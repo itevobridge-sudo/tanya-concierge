@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A'Zambezi River Lodge - Guest Concierge</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
@@ -47,7 +45,7 @@
         /** * ADMIN CONFIGURATION */
         const APP_CONFIG = {
             hotelName: "A'Zambezi River Lodge",
-            logoUrl: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80&w=200", 
+            logoUrl: "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&q=80&w=200", 
             wifi: {
                 ssid: "AZambezi_Guest_WiFi",
                 password: "RiverSideRelax",
@@ -63,7 +61,7 @@
             sponsored: {
                 title: "24-Hour Medical Care",
                 company: "Victoria Falls Medical Centre",
-                image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=400",
+                image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=400",
                 link: "https://example.com/medical-centre"
             },
             languages: [
@@ -72,26 +70,35 @@
             ],
             content: {
                 en: {
-                    heroImage: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=800",
+                    heroImage: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=1200",
                     attractions: [
-                        { title: "The Victoria Falls", dist: "10 min drive", desc: "One of the Seven Natural Wonders of the World. Our shuttle departs every hour.", img: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=400" },
-                        { title: "Zambezi Sunset Cruise", dist: "On-site Pier", desc: "Witness the majestic African sunset while viewing hippos and crocodiles.", img: "https://images.unsplash.com/photo-1534017366300-84c1f1ec4f67?auto=format&fit=crop&q=80&w=400" },
-                        { title: "Elephant Cafe", dist: "15 min drive", desc: "A unique fine-dining experience in the presence of rescued elephants.", img: "https://images.unsplash.com/photo-1505149185040-ad29b9a4b3f1?auto=format&fit=crop&q=80&w=400" }
+                        { title: "The Victoria Falls", dist: "10 min drive", desc: "One of the Seven Natural Wonders of the World. Our shuttle departs throughout the day.", img: "https://images.unsplash.com/photo-1604537466158-719b1972edd8?auto=format&fit=crop&q=80&w=600" },
+                        { title: "Zambezi Sunset Cruise", dist: "On-site Pier", desc: "Witness the majestic African sunset while viewing hippos and crocodiles directly from the hotel launch pier.", img: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=600" },
+                        { title: "Elephant Cafe", dist: "15 min drive", desc: "A unique fine-dining experience in the presence of rescued elephants.", img: "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&q=80&w=600" }
                     ],
                     policies: [
-                        { title: "Nature Awareness", desc: "As we are located on the river bank, please keep balcony doors closed to prevent wildlife from entering." },
-                        { title: "Pool & Bar", desc: "Open 08:00 - 22:00. Please use towels provided at the pool station." },
-                        { title: "Sustainability", desc: "Help us preserve the Zambezi. We encourage reusing towels to save water." }
+                        { title: "Nature Awareness", desc: "As we are located directly on the Zambezi river bank, please keep balcony doors closed to prevent wildlife and monkeys from entering." },
+                        { title: "Pool & Bar", desc: "Open 08:00 - 22:00. Please use dedicated towels provided at the pool deck station." },
+                        { title: "Sustainability", desc: "Help us preserve Victoria Falls ecosystem. We encourage reusing linen to save water." }
                     ],
                     menuPreview: [
-                        { name: "Flame Grilled Zambezi Bream", price: "$24", desc: "Fresh river bream with lemon-garlic butter and seasonal greens.", img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=400" },
-                        { name: "Wild Game Platter", price: "$35", desc: "A selection of grilled impala, ostrich, and crocodile skewers.", img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400" }
+                        { name: "Flame Grilled Zambezi Bream", price: "$15", desc: "Fresh river bream fillet with lemon-garlic butter and seasonal greens.", img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=400" },
+                        { name: "Rare Roast Venison of the Day", price: "$18", desc: "Served with traditional coriander pap, grilled baby corn and red wine compote.", img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400" },
+                        { name: "Warthog Baguette", price: "$14", desc: "Grilled marinated warthog minute steaks on a garlic baguette with fresh salad.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=400" },
+                        { name: "Zimbabwean Beef Fillet Steak", price: "$20", desc: "Grass-fed local grilled beef finished with thyme and garlic butter, served with wedges.", img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&q=80&w=400" }
+                    ],
+                    drinksPreview: [
+                        { name: "Zambezi Lager", price: "$4", desc: "Zimbabwe's legendary local premium lager. Crisp and refreshing." },
+                        { name: "Elephant Gin & Tonic", price: "$8", desc: "Premium local botanical gin mixed with crisp Indian tonic and a twist of lime." },
+                        { name: "Malawi Shandy", price: "$5", desc: "Classic combination of ginger ale, lemonade, and dashed bitters." },
+                        { name: "Rock Shandy", price: "$5", desc: "Perfect poolside quencher: half lemonade, half sparkling water, and Angostura bitters." }
                     ],
                     shuttle: [
-                        { time: "09:00 AM", route: "Lodge → Victoria Falls Town" },
-                        { time: "11:00 AM", route: "Lodge → Rainforest Entrance" },
-                        { time: "02:00 PM", route: "Lodge → Victoria Falls Town" },
-                        { time: "05:00 PM", route: "Lodge → Rainforest Entrance" }
+                        { time: "09:05 AM", route: "Lodge → Victoria Falls Town → Rainforest" },
+                        { time: "11:05 AM", route: "Lodge → Victoria Falls Town → Rainforest" },
+                        { time: "12:05 PM", route: "Lodge → Victoria Falls Town → Rainforest" },
+                        { time: "01:05 PM", route: "Lodge → Victoria Falls Town → Rainforest" },
+                        { time: "04:05 PM", route: "Lodge → Victoria Falls Town → Rainforest" }
                     ],
                     departments: [
                         { name: "Front Desk", ext: "0" },
@@ -102,24 +109,29 @@
                     ]
                 },
                 fr: {
-                    heroImage: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=800",
+                    heroImage: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=1200",
                     attractions: [
-                        { title: "Les Chutes Victoria", dist: "10 min en voiture", desc: "L'une des sept merveilles naturelles du monde.", img: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=400" },
-                        { title: "Croisière au Zambèze", dist: "Jetée", desc: "Admirez le majestueux coucher de soleil africain.", img: "https://images.unsplash.com/photo-1534017366300-84c1f1ec4f67?auto=format&fit=crop&q=80&w=400" },
-                        { title: "Elephant Cafe", dist: "15 min", desc: "Dîner gastronomique avec des éléphants.", img: "https://images.unsplash.com/photo-1505149185040-ad29b9a4b3f1?auto=format&fit=crop&q=80&w=400" }
+                        { title: "Les Chutes Victoria", dist: "10 min en voiture", desc: "L'une des sept merveilles naturelles du monde.", img: "https://images.unsplash.com/photo-1604537466158-719b1972edd8?auto=format&fit=crop&q=80&w=600" },
+                        { title: "Croisière au Zambèze", dist: "Jetée", desc: "Admirez le majestueux coucher de soleil africain.", img: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=600" },
+                        { title: "Elephant Cafe", dist: "15 min", desc: "Dîner gastronomique avec des éléphants.", img: "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&q=80&w=600" }
                     ],
                     policies: [
-                        { title: "Conscience Naturelle", desc: "Veuillez garder les portes des balcons fermées." },
+                        { title: "Conscience Naturelle", desc: "Veuillez garder les portes des balcons fermées contre les singes." },
                         { title: "Piscine", desc: "Ouvert 08:00 - 22:00." },
                         { title: "Écologie", desc: "Préservons ensemble le Zambèze." }
                     ],
                     menuPreview: [
-                        { name: "Brème du Zambèze", price: "$24", desc: "Poisson frais avec beurre citron-ail.", img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=400" },
-                        { name: "Plateau de Gibier", price: "$35", desc: "Impala, autruche et crocodile.", img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400" }
+                        { name: "Brème du Zambèze Grillée", price: "$15", desc: "Poisson frais avec beurre citron-ail et légumes.", img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=400" },
+                        { name: "Filet de Venaison", price: "$18", desc: "Rôti de gibier du jour servi avec du pap à la coriandre.", img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400" },
+                        { name: "Baguette de Phacochère", price: "$14", desc: "Steaks de phacochère marinés sur baguette à l'ail.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=400" }
+                    ],
+                    drinksPreview: [
+                        { name: "Zambezi Lager", price: "$4", desc: "Bière blonde locale premium croustillante." },
+                        { name: "Elephant Gin & Tonic", price: "$8", desc: "Gin artisanal local avec tonic et lime." }
                     ],
                     shuttle: [
-                        { time: "09h00", route: "Lodge → Centre-ville" },
-                        { time: "11h00", route: "Lodge → Entrée Rainforest" }
+                        { time: "09h05", route: "Lodge → Centre-ville → Rainforest" },
+                        { time: "11h05", route: "Lodge → Centre-ville → Rainforest" }
                     ],
                     departments: [
                         { name: "Réception", ext: "0" },
@@ -146,10 +158,10 @@
                     services: "Guest Services",
                     dining: "Dining & Drinks",
                     info: "Lodge Information",
-                    roomService: "Room Service",
+                    roomService: "Room Service Menu",
                     heritage: "Heritage Expeditions",
-                    shuttle: "Town Shuttle",
-                    restaurantMenu: "Amulonga Restaurant",
+                    shuttle: "Town & Rainforest Shuttle",
+                    restaurantMenu: "Amulonga Restaurant & Deck Bar",
                     policies: "Guest Guidelines",
                     checkout: "Departure: 11:00 AM",
                     localAttractions: "Adventure & Safari",
@@ -173,10 +185,10 @@
                     services: "Services",
                     dining: "Restauration",
                     info: "Informations",
-                    roomService: "Service en Chambre",
+                    roomService: "Menu Restauration",
                     heritage: "Expéditions Heritage",
-                    shuttle: "Navette de Ville",
-                    restaurantMenu: "Amulonga Restaurant",
+                    shuttle: "Navette Rainforest",
+                    restaurantMenu: "Amulonga Restaurant & Bar",
                     policies: "Consignes",
                     checkout: "Départ : 11h00",
                     localAttractions: "Safari & Aventure",
@@ -217,10 +229,6 @@
             lucide.createIcons();
         }
 
-        /**
-         * Targeted update for the capture form submit button
-         * to avoid re-rendering inputs and losing focus.
-         */
         function updateCaptureState() {
             state.guestName = document.getElementById('guest-name-input').value;
             state.guestContact = document.getElementById('guest-contact-input').value;
@@ -283,7 +291,6 @@
                     </div>
                     
                     <div class="flex-1 flex flex-col px-8 py-10 -mt-8 bg-white rounded-t-[32px] z-30 shadow-2xl overflow-y-auto">
-                        <!-- Partner Ad Space -->
                         <div class="mb-8 p-4 bg-slate-50 rounded-2xl border border-slate-100 flex items-center space-x-4">
                             <div class="w-16 h-16 rounded-xl flex-shrink-0 overflow-hidden bg-slate-200 flex items-center justify-center">
                                 <img src="${APP_CONFIG.sponsored.image}" 
@@ -477,7 +484,9 @@
                 title = t.localAttractions;
                 body = content.attractions.map(item => `
                     <div class="bg-white rounded-3xl border border-slate-100 overflow-hidden mb-6 shadow-sm">
-                        <img src="${item.img}" onload="handleImageLoad(this)" class="w-full h-44 object-cover" />
+                        <div class="w-full h-44 overflow-hidden bg-slate-100">
+                            <img src="${item.img}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
+                        </div>
                         <div class="p-6">
                             <div class="flex justify-between items-start mb-2">
                                 <h4 class="font-bold text-slate-800 text-lg">${item.title}</h4>
@@ -499,12 +508,16 @@
                 title = t.restaurantMenu;
                 body = `
                     <div class="space-y-6">
-                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=600" onload="handleImageLoad(this)" class="w-full h-48 rounded-3xl object-cover shadow-sm" />
-                        <div class="p-5 bg-orange-50 rounded-2xl text-orange-800 text-xs italic border border-orange-100 leading-relaxed">
-                            Experience fresh local flavors on the banks of the Zambezi.
+                        <div class="w-full h-48 overflow-hidden bg-slate-100 rounded-3xl shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
                         </div>
+                        <div class="p-5 bg-orange-50 rounded-2xl text-orange-800 text-xs italic border border-orange-100 leading-relaxed">
+                            Experience modern international favorites combined with unique African traditional flavors on the banks of the mighty Zambezi.
+                        </div>
+                        
+                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider px-1">Amulonga Main Delicacies</h3>
                         ${content.menuPreview.map(item => `
-                            <button onclick="window.open('https://wa.me/${APP_CONFIG.contacts.whatsapp}?text=Order: ${encodeURIComponent(item.name)}') " class="w-full text-left flex justify-between items-center bg-white p-5 rounded-3xl border border-slate-100 shadow-sm active:bg-slate-50 transition-colors">
+                            <button onclick="window.open('https://wa.me/${APP_CONFIG.contacts.whatsapp}?text=Order: ${encodeURIComponent(item.name)}')" class="w-full text-left flex justify-between items-center bg-white p-5 rounded-3xl border border-slate-100 shadow-sm active:bg-slate-50 transition-colors">
                                 <div class="pr-4">
                                     <h4 class="font-bold text-slate-800 text-sm">${item.name}</h4>
                                     <p class="text-[11px] text-slate-400 mt-1">${item.desc}</p>
@@ -512,13 +525,33 @@
                                 <span class="font-black text-lodge-teal text-sm">${item.price}</span>
                             </button>
                         `).join('')}
+
+                        ${content.drinksPreview ? `
+                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider px-1 pt-4">Amulonga Deck Bar Drinks</h3>
+                        <div class="space-y-3">
+                            ${content.drinksPreview.map(item => `
+                                <div class="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">${item.name}</h4>
+                                        <p class="text-[11px] text-slate-400 mt-0.5">${item.desc}</p>
+                                    </div>
+                                    <span class="font-bold text-slate-700 text-sm ml-2">${item.price}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                        ` : ''}
                     </div>
                 `;
             } else if (state.detailModal === 'shuttle') {
                 title = t.shuttle;
                 body = `
                     <div class="space-y-6">
-                        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=600" onload="handleImageLoad(this)" class="w-full h-48 rounded-3xl object-cover shadow-sm" />
+                        <div class="w-full h-48 overflow-hidden bg-slate-100 rounded-3xl shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=600" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="p-4 bg-slate-100 text-slate-600 text-xs rounded-2xl border border-slate-200">
+                            <strong>Bus Route:</strong> A'Zambezi River Lodge ➔ Victoria Falls Rainbow Hotel ➔ Marula Café/Batoka Safaris ➔ Rainforest.
+                        </div>
                         <div class="bg-white rounded-[32px] border border-slate-100 overflow-hidden shadow-sm">
                             ${content.shuttle.map(item => `
                                 <div class="flex items-center justify-between p-5 border-b last:border-0 border-slate-100">
@@ -529,6 +562,9 @@
                                     <span class="text-[11px] text-slate-500 font-bold uppercase tracking-wide text-right">${item.route}</span>
                                 </div>
                             `).join('')}
+                        </div>
+                        <div class="text-[11px] text-slate-400 px-2 italic">
+                            * Clients wishing to board the bus from the hotel should notify the porter at Reception by the pickup times above.
                         </div>
                         <button onclick="window.open('https://wa.me/${APP_CONFIG.contacts.whatsapp}?text=Book Private Shuttle')" class="w-full py-5 bg-lodge-teal text-white rounded-3xl font-black shadow-lg shadow-sky-50 active:scale-95 transition-all">Book Private Taxi</button>
                     </div>
