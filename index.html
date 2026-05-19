@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A'Zambezi River Lodge - Guest Concierge</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --lodge-teal: #00b5e2;
+            --lodge-grey: #58595b;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        .animate-slide-up {
+            animation: slideUp 0.3s ease-out forwards;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            background-color: #f8fafc;
+        }
+        .bg-lodge-teal { background-color: var(--lodge-teal); }
+        .text-lodge-teal { color: var(--lodge-teal); }
+        .border-lodge-teal { border-color: var(--lodge-teal); }
+        
+        /* Smooth image fade in */
+        img { opacity: 0; transition: opacity 0.3s ease-in; }
+        img.loaded { opacity: 1; }
+
+        /* Prevent auto-zoom on iOS inputs */
+        input { font-size: 16px !important; }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        /** * ADMIN CONFIGURATION */
+        const APP_CONFIG = {
+            hotelName: "A'Zambezi River Lodge",
+            logoUrl: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80&w=200", 
+            wifi: {
+                ssid: "AZambezi_Guest_WiFi",
+                password: "RiverSideRelax",
+            },
+            contacts: {
+                whatsapp: "263772123456",
+                frontDesk: "+263 13 44561",
+            },
+            links: {
+                menu: "https://example.com/menu.pdf",
+                heritage: "https://heritageexpeditionsafrica.com/",
+            },
+            sponsored: {
+                title: "24-Hour Medical Care",
+                company: "Victoria Falls Medical Centre",
+                image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=400",
+                link: "https://example.com/medical-centre"
+            },
+            languages: [
+                { code: 'en', label: 'English', flag: '🇺🇸' },
+                { code: 'fr', label: 'Français', flag: '🇫🇷' },
+            ],
+            content: {
+                en: {
+                    heroImage: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=800",
+                    attractions: [
+                        { title: "The Victoria Falls", dist: "10 min drive", desc: "One of the Seven Natural Wonders of the World. Our shuttle departs every hour.", img: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=400" },
+                        { title: "Zambezi Sunset Cruise", dist: "On-site Pier", desc: "Witness the majestic African sunset while viewing hippos and crocodiles.", img: "https://images.unsplash.com/photo-1534017366300-84c1f1ec4f67?auto=format&fit=crop&q=80&w=400" },
+                        { title: "Elephant Cafe", dist: "15 min drive", desc: "A unique fine-dining experience in the presence of rescued elephants.", img: "https://images.unsplash.com/photo-1505149185040-ad29b9a4b3f1?auto=format&fit=crop&q=80&w=400" }
+                    ],
+                    policies: [
+                        { title: "Nature Awareness", desc: "As we are located on the river bank, please keep balcony doors closed to prevent wildlife from entering." },
+                        { title: "Pool & Bar", desc: "Open 08:00 - 22:00. Please use towels provided at the pool station." },
+                        { title: "Sustainability", desc: "Help us preserve the Zambezi. We encourage reusing towels to save water." }
+                    ],
+                    menuPreview: [
+                        { name: "Flame Grilled Zambezi Bream", price: "$24", desc: "Fresh river bream with lemon-garlic butter and seasonal greens.", img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=400" },
+                        { name: "Wild Game Platter", price: "$35", desc: "A selection of grilled impala, ostrich, and crocodile skewers.", img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400" }
+                    ],
+                    shuttle: [
+                        { time: "09:00 AM", route: "Lodge → Victoria Falls Town" },
+                        { time: "11:00 AM", route: "Lodge → Rainforest Entrance" },
+                        { time: "02:00 PM", route: "Lodge → Victoria Falls Town" },
+                        { time: "05:00 PM", route: "Lodge → Rainforest Entrance" }
+                    ],
+                    departments: [
+                        { name: "Front Desk", ext: "0" },
+                        { name: "Housekeeping", ext: "101" },
+                        { name: "Maintenance", ext: "102" },
+                        { name: "Room Service", ext: "103" },
+                        { name: "Safari Desk", ext: "105" }
+                    ]
+                },
+                fr: {
+                    heroImage: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=800",
+                    attractions: [
+                        { title: "Les Chutes Victoria", dist: "10 min en voiture", desc: "L'une des sept merveilles naturelles du monde.", img: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=400" },
+                        { title: "Croisière au Zambèze", dist: "Jetée", desc: "Admirez le majestueux coucher de soleil africain.", img: "https://images.unsplash.com/photo-1534017366300-84c1f1ec4f67?auto=format&fit=crop&q=80&w=400" },
+                        { title: "Elephant Cafe", dist: "15 min", desc: "Dîner gastronomique avec des éléphants.", img: "https://images.unsplash.com/photo-1505149185040-ad29b9a4b3f1?auto=format&fit=crop&q=80&w=400" }
+                    ],
+                    policies: [
+                        { title: "Conscience Naturelle", desc: "Veuillez garder les portes des balcons fermées." },
+                        { title: "Piscine", desc: "Ouvert 08:00 - 22:00." },
+                        { title: "Écologie", desc: "Préservons ensemble le Zambèze." }
+                    ],
+                    menuPreview: [
+                        { name: "Brème du Zambèze", price: "$24", desc: "Poisson frais avec beurre citron-ail.", img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=400" },
+                        { name: "Plateau de Gibier", price: "$35", desc: "Impala, autruche et crocodile.", img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400" }
+                    ],
+                    shuttle: [
+                        { time: "09h00", route: "Lodge → Centre-ville" },
+                        { time: "11h00", route: "Lodge → Entrée Rainforest" }
+                    ],
+                    departments: [
+                        { name: "Réception", ext: "0" },
+                        { name: "Ménage", ext: "101" },
+                        { name: "Maintenance", ext: "102" },
+                        { name: "Service en Chambre", ext: "103" },
+                        { name: "Bureau Safari", ext: "105" }
+                    ]
+                }
+            },
+            translations: {
+                en: {
+                    welcome: "Experience the River",
+                    subtitle: "The only river-front lodge in Victoria Falls.",
+                    accessButton: "Get Connected",
+                    captureTitle: "Welcome Home",
+                    captureSub: "Let us know who is staying with us.",
+                    wifiTitle: "Lodge WiFi",
+                    wifiSub: "Enjoy unlimited high-speed internet.",
+                    copyPass: "Copy Key",
+                    copied: "Ready to Paste!",
+                    continuePortal: "Explore the Lodge",
+                    portalTitle: "River Concierge",
+                    services: "Guest Services",
+                    dining: "Dining & Drinks",
+                    info: "Lodge Information",
+                    roomService: "Room Service",
+                    heritage: "Heritage Expeditions",
+                    shuttle: "Town Shuttle",
+                    restaurantMenu: "Amulonga Restaurant",
+                    policies: "Guest Guidelines",
+                    checkout: "Departure: 11:00 AM",
+                    localAttractions: "Adventure & Safari",
+                    deptDirectory: "Lodge Directory",
+                    sponsoredLabel: "Essential Partner Service",
+                    waMessage: "Hello A'Zambezi Concierge! I need help with ",
+                    close: "Close"
+                },
+                fr: {
+                    welcome: "Vivez le Fleuve",
+                    subtitle: "Le seul lodge au bord de l'eau à Victoria Falls.",
+                    accessButton: "Se Connecter",
+                    captureTitle: "Bienvenue",
+                    captureSub: "Dites-nous qui séjourne avec nous.",
+                    wifiTitle: "WiFi du Lodge",
+                    wifiSub: "Internet haut débit illimité.",
+                    copyPass: "Copier",
+                    copied: "Copié !",
+                    continuePortal: "Explorer le Lodge",
+                    portalTitle: "Concierge",
+                    services: "Services",
+                    dining: "Restauration",
+                    info: "Informations",
+                    roomService: "Service en Chambre",
+                    heritage: "Expéditions Heritage",
+                    shuttle: "Navette de Ville",
+                    restaurantMenu: "Amulonga Restaurant",
+                    policies: "Consignes",
+                    checkout: "Départ : 11h00",
+                    localAttractions: "Safari & Aventure",
+                    deptDirectory: "Répertoire",
+                    sponsoredLabel: "Partenaire Essentiel",
+                    waMessage: "Bonjour Concierge A'Zambezi ! ",
+                    close: "Fermer"
+                }
+            }
+        };
+
+        // --- Global State ---
+        let state = {
+            view: 'language',
+            lang: 'en',
+            guestName: '',
+            guestContact: '',
+            detailModal: null, 
+            copyStatus: false
+        };
+
+        const appContainer = document.getElementById('app');
+
+        function setView(newView) { state.view = newView; render(); }
+        function setLang(newLang) { state.lang = newLang; }
+        function setDetailModal(type) { state.detailModal = type; render(); }
+        
+        function handleImageLoad(img) {
+            img.classList.add('loaded');
+        }
+
+        function handleImageError(img) {
+            img.style.display = 'none';
+            img.parentElement.classList.add('bg-slate-100', 'flex', 'items-center', 'justify-center');
+            const icon = document.createElement('div');
+            icon.innerHTML = '<i data-lucide="image-off" class="text-slate-300"></i>';
+            img.parentElement.appendChild(icon);
+            lucide.createIcons();
+        }
+
+        /**
+         * Targeted update for the capture form submit button
+         * to avoid re-rendering inputs and losing focus.
+         */
+        function updateCaptureState() {
+            state.guestName = document.getElementById('guest-name-input').value;
+            state.guestContact = document.getElementById('guest-contact-input').value;
+            
+            const btn = document.getElementById('capture-submit-btn');
+            if (state.guestName.trim() && state.guestContact.trim()) {
+                btn.disabled = false;
+                btn.className = "w-full py-5 rounded-2xl font-bold mt-4 transition-all bg-lodge-teal text-white shadow-lg active:scale-95";
+            } else {
+                btn.disabled = true;
+                btn.className = "w-full py-5 rounded-2xl font-bold mt-4 transition-all bg-slate-200 text-slate-400 cursor-not-allowed";
+            }
+        }
+
+        function copyToClipboard() {
+            const pass = APP_CONFIG.wifi.password;
+            const textArea = document.createElement("textarea");
+            textArea.value = pass;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            state.copyStatus = true; render();
+            setTimeout(() => { state.copyStatus = false; render(); }, 2000);
+        }
+
+        // --- View Renders ---
+
+        function renderLanguage() {
+            return `
+                <div class="min-h-screen flex flex-col items-center justify-center p-6 text-center bg-white">
+                    <img src="${APP_CONFIG.logoUrl}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-24 h-24 mb-6 rounded-full object-cover border-4 border-slate-100 shadow-sm" />
+                    <h1 class="text-2xl font-bold text-slate-800 mb-2">Welcome to A'Zambezi</h1>
+                    <p class="text-slate-500 mb-8">Please choose your language</p>
+                    <div class="grid grid-cols-1 w-full max-w-xs gap-3">
+                        ${APP_CONFIG.languages.map(l => `
+                            <button onclick="setLang('${l.code}'); setView('landing')" class="flex items-center justify-between p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-lodge-teal hover:bg-sky-50 transition-all group">
+                                <span class="text-2xl mr-3">${l.flag}</span>
+                                <span class="font-bold text-slate-700 flex-1 text-left">${l.label}</span>
+                                <i data-lucide="chevron-right" class="text-slate-400 group-hover:text-lodge-teal" size="18"></i>
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderLanding() {
+            const t = APP_CONFIG.translations[state.lang] || APP_CONFIG.translations['en'];
+            const content = APP_CONFIG.content[state.lang] || APP_CONFIG.content['en'];
+            return `
+                <div class="min-h-screen bg-white flex flex-col">
+                    <div class="h-[45%] relative flex items-center justify-center overflow-hidden">
+                        <img src="${content.heroImage}" onload="handleImageLoad(this)" class="absolute inset-0 w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-black/30 z-10"></div>
+                        <div class="z-30 text-center px-6">
+                            <h1 class="text-white text-4xl font-bold mb-2 shadow-sm">${APP_CONFIG.hotelName}</h1>
+                            <p class="text-white/90 text-sm italic tracking-wide">${t.subtitle}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex-1 flex flex-col px-8 py-10 -mt-8 bg-white rounded-t-[32px] z-30 shadow-2xl overflow-y-auto">
+                        <!-- Partner Ad Space -->
+                        <div class="mb-8 p-4 bg-slate-50 rounded-2xl border border-slate-100 flex items-center space-x-4">
+                            <div class="w-16 h-16 rounded-xl flex-shrink-0 overflow-hidden bg-slate-200 flex items-center justify-center">
+                                <img src="${APP_CONFIG.sponsored.image}" 
+                                     onload="handleImageLoad(this)" 
+                                     onerror="handleImageError(this)" 
+                                     class="w-full h-full object-cover" />
+                            </div>
+                            <div class="flex-1">
+                                <span class="text-[10px] font-bold text-lodge-teal uppercase tracking-widest block mb-0.5">${t.sponsoredLabel}</span>
+                                <h4 class="text-sm font-bold text-slate-800 leading-tight">${APP_CONFIG.sponsored.title}</h4>
+                                <p class="text-[11px] text-slate-500">${APP_CONFIG.sponsored.company}</p>
+                            </div>
+                            <a href="${APP_CONFIG.sponsored.link}" target="_blank" class="p-2.5 bg-white rounded-full border border-slate-200 shadow-sm active:scale-90 transition-transform">
+                                <i data-lucide="external-link" size="16" class="text-lodge-teal"></i>
+                            </a>
+                        </div>
+
+                        <div class="text-center mb-8">
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">${t.welcome}</h2>
+                        </div>
+                        
+                        <button onclick="setView('capture')" class="w-full bg-lodge-teal text-white font-bold py-5 rounded-2xl shadow-lg shadow-sky-100 hover:brightness-110 active:scale-95 transition-all flex items-center justify-center space-x-3">
+                            <span>${t.accessButton}</span>
+                            <i data-lucide="wifi" size="20"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCapture() {
+            const t = APP_CONFIG.translations[state.lang] || APP_CONFIG.translations['en'];
+            const isReady = state.guestName && state.guestContact;
+            return `
+                <div class="min-h-screen bg-slate-50 p-6 flex flex-col">
+                    <div class="mt-8 mb-8 text-center">
+                        <h2 class="text-2xl font-bold text-slate-800 mb-2">${t.captureTitle}</h2>
+                        <p class="text-slate-500 text-sm">${t.captureSub}</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-[32px] shadow-sm border border-slate-100 flex-1 max-w-md mx-auto w-full">
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase mb-2 ml-1">Guest Name</label>
+                                <div class="relative">
+                                    <i data-lucide="user" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size="18"></i>
+                                    <input type="text" id="guest-name-input" placeholder="e.g. David Livingstone" 
+                                        oninput="updateCaptureState()" 
+                                        value="${state.guestName}"
+                                        class="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-lodge-teal focus:outline-none transition-all" />
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase mb-2 ml-1">Room No / Phone</label>
+                                <div class="relative">
+                                    <i data-lucide="key" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size="18"></i>
+                                    <input type="text" id="guest-contact-input" placeholder="e.g. Room 204" 
+                                        oninput="updateCaptureState()" 
+                                        value="${state.guestContact}"
+                                        class="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-lodge-teal focus:outline-none transition-all" />
+                                </div>
+                            </div>
+                            <button onclick="setView('wifi')" id="capture-submit-btn" ${!isReady ? 'disabled' : ''} 
+                                class="w-full py-5 rounded-2xl font-bold mt-4 transition-all ${isReady ? 'bg-lodge-teal text-white shadow-lg active:scale-95' : 'bg-slate-200 text-slate-400 cursor-not-allowed'}">
+                                Access Concierge
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderWifi() {
+            const t = APP_CONFIG.translations[state.lang] || APP_CONFIG.translations['en'];
+            return `
+                <div class="min-h-screen bg-lodge-teal p-6 flex flex-col text-white">
+                    <div class="flex-1 flex flex-col items-center justify-center text-center">
+                        <div class="bg-white/20 p-7 rounded-full mb-6">
+                            <i data-lucide="wifi" size="52"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-2">${t.wifiTitle}</h2>
+                        <p class="text-white/80 mb-10 text-sm font-light tracking-wide">${t.wifiSub}</p>
+                        
+                        <div class="bg-white rounded-[40px] p-10 w-full max-w-sm text-slate-800 shadow-2xl relative">
+                            <div class="mb-8">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Network Name</span>
+                                <p class="text-xl font-bold text-lodge-teal">${APP_CONFIG.wifi.ssid}</p>
+                            </div>
+                            <div class="mb-10">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Passkey</span>
+                                <p class="text-3xl font-mono font-bold tracking-tight text-slate-900">${APP_CONFIG.wifi.password}</p>
+                            </div>
+                            <button onclick="copyToClipboard()" class="w-full py-4 rounded-2xl font-bold flex items-center justify-center space-x-2 transition-all active:scale-95 ${state.copyStatus ? 'bg-green-500 text-white' : 'bg-slate-100 text-slate-800'}">
+                                ${state.copyStatus ? '<i data-lucide="check" size="18"></i>' : '<i data-lucide="copy" size="18"></i>'}
+                                <span>${state.copyStatus ? t.copied : t.copyPass}</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button onclick="setView('portal')" class="mt-8 w-full bg-white/20 border border-white/40 py-5 rounded-2xl font-bold flex items-center justify-center space-x-2 backdrop-blur-sm active:scale-95 transition-transform">
+                        <span>${t.continuePortal}</span>
+                        <i data-lucide="arrow-right" size="18"></i>
+                    </button>
+                </div>
+            `;
+        }
+
+        function renderPortal() {
+            const t = APP_CONFIG.translations[state.lang] || APP_CONFIG.translations['en'];
+            return `
+                <div class="min-h-screen bg-slate-50 pb-24">
+                    <div class="bg-white px-6 py-6 border-b border-slate-100 sticky top-0 z-50 flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-slate-100 overflow-hidden border border-slate-100">
+                                <img src="${APP_CONFIG.logoUrl}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
+                            </div>
+                            <div>
+                                <h1 class="text-lg font-bold text-slate-800">${t.portalTitle}</h1>
+                                <p class="text-[9px] text-slate-400 uppercase font-black tracking-[1.5px]">${APP_CONFIG.hotelName}</p>
+                            </div>
+                        </div>
+                        <div class="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center active:bg-slate-100 transition-colors">
+                            <i data-lucide="search" class="text-slate-400" size="18"></i>
+                        </div>
+                    </div>
+
+                    <div class="p-5 space-y-8">
+                        <section>
+                            <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-[2.5px] px-2 mb-4">${t.services}</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <button onclick="setDetailModal('menu')" class="bg-white p-6 rounded-[28px] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center space-y-3 active:scale-95 transition-all">
+                                    <div class="p-3 bg-orange-50 rounded-2xl text-orange-500"><i data-lucide="utensils" size="24"></i></div>
+                                    <span class="text-xs font-bold text-slate-700">${t.roomService}</span>
+                                </button>
+                                <a href="${APP_CONFIG.links.heritage}" target="_blank" class="bg-white p-6 rounded-[28px] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center space-y-3 active:scale-95 transition-all">
+                                    <div class="p-3 bg-sky-50 rounded-2xl text-lodge-teal"><i data-lucide="compass" size="24"></i></div>
+                                    <span class="text-xs font-bold text-slate-700">${t.heritage}</span>
+                                </a>
+                                <button onclick="setDetailModal('shuttle')" class="bg-white p-6 rounded-[28px] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center space-y-3 active:scale-95 transition-all">
+                                    <div class="p-3 bg-purple-50 rounded-2xl text-purple-500"><i data-lucide="clock" size="24"></i></div>
+                                    <span class="text-xs font-bold text-slate-700">${t.shuttle}</span>
+                                </button>
+                                <button onclick="setDetailModal('policies')" class="bg-white p-6 rounded-[28px] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center space-y-3 active:scale-95 transition-all">
+                                    <div class="p-3 bg-emerald-50 rounded-2xl text-emerald-600"><i data-lucide="info" size="24"></i></div>
+                                    <span class="text-xs font-bold text-slate-700">${t.info}</span>
+                                </button>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-[2.5px] px-2 mb-4">${t.info}</h3>
+                            <div class="bg-white rounded-[28px] shadow-sm border border-slate-100 divide-y divide-slate-100 overflow-hidden">
+                                <div class="p-5 flex items-center justify-between">
+                                    <div class="flex items-center space-x-4 text-slate-700">
+                                        <i data-lucide="calendar" class="text-slate-400" size="18"></i>
+                                        <span class="text-sm font-semibold">${t.checkout}</span>
+                                    </div>
+                                </div>
+                                <button onclick="setDetailModal('departments')" class="w-full p-5 flex items-center justify-between text-left hover:bg-slate-50 transition-colors">
+                                    <div class="flex items-center space-x-4 text-slate-700">
+                                        <i data-lucide="phone-call" class="text-slate-400" size="18"></i>
+                                        <span class="text-sm font-semibold">${t.deptDirectory}</span>
+                                    </div>
+                                    <i data-lucide="chevron-right" class="text-slate-300" size="16"></i>
+                                </button>
+                                <button onclick="setDetailModal('attractions')" class="w-full p-5 flex items-center justify-between text-left hover:bg-slate-50 transition-colors">
+                                    <div class="flex items-center space-x-4 text-slate-700">
+                                        <i data-lucide="map-pin" class="text-slate-400" size="18"></i>
+                                        <span class="text-sm font-semibold">${t.localAttractions}</span>
+                                    </div>
+                                    <i data-lucide="chevron-right" class="text-slate-300" size="16"></i>
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+
+                    <a href="https://wa.me/${APP_CONFIG.contacts.whatsapp}?text=${encodeURIComponent(t.waMessage)}" class="fixed bottom-8 right-6 w-16 h-16 bg-green-500 text-white rounded-full shadow-2xl flex items-center justify-center z-[100] ring-8 ring-green-500/5 active:scale-90 transition-transform">
+                        <i data-lucide="message-square" fill="white" size="28"></i>
+                    </a>
+
+                    ${renderModal()}
+                </div>
+            `;
+        }
+
+        function renderModal() {
+            if (!state.detailModal) return '';
+            const t = APP_CONFIG.translations[state.lang] || APP_CONFIG.translations['en'];
+            const content = APP_CONFIG.content[state.lang] || APP_CONFIG.content['en'];
+            let title = '', body = '';
+
+            if (state.detailModal === 'attractions') {
+                title = t.localAttractions;
+                body = content.attractions.map(item => `
+                    <div class="bg-white rounded-3xl border border-slate-100 overflow-hidden mb-6 shadow-sm">
+                        <img src="${item.img}" onload="handleImageLoad(this)" class="w-full h-44 object-cover" />
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-slate-800 text-lg">${item.title}</h4>
+                                <span class="text-[10px] bg-sky-50 text-lodge-teal px-3 py-1 rounded-full font-bold uppercase tracking-wider">${item.dist}</span>
+                            </div>
+                            <p class="text-sm text-slate-500 leading-relaxed">${item.desc}</p>
+                        </div>
+                    </div>
+                `).join('');
+            } else if (state.detailModal === 'policies') {
+                title = t.policies;
+                body = content.policies.map(item => `
+                    <div class="p-6 bg-white rounded-3xl border border-slate-100 mb-4 shadow-sm">
+                        <h4 class="font-bold text-lodge-teal mb-2">${item.title}</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">${item.desc}</p>
+                    </div>
+                `).join('');
+            } else if (state.detailModal === 'menu') {
+                title = t.restaurantMenu;
+                body = `
+                    <div class="space-y-6">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=600" onload="handleImageLoad(this)" class="w-full h-48 rounded-3xl object-cover shadow-sm" />
+                        <div class="p-5 bg-orange-50 rounded-2xl text-orange-800 text-xs italic border border-orange-100 leading-relaxed">
+                            Experience fresh local flavors on the banks of the Zambezi.
+                        </div>
+                        ${content.menuPreview.map(item => `
+                            <button onclick="window.open('https://wa.me/${APP_CONFIG.contacts.whatsapp}?text=Order: ${encodeURIComponent(item.name)}') " class="w-full text-left flex justify-between items-center bg-white p-5 rounded-3xl border border-slate-100 shadow-sm active:bg-slate-50 transition-colors">
+                                <div class="pr-4">
+                                    <h4 class="font-bold text-slate-800 text-sm">${item.name}</h4>
+                                    <p class="text-[11px] text-slate-400 mt-1">${item.desc}</p>
+                                </div>
+                                <span class="font-black text-lodge-teal text-sm">${item.price}</span>
+                            </button>
+                        `).join('')}
+                    </div>
+                `;
+            } else if (state.detailModal === 'shuttle') {
+                title = t.shuttle;
+                body = `
+                    <div class="space-y-6">
+                        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=600" onload="handleImageLoad(this)" class="w-full h-48 rounded-3xl object-cover shadow-sm" />
+                        <div class="bg-white rounded-[32px] border border-slate-100 overflow-hidden shadow-sm">
+                            ${content.shuttle.map(item => `
+                                <div class="flex items-center justify-between p-5 border-b last:border-0 border-slate-100">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="w-2.5 h-2.5 bg-lodge-teal rounded-full shadow-sm"></div>
+                                        <span class="font-bold text-slate-800 text-sm">${item.time}</span>
+                                    </div>
+                                    <span class="text-[11px] text-slate-500 font-bold uppercase tracking-wide text-right">${item.route}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <button onclick="window.open('https://wa.me/${APP_CONFIG.contacts.whatsapp}?text=Book Private Shuttle')" class="w-full py-5 bg-lodge-teal text-white rounded-3xl font-black shadow-lg shadow-sky-50 active:scale-95 transition-all">Book Private Taxi</button>
+                    </div>
+                `;
+            } else if (state.detailModal === 'departments') {
+                title = t.deptDirectory;
+                body = `
+                    <div class="space-y-5">
+                        <div class="bg-white rounded-[32px] border border-slate-100 overflow-hidden shadow-sm">
+                            ${content.departments.map(item => `
+                                <div class="flex items-center justify-between p-5 border-b last:border-0 border-slate-100">
+                                    <span class="font-bold text-slate-700 text-sm">${item.name}</span>
+                                    <div class="flex items-center space-x-3 bg-slate-50 px-4 py-2.5 rounded-2xl border border-slate-100">
+                                        <i data-lucide="phone" class="text-lodge-teal" size="14"></i>
+                                        <span class="font-mono font-black text-lodge-teal text-sm">${item.ext}</span>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            return `
+                <div class="fixed inset-0 z-[200] bg-white flex flex-col animate-slide-up">
+                    <div class="p-6 flex items-center justify-between border-b border-slate-100 bg-white sticky top-0 z-[210]">
+                        <div class="flex items-center space-x-4">
+                            <button onclick="setDetailModal(null)" class="p-2 -ml-2 rounded-full active:bg-slate-50 transition-colors">
+                                <i data-lucide="chevron-left" size="24" class="text-lodge-teal"></i>
+                            </button>
+                            <h2 class="text-xl font-bold text-slate-800">${title}</h2>
+                        </div>
+                        <button onclick="setDetailModal(null)" class="text-[10px] font-black text-slate-400 uppercase tracking-widest">${t.close}</button>
+                    </div>
+                    <div class="flex-1 overflow-y-auto p-6 bg-slate-50/50">
+                        ${body}
+                    </div>
+                </div>
+            `;
+        }
+
+        function render() {
+            let html = '';
+            switch(state.view) {
+                case 'language': html = renderLanguage(); break;
+                case 'landing':  html = renderLanding(); break;
+                case 'capture':  html = renderCapture(); break;
+                case 'wifi':     html = renderWifi(); break;
+                case 'portal':   html = renderPortal(); break;
+                default:         html = renderLanguage(); break;
+            }
+            appContainer.innerHTML = html;
+            lucide.createIcons();
+        }
+
+        window.onload = render;
+    </script>
+</body>
+</html>
