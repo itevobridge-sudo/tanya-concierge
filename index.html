@@ -127,64 +127,54 @@
             activities: {
                 provider: "Heritage Expeditions Africa",
                 tagline: "Dream. Explore. Discover…",
+                sourceUrl: "https://www.heritageexpeditionsafrica.com/destinations/victoria-falls",
+                note: "Tap any activity to view full details and book directly on Heritage Expeditions Africa's site. Prices are per person and were last checked against heritageexpeditionsafrica.com — update this list here in config.json whenever their pricing changes.",
                 bannerImage: "https://images.unsplash.com/photo-1604537466158-719b1972edd8?auto=format&fit=crop&q=80&w=1200",
-                sectionImages: { adrenaline: "", safari: "", toursAndTransfers: "", helicopter: "" },
-                combos: [
-                    { name: "Zambezi Game Drive + Standard Sunset Cruise", price: "US$130 per person", note: "Including park fees", desc: "A combo that blends wild game viewing with a tranquil sunset cruise on the mighty Zambezi River.", img: "" },
-                    { name: "Flight of Angels + Game Drive", price: "US$270 per person", note: "Including park fees", desc: "Soar above the Falls on a 12–13 minute helicopter flight, then continue with a 3-hour game drive.", img: "" },
-                    { name: "Flight of Angels + Standard Sunset Cruise", price: "US$250 per person", note: "Including park fees", desc: "An aerial view of the Falls, followed by a 2-hour sunset cruise on the Zambezi.", img: "" },
-                    { name: "Flight of Angels + Standard Sunset Cruise + Game Drive", price: "US$310 per person", note: "Including park fees", desc: "The ultimate full-day combo: helicopter flight, game drive and sunset river cruise.", img: "" }
+                categories: [
+                    { id: "cruises", label: "Cruises" },
+                    { id: "flights", label: "Flights & Helicopter" },
+                    { id: "adrenaline", label: "Adrenaline" },
+                    { id: "safari", label: "Safari & Wildlife" },
+                    { id: "tours", label: "Tours & Transfers" }
                 ],
-                riverAndAir: [
-                    { name: "Zambezi Game Drive", price: "US$83 per person", note: "Excluding park fees", desc: "A thrilling three-hour game drive in Zambezi National Park.", img: "" },
-                    { name: "Zambezi Standard Sunset Cruise", price: "US$52 per person", note: "Excluding park fees", desc: "Glide along the Zambezi at sunset, spotting hippo, crocodile and birdlife.", img: "" },
-                    { name: "Flight of Angels", price: "US$210 per person", note: "Including park fees, drinks and snacks", desc: "A 12–13 minute helicopter flight over the Falls.", img: "" },
-                    { name: "Zambezi Dinner Cruise", price: "US$122 per person", note: "Including transfer and park fees", desc: "Exceptional dining paired with breathtaking Zambezi scenery.", img: "" },
-                    { name: "The Boma Dinner and Drum Show", price: "US$75 per person", note: "Including transfers", desc: "Local cuisine, dance and interactive drumming.", img: "" }
-                ],
-                adrenaline: [
-                    { name: "White Water Rafting", price: "US$174", parkFee: "US$12" },
-                    { name: "Bungee Jumping", price: "US$194", parkFee: "US$6" },
-                    { name: "Gorge Swing", price: "US$134", parkFee: "US$6" },
-                    { name: "Tandem Gorge Swing", price: "US$201", parkFee: "US$6" },
-                    { name: "Zip Line", price: "US$108", parkFee: "US$6" },
-                    { name: "Tandem Zip Line", price: "US$162", parkFee: "US$6" },
-                    { name: "Flying Fox", price: "US$69", parkFee: "US$6" },
-                    { name: "Canopy Tour", price: "US$81", parkFee: "US$6" },
-                    { name: "High Wire Pass", price: "US$208", parkFee: "US$6" },
-                    { name: "Quad Bike Tour", price: "US$90", parkFee: "—" },
-                    { name: "Adventure Jet Boat", price: "US$141", parkFee: "US$10" },
-                    { name: "Rafting & Gorge Swing", price: "US$274", parkFee: "US$18" }
-                ],
-                safari: [
-                    { name: "Game Drive Zambezi National Park", price: "US$83", parkFee: "Int $16 / SADC $14 / Local $6" },
-                    { name: "Safari Game Walk", price: "US$132", parkFee: "US$18" },
-                    { name: "Elephant Encounter", price: "US$169", parkFee: "US$24" },
-                    { name: "Chobe Day Trip", price: "US$178", parkFee: "US$20" },
-                    { name: "Lion Walk", price: "US$160", parkFee: "US$10" },
-                    { name: "Cheetah Walk", price: "US$160", parkFee: "US$10" },
-                    { name: "Horse Back Safari", price: "US$171", parkFee: "US$30" },
-                    { name: "Game Drive Private Reserve", price: "US$159", parkFee: "US$18" },
-                    { name: "Night Game Drive + Bush Dinner", price: "US$159", parkFee: "US$18" },
-                    { name: "Dinner Game Drive, Zambezi National Park", price: "US$216", parkFee: "US$10" },
-                    { name: "Bush Dinner", price: "US$216", parkFee: "US$10" },
-                    { name: "Elephant Ride", price: "US$160", parkFee: "US$10" }
-                ],
-                toursAndTransfers: [
-                    { name: "Traditional Village Tour", price: "US$70 per person", note: "Park fees: Int $32, SADC $35" },
-                    { name: "Guided Tour of the Falls", price: "US$32 per person", note: "Park fees: SADC $35" },
-                    { name: "Boma Dinner", price: "US$75 per person", note: "Transfers included, excluding drinks" },
-                    { name: "Transfer – Livingstone Airport", price: "US$55 per person one way", note: "US$27 per person sharing one way" },
-                    { name: "Transfer – Kasane Airport", price: "US$100 per person one way", note: "US$50 per person sharing one way" },
-                    { name: "Transfer – Victoria Falls Int'l Airport", price: "US$15 per person one way", note: "US$10 per person sharing one way" },
-                    { name: "Victoria Falls Town Shuttle", price: "US$30 per person one way", note: "US$10 per person sharing one way" },
-                    { name: "Bamba Tram – Sunrise Run", price: "US$76 per person" },
-                    { name: "Victoria Falls Bike / Bamba Bike", price: "US$61 per person" },
-                    { name: "Simunye Theatre", price: "US$58 per person", note: "Excluding transfers" }
-                ],
-                helicopter: [
-                    { name: "Helicopter Flight – 22 minutes", price: "US$321" },
-                    { name: "Zambezi Spectacular – 25 minutes", price: "US$379" }
+                items: [
+                    { name: "Traditional Village Tour", duration: "", price: "US$70", category: "tours", url: "https://www.heritageexpeditionsafrica.com/tour/traditional-village-tour" },
+                    { name: "Guided Tour of the Falls", duration: "", price: "US$32", category: "tours", url: "https://www.heritageexpeditionsafrica.com/tour/guided-tour-of-the-falls" },
+                    { name: "Zambezi Royal Cruise", duration: "2h", price: "US$102", category: "cruises", url: "https://www.heritageexpeditionsafrica.com/activity/zambezi-royal-cruise" },
+                    { name: "Gorge Swing", duration: "20 min", price: "US$134", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/gorge-swing" },
+                    { name: "Quadbikes Tour", duration: "1h", price: "US$60", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/quadbikes-tour" },
+                    { name: "Safari Game Walk", duration: "3h", price: "US$132", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/safari-game-walk" },
+                    { name: "Village Tour", duration: "3h", price: "US$130", category: "tours", url: "https://www.heritageexpeditionsafrica.com/activity/village-tour" },
+                    { name: "Sunset Cruise – Signature Deck (Zambezi Explorer)", duration: "2h", price: "US$110", category: "cruises", url: "https://www.heritageexpeditionsafrica.com/activity/sunset-cruise-signature-deck-cruise-zambezi-explorer" },
+                    { name: "Game Drive – Stanley & Livingstone Reserve, Night Drive & Bush Dinner", duration: "3h 30m", price: "US$216", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/game-drive-stanley-and-livingstone-private-reserve-night-drive-and-bush-dinner" },
+                    { name: "Bamba E-Bikes Tour", duration: "2h 30m", price: "US$61", category: "tours", url: "https://www.heritageexpeditionsafrica.com/activity/bamba-e-bikes-tour" },
+                    { name: "Zambezi Spectacular (Helicopter)", duration: "25–30 min", price: "US$329", category: "flights", url: "https://www.heritageexpeditionsafrica.com/activity/zambezi-spectacular" },
+                    { name: "Scenic Helicopter Rides", duration: "1h 30m", price: "US$174", category: "flights", url: "https://www.heritageexpeditionsafrica.com/activity/scenic-helicopter-rides" },
+                    { name: "Bamba Tram Sunrise", duration: "2h 30m", price: "US$76", category: "tours", url: "https://www.heritageexpeditionsafrica.com/activity/bamba-tram-sunrise" },
+                    { name: "Boma Dinner", duration: "2h 45m", price: "US$75", category: "tours", url: "https://www.heritageexpeditionsafrica.com/activity/boma-dinner" },
+                    { name: "Bungee Jumping", duration: "20 min", price: "US$194", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/bungee-jumping" },
+                    { name: "Flight of the Angels (13–15 min Helicopter)", duration: "15 min", price: "US$174", category: "flights", url: "https://www.heritageexpeditionsafrica.com/activity/helicopter-short-flight-flight-of-the-angels" },
+                    { name: "Scenic Gorge Flight (20–22 min)", duration: "22 min", price: "US$271", category: "flights", url: "https://www.heritageexpeditionsafrica.com/activity/scenic-gorge-flight" },
+                    { name: "Adventure Jet Boat", duration: "2h 30m", price: "US$141", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/adventure-jet-boat" },
+                    { name: "Rafting and Gorge Swing", duration: "7h 30m", price: "US$274", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/rafting-and-gorge-swing" },
+                    { name: "Game Drive – Zambezi National Park", duration: "2h", price: "US$83", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/game-drive-zambezi-national-park" },
+                    { name: "Lion Walk", duration: "2h 15m", price: "US$160", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/lion-walk" },
+                    { name: "Cheetah Walk", duration: "1h 45m", price: "US$160", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/cheetah-walk" },
+                    { name: "Riversong Luxury Cruise", duration: "2h", price: "US$100", category: "cruises", url: "https://www.heritageexpeditionsafrica.com/activity/riversong-luxury-cruise" },
+                    { name: "White-Water Rafting", duration: "7h 30m", price: "US$174", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/white-water-rafting" },
+                    { name: "Dinner Cruise", duration: "3h", price: "US$116", category: "cruises", url: "https://www.heritageexpeditionsafrica.com/activity/dinner-cruise" },
+                    { name: "Victoria Falls River Drift", duration: "3h 30m", price: "US$120", category: "cruises", url: "https://www.heritageexpeditionsafrica.com/activity/victoria-falls-river-drift" },
+                    { name: "Chobe Day Trip", duration: "12h", price: "US$178", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/chobe-day-trip" },
+                    { name: "Tandem Gorge Swing", duration: "20 min", price: "US$201", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/tandem-gorge-swing" },
+                    { name: "Tandem Zip Line", duration: "20 min", price: "US$162", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/tandem-zip-line" },
+                    { name: "Elephant Encounter", duration: "3h", price: "US$169", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/elephant-encounter" },
+                    { name: "Canopy Tour", duration: "20 min", price: "US$81", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/canopy-tour" },
+                    { name: "HEXA Bikes Hire", duration: "8h", price: "US$25", category: "tours", url: "https://www.heritageexpeditionsafrica.com/activity/hexa-bikes-hire" },
+                    { name: "Sunset Cruise – Luxury Deck (Zambezi Explorer)", duration: "2h", price: "US$69", category: "cruises", url: "https://www.heritageexpeditionsafrica.com/activity/sunset-cruise-luxury-deck-zambezi-explorer" },
+                    { name: "Standard Sunset Cruise", duration: "2h", price: "US$52", category: "cruises", url: "https://www.heritageexpeditionsafrica.com/activity/standard-sunset-cruise" },
+                    { name: "Flying Fox", duration: "20 min", price: "US$69", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/flying-fox" },
+                    { name: "Game Drive – Stanley & Livingstone Private Reserve", duration: "2h", price: "US$159", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/game-drive-stanley-and-livingstone-private-reserve" },
+                    { name: "Zip Line", duration: "20 min", price: "US$108", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/zip-line" }
                 ]
             },
             restaurant: {
@@ -335,22 +325,6 @@
         // --- Global State ---
         let CONFIG = null;
         let configError = false;
-        // Live activities fetched from /api/activities (a Vercel serverless
-        // function that pulls current pricing from Heritage Expeditions
-        // Africa's own website). Null until the fetch resolves; if it fails,
-        // stays null and the app falls back to CONFIG.activities from
-        // config.json instead. See /api/activities.js for details.
-        let LIVE_ACTIVITIES = null;
-        let liveActivitiesError = false;
-
-        const LIVE_TABS = [
-            { id: 'cruises', label: 'Cruises' },
-            { id: 'flights', label: 'Flights & Helicopter' },
-            { id: 'adrenaline', label: 'Adrenaline' },
-            { id: 'safari', label: 'Safari & Wildlife' },
-            { id: 'tours', label: 'Tours & Transfers' },
-            { id: 'other', label: 'More' }
-        ];
 
         let state = {
             view: 'loading',
@@ -359,8 +333,7 @@
             guestContact: '',
             detailModal: null,
             activeMenuTab: null,
-            activeActivityTab: 'combos',
-            activeLiveTab: 'cruises',
+            activeActivityTab: null,
             copyStatus: false
         };
 
@@ -372,11 +345,13 @@
             if (type === 'menu' && !state.activeMenuTab) {
                 state.activeMenuTab = CONFIG.restaurant.categories[0].id;
             }
+            if (type === 'activities' && !state.activeActivityTab) {
+                state.activeActivityTab = CONFIG.activities.categories[0].id;
+            }
             render();
         }
         function setMenuTab(id) { state.activeMenuTab = id; render(); }
         function setActivityTab(id) { state.activeActivityTab = id; render(); }
-        function setLiveTab(id) { state.activeLiveTab = id; render(); }
 
         function handleImageLoad(img) { img.classList.add('loaded'); }
         function handleImageError(img) {
@@ -634,18 +609,6 @@
             `;
         }
 
-        function priceRow(item, extraNoteKey) {
-            return `
-                <div class="flex items-center justify-between p-4 border-b last:border-0 border-slate-100">
-                    <span class="font-semibold text-slate-700 text-sm pr-3">${item.name}</span>
-                    <div class="text-right flex-shrink-0">
-                        <span class="font-black text-lodge-teal text-sm block">${item.price}</span>
-                        ${item[extraNoteKey] ? `<span class="text-[10px] text-slate-400">${extraNoteKey === 'parkFee' ? 'Park fee: ' + item.parkFee : item.note}</span>` : ''}
-                    </div>
-                </div>
-            `;
-        }
-
         function renderModal() {
             if (!state.detailModal) return '';
             const t = UI_TEXT.en;
@@ -699,27 +662,28 @@
                     <p class="text-[10px] text-slate-400 italic px-1 pt-6">${CONFIG.restaurant.allergyNote}</p>
                 `;
 
-            } else if (state.detailModal === 'activities' && LIVE_ACTIVITIES && LIVE_ACTIVITIES.length) {
+            } else if (state.detailModal === 'activities') {
                 title = t.localAttractions;
-                const activeId = state.activeLiveTab;
-                const grouped = {};
-                LIVE_TABS.forEach(tab => grouped[tab.id] = []);
-                LIVE_ACTIVITIES.forEach(item => {
-                    (grouped[item.category] || grouped.other).push(item);
-                });
-                const visibleTabs = LIVE_TABS.filter(tab => grouped[tab.id].length > 0);
-                const list = grouped[activeId] || [];
+                const act = CONFIG.activities;
+                const cats = act.categories;
+                const active = cats.find(c => c.id === state.activeActivityTab) || cats[0];
+                const list = act.items.filter(item => item.category === active.id);
 
                 body = `
+                    ${act.bannerImage ? `
+                        <div class="w-full h-40 overflow-hidden bg-slate-100 rounded-3xl shadow-sm mb-4">
+                            <img src="${act.bannerImage}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
+                        </div>
+                    ` : ''}
                     <div class="mb-4 p-4 bg-sky-50 rounded-2xl border border-sky-100 text-center">
-                        <p class="text-[10px] font-bold text-lodge-teal uppercase tracking-widest">Heritage Expeditions Africa</p>
-                        <p class="text-xs text-slate-500 italic">Live pricing, updated automatically</p>
+                        <p class="text-[10px] font-bold text-lodge-teal uppercase tracking-widest">${act.provider}</p>
+                        <p class="text-xs text-slate-500 italic">${act.tagline}</p>
                     </div>
                     <div class="sticky -top-6 -mx-6 px-6 pt-1 pb-3 bg-slate-50/95 backdrop-blur z-10 mb-4">
                         <div class="flex space-x-2 overflow-x-auto tab-scroll pb-1">
-                            ${visibleTabs.map(tab => `
-                                <button onclick="setLiveTab('${tab.id}')" class="flex-shrink-0 px-4 py-2 rounded-full text-xs font-bold border transition-all ${tab.id === activeId ? 'bg-lodge-teal text-white border-lodge-teal' : 'bg-white text-slate-500 border-slate-200'}">
-                                    ${tab.label}
+                            ${cats.map(c => `
+                                <button onclick="setActivityTab('${c.id}')" class="flex-shrink-0 px-4 py-2 rounded-full text-xs font-bold border transition-all ${c.id === active.id ? 'bg-lodge-teal text-white border-lodge-teal' : 'bg-white text-slate-500 border-slate-200'}">
+                                    ${c.label}
                                 </button>
                             `).join('')}
                         </div>
@@ -738,76 +702,7 @@
                             </button>
                         `).join('') : `<p class="p-6 text-sm text-slate-400 text-center">Nothing in this category right now.</p>`}
                     </div>
-                    <p class="text-[10px] text-slate-400 italic px-1 pt-4">Tap any activity to view full details and book directly with Heritage Expeditions Africa.</p>
-                    <button onclick="window.open('${waLink('Hello! I would like to book: ')}')" class="w-full mt-6 py-5 bg-lodge-teal text-white rounded-3xl font-black shadow-lg shadow-sky-50 active:scale-95 transition-all">${t.bookOnWhatsApp}</button>
-                `;
-
-            } else if (state.detailModal === 'activities') {
-                title = t.localAttractions;
-                const act = CONFIG.activities;
-                const tabs = [
-                    { id: 'combos', label: 'Combos' },
-                    { id: 'riverAndAir', label: 'Cruises & Flights' },
-                    { id: 'adrenaline', label: 'Adrenaline' },
-                    { id: 'safari', label: 'Safari' },
-                    { id: 'toursAndTransfers', label: 'Tours & Transfers' },
-                    { id: 'helicopter', label: 'Helicopter' }
-                ];
-                const activeId = state.activeActivityTab;
-                const list = act[activeId] || [];
-                const hasDesc = activeId === 'combos' || activeId === 'riverAndAir';
-                const noteKey = (activeId === 'adrenaline' || activeId === 'safari') ? 'parkFee' : 'note';
-
-                const sectionImg = act.sectionImages ? act.sectionImages[activeId] : '';
-                body = `
-                    ${act.bannerImage ? `
-                        <div class="w-full h-40 overflow-hidden bg-slate-100 rounded-3xl shadow-sm mb-4">
-                            <img src="${act.bannerImage}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
-                        </div>
-                    ` : ''}
-                    <div class="mb-4 p-4 bg-sky-50 rounded-2xl border border-sky-100 text-center">
-                        <p class="text-[10px] font-bold text-lodge-teal uppercase tracking-widest">${act.provider}</p>
-                        <p class="text-xs text-slate-500 italic">${act.tagline}</p>
-                    </div>
-                    <div class="sticky -top-6 -mx-6 px-6 pt-1 pb-3 bg-slate-50/95 backdrop-blur z-10 mb-4">
-                        <div class="flex space-x-2 overflow-x-auto tab-scroll pb-1">
-                            ${tabs.map(tab => `
-                                <button onclick="setActivityTab('${tab.id}')" class="flex-shrink-0 px-4 py-2 rounded-full text-xs font-bold border transition-all ${tab.id === activeId ? 'bg-lodge-teal text-white border-lodge-teal' : 'bg-white text-slate-500 border-slate-200'}">
-                                    ${tab.label}
-                                </button>
-                            `).join('')}
-                        </div>
-                    </div>
-                    ${hasDesc ? `
-                        <div class="space-y-4">
-                            ${list.map(item => `
-                                <div class="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm">
-                                    ${item.img ? `
-                                        <div class="w-full h-36 overflow-hidden bg-slate-100">
-                                            <img src="${item.img}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
-                                        </div>
-                                    ` : ''}
-                                    <div class="p-6">
-                                        <div class="flex justify-between items-start mb-2 gap-3">
-                                            <h4 class="font-bold text-slate-800 text-sm">${item.name}</h4>
-                                            <span class="text-[10px] bg-sky-50 text-lodge-teal px-3 py-1 rounded-full font-bold uppercase tracking-wider flex-shrink-0">${item.price}</span>
-                                        </div>
-                                        <p class="text-xs text-slate-500 leading-relaxed mb-1">${item.desc}</p>
-                                        <p class="text-[10px] text-slate-400 italic">${item.note}</p>
-                                    </div>
-                                </div>
-                            `).join('')}
-                        </div>
-                    ` : `
-                        ${sectionImg ? `
-                            <div class="w-full h-36 overflow-hidden bg-slate-100 rounded-3xl shadow-sm mb-4">
-                                <img src="${sectionImg}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
-                            </div>
-                        ` : ''}
-                        <div class="bg-white rounded-[32px] border border-slate-100 overflow-hidden shadow-sm">
-                            ${list.map(item => priceRow(item, noteKey)).join('')}
-                        </div>
-                    `}
+                    <p class="text-[10px] text-slate-400 italic px-1 pt-4">${act.note}</p>
                     <button onclick="window.open('${waLink('Hello! I would like to book: ')}')" class="w-full mt-6 py-5 bg-lodge-teal text-white rounded-3xl font-black shadow-lg shadow-sky-50 active:scale-95 transition-all">${t.bookOnWhatsApp}</button>
                 `;
 
@@ -894,25 +789,6 @@
             lucide.createIcons();
         }
 
-        async function loadLiveActivities() {
-            try {
-                const res = await fetch('/api/activities', { cache: 'no-store' });
-                if (!res.ok) throw new Error('activities API responded ' + res.status);
-                const data = await res.json();
-                if (!data.activities || !data.activities.length) throw new Error('empty activities payload');
-                LIVE_ACTIVITIES = data.activities;
-                state.activeLiveTab = LIVE_ACTIVITIES[0].category || 'cruises';
-            } catch (err) {
-                // Silent by design: this is expected whenever the app is
-                // previewed outside of Vercel (no /api routes available), or
-                // if Heritage's site is briefly unreachable. The curated
-                // activities in config.json cover this automatically.
-                console.warn('Live activities unavailable, using config.json fallback:', err.message);
-                liveActivitiesError = true;
-            }
-            render();
-        }
-
         async function loadConfig() {
             try {
                 const res = await fetch('./config.json', { cache: 'no-store' });
@@ -925,7 +801,6 @@
             }
             state.view = 'language';
             render();
-            loadLiveActivities();
         }
 
         window.onload = loadConfig;
