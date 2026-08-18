@@ -72,51 +72,259 @@
             hotel: {
                 name: "A'Zambezi River Lodge",
                 logoUrl: "https://i.ibb.co/Fqjz6r4V/azam-logo.jpg",
-                heroImage: "https://i.ibb.co/fV635h07/AZambezi-River-Lodge-poolside1.jpg?auto=format&fit=crop&q=80&w=1200"
+                heroImage: "https://i.ibb.co/fV635h07/AZambezi-River-Lodge-poolside1.jpg",
+                address: "308 Parkway Drive, Victoria Falls"
             },
-            wifi: { ssid: "AZambezi_Guest_WiFi", password: "RiverSideRelax" },
-            contacts: { whatsapp: "263772123456", frontDesk: "+263 13 44561" },
-            links: { heritage: "https://heritageexpeditionsafrica.com/" },
+            wifi: {
+                ssid: "Azambezi: Rainbow Guest",
+                password: "T6WQ4-MUYXZ"
+            },
+            contacts: {
+                whatsapp: "263772123456",
+                frontDesk: "+263 (8328) 44561-4",
+                email: "reservations.azambezi@rtg.co.zw"
+            },
+            links: {
+                heritage: "https://heritageexpeditionsafrica.com/"
+            },
             sponsored: {
-                title: "24-Hour Medical Care",
+                title: {
+                    en: "24-Hour Medical Care",
+                    fr: "Soins médicaux 24h/24",
+                    de: "24-Stunden-Notarztdienst",
+                    zh: "24小时医疗服务"
+                },
                 company: "Victoria Falls Medical Centre",
                 image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=400",
                 link: "https://example.com/medical-centre"
             },
-            checkout: "Departure: 11:00 AM",
+            checkout: {
+                en: "Departure: 11:00 AM",
+                fr: "Départ : 11h00",
+                de: "Abreise: 11:00 Uhr",
+                zh: "退房时间：上午11:00"
+            },
             departments: [
-                { name: "Reception", ext: "41322 / 41321" },
-                { name: "General Manager", ext: "41311" },
-                { name: "Guest Relations", ext: "41312" },
-                { name: "Accountant", ext: "41314" },
-                { name: "Front Office Manager", ext: "399" },
-                { name: "F&B Manager", ext: "398" },
-                { name: "F&B Control", ext: "394" },
-                { name: "HR", ext: "41332" },
-                { name: "Bar", ext: "41333" },
-                { name: "Restaurant", ext: "41335" },
-                { name: "Maintenance", ext: "338" },
-                { name: "Housekeeping", ext: "305" },
-                { name: "Stores", ext: "342" },
-                { name: "Accounts – Justin / Fadzai", ext: "41339" },
-                { name: "Accounts – Rutendo", ext: "397" },
-                { name: "Security Desk", ext: "354" },
-                { name: "Security – Gate", ext: "396" },
-                { name: "Laundry", ext: "337" },
-                { name: "Kitchen", ext: "340" },
-                { name: "Heritage Desk", ext: "41340" },
-                { name: "Reservations", ext: "41301" }
+                {
+                    name: {
+                        en: "Reception",
+                        fr: "Réception",
+                        de: "Rezeption",
+                        zh: "前台"
+                    },
+                    ext: "41322 / 41321"
+                },
+                {
+                    name: {
+                        en: "General Manager",
+                        fr: "Directeur Général",
+                        de: "Generaldirektor",
+                        zh: "总经理"
+                    },
+                    ext: "41311"
+                },
+                {
+                    name: {
+                        en: "Guest Relations",
+                        fr: "Relations Clients",
+                        de: "Gästebetreuung",
+                        zh: "客户关系部"
+                    },
+                    ext: "41312"
+                },
+                {
+                    name: {
+                        en: "Accountant",
+                        fr: "Comptable",
+                        de: "Buchhalter",
+                        zh: "会计部"
+                    },
+                    ext: "41314"
+                },
+                {
+                    name: {
+                        en: "Front Office Manager",
+                        fr: "Chef de Réception",
+                        de: "Empfangsleiter",
+                        zh: "前厅经理"
+                    },
+                    ext: "399"
+                },
+                {
+                    name: {
+                        en: "F&B Manager",
+                        fr: "Directeur Restauration",
+                        de: "F&B-Manager",
+                        zh: "餐饮部经理"
+                    },
+                    ext: "398"
+                },
+                {
+                    name: {
+                        en: "F&B Control",
+                        fr: "Contrôle Restauration",
+                        de: "F&B-Kontrolle",
+                        zh: "餐饮成本控制"
+                    },
+                    ext: "394"
+                },
+                {
+                    name: {
+                        en: "HR",
+                        fr: "Ressources Humaines",
+                        de: "Personalabteilung",
+                        zh: "人力资源部"
+                    },
+                    ext: "41332"
+                },
+                {
+                    name: {
+                        en: "Bar",
+                        fr: "Bar",
+                        de: "Bar",
+                        zh: "酒吧"
+                    },
+                    ext: "41333"
+                },
+                {
+                    name: {
+                        en: "Restaurant",
+                        fr: "Restaurant",
+                        de: "Restaurant",
+                        zh: "餐厅"
+                    },
+                    ext: "41335"
+                },
+                {
+                    name: {
+                        en: "Maintenance",
+                        fr: "Maintenance",
+                        de: "Wartung",
+                        zh: "维修部"
+                    },
+                    ext: "338"
+                },
+                {
+                    name: {
+                        en: "Housekeeping",
+                        fr: "Entretien Ménager",
+                        de: "Housekeeping",
+                        zh: "客房部"
+                    },
+                    ext: "305"
+                },
+                {
+                    name: {
+                        en: "Stores",
+                        fr: "Magasin",
+                        de: "Lager",
+                        zh: "仓库"
+                    },
+                    ext: "342"
+                },
+                {
+                    name: {
+                        en: "Accounts – Justin / Fadzai",
+                        fr: "Comptabilité – Justin / Fadzai",
+                        de: "Buchhaltung – Justin / Fadzai",
+                        zh: "账务部 – Justin / Fadzai"
+                    },
+                    ext: "41339"
+                },
+                {
+                    name: {
+                        en: "Accounts – Rutendo",
+                        fr: "Comptabilité – Rutendo",
+                        de: "Buchhaltung – Rutendo",
+                        zh: "账务部 – Rutendo"
+                    },
+                    ext: "397"
+                },
+                {
+                    name: {
+                        en: "Security Desk",
+                        fr: "Poste de Sécurité",
+                        de: "Sicherheitsdienst",
+                        zh: "安保处"
+                    },
+                    ext: "354"
+                },
+                {
+                    name: {
+                        en: "Security – Gate",
+                        fr: "Sécurité – Portail",
+                        de: "Sicherheit – Tor",
+                        zh: "安保 – 大门"
+                    },
+                    ext: "396"
+                },
+                {
+                    name: {
+                        en: "Laundry",
+                        fr: "Blanchisserie",
+                        de: "Wäscherei",
+                        zh: "洗衣房"
+                    },
+                    ext: "337"
+                },
+                {
+                    name: {
+                        en: "Kitchen",
+                        fr: "Cuisine",
+                        de: "Küche",
+                        zh: "厨房"
+                    },
+                    ext: "340"
+                },
+                {
+                    name: {
+                        en: "Heritage Desk",
+                        fr: "Bureau Heritage",
+                        de: "Heritage-Schalter",
+                        zh: "Heritage服务台"
+                    },
+                    ext: "41340"
+                },
+                {
+                    name: {
+                        en: "Reservations",
+                        fr: "Réservations",
+                        de: "Reservierungen",
+                        zh: "预订部"
+                    },
+                    ext: "41301"
+                }
             ],
             shuttle: {
                 heading: "Shuttle Bus Timetable",
-                bannerImage: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=1200",
-                route: ["A'Zambezi River Lodge", "Victoria Falls Rainbow Hotel", "Marula Café / Batoka Safaris", "Rainforest"],
+                bannerImage: "https://i.ibb.co/kgR6b9YR/azam-shuttle.jpg",
+                route: [
+                    "A'Zambezi River Lodge",
+                    "Victoria Falls Rainbow Hotel",
+                    "Marula Café / Batoka Safaris",
+                    "Rainforest"
+                ],
                 schedule: [
-                    { toRainforest: "09:05", fromRainforest: "09:50" },
-                    { toRainforest: "11:05", fromRainforest: "11:50" },
-                    { toRainforest: "12:05", fromRainforest: "12:50" },
-                    { toRainforest: "13:05", fromRainforest: "13:50" },
-                    { toRainforest: "16:05", fromRainforest: "16:50" }
+                    {
+                        toRainforest: "09:05",
+                        fromRainforest: "09:50"
+                    },
+                    {
+                        toRainforest: "11:05",
+                        fromRainforest: "11:50"
+                    },
+                    {
+                        toRainforest: "12:05",
+                        fromRainforest: "12:50"
+                    },
+                    {
+                        toRainforest: "13:05",
+                        fromRainforest: "13:50"
+                    },
+                    {
+                        toRainforest: "16:05",
+                        fromRainforest: "16:50"
+                    }
                 ],
                 notes: [
                     "Pick-up and drop-off points: Marula Café / Batoka Safaris, and The Rainforest.",
@@ -126,165 +334,1538 @@
             },
             activities: {
                 provider: "Heritage Expeditions Africa",
-                tagline: "Dream. Explore. Discover…",
+                tagline: {
+                    en: "Dream. Explore. Discover…",
+                    fr: "Rêvez. Explorez. Découvrez…",
+                    de: "Träumen. Erkunden. Entdecken…",
+                    zh: "梦想·探索·发现…"
+                },
                 sourceUrl: "https://www.heritageexpeditionsafrica.com/destinations/victoria-falls",
-                note: "Tap any activity to view full details and book directly on Heritage Expeditions Africa's site. Prices are per person and were last checked against heritageexpeditionsafrica.com — update this list here in config.json whenever their pricing changes.",
-                bannerImage: "https://images.unsplash.com/photo-1604537466158-719b1972edd8?auto=format&fit=crop&q=80&w=1200",
+                note: {
+                    en: "Tap any activity to view full details and book directly on Heritage Expeditions Africa's site. Prices are per person and were last checked against heritageexpeditionsafrica.com — update this list here in config.json whenever their pricing changes.",
+                    fr: "Appuyez sur une activité pour voir tous les détails et réserver directement sur le site de Heritage Expeditions Africa. Les prix sont par personne et ont été vérifiés sur heritageexpeditionsafrica.com — mettez à jour cette liste dans config.json en cas de changement de tarifs.",
+                    de: "Tippen Sie auf eine Aktivität, um alle Details zu sehen und direkt auf der Website von Heritage Expeditions Africa zu buchen. Die Preise verstehen sich pro Person und wurden zuletzt auf heritageexpeditionsafrica.com geprüft — aktualisieren Sie diese Liste in config.json, sobald sich die Preise ändern.",
+                    zh: "点击任意活动查看详情，并直接在Heritage Expeditions Africa官网上预订。价格为每人价格，最近一次核对时间以heritageexpeditionsafrica.com为准——如价格变动，请在config.json中更新此列表。"
+                },
+                bannerImage: "https://i.ibb.co/S7xJBfbb/azam-activities.webp",
                 categories: [
-                    { id: "cruises", label: "Cruises" },
-                    { id: "flights", label: "Flights & Helicopter" },
-                    { id: "adrenaline", label: "Adrenaline" },
-                    { id: "safari", label: "Safari & Wildlife" },
-                    { id: "tours", label: "Tours & Transfers" }
+                    {
+                        id: "cruises",
+                        label: {
+                            en: "Cruises",
+                            fr: "Croisières",
+                            de: "Kreuzfahrten",
+                            zh: "游船"
+                        }
+                    },
+                    {
+                        id: "flights",
+                        label: {
+                            en: "Flights & Helicopter",
+                            fr: "Vols & Hélicoptère",
+                            de: "Flüge & Helikopter",
+                            zh: "飞行与直升机"
+                        }
+                    },
+                    {
+                        id: "adrenaline",
+                        label: {
+                            en: "Adrenaline",
+                            fr: "Adrénaline",
+                            de: "Adrenalin",
+                            zh: "极限刺激"
+                        }
+                    },
+                    {
+                        id: "safari",
+                        label: {
+                            en: "Safari & Wildlife",
+                            fr: "Safari & Faune",
+                            de: "Safari & Tierwelt",
+                            zh: "野生动物游猎"
+                        }
+                    },
+                    {
+                        id: "tours",
+                        label: {
+                            en: "Tours & Transfers",
+                            fr: "Excursions & Transferts",
+                            de: "Touren & Transfers",
+                            zh: "游览与接送服务"
+                        }
+                    }
                 ],
                 items: [
-                    { name: "Traditional Village Tour", duration: "", price: "US$70", category: "tours", url: "https://www.heritageexpeditionsafrica.com/tour/traditional-village-tour" },
-                    { name: "Guided Tour of the Falls", duration: "", price: "US$32", category: "tours", url: "https://www.heritageexpeditionsafrica.com/tour/guided-tour-of-the-falls" },
-                    { name: "Zambezi Royal Cruise", duration: "2h", price: "US$102", category: "cruises", url: "https://www.heritageexpeditionsafrica.com/activity/zambezi-royal-cruise" },
-                    { name: "Gorge Swing", duration: "20 min", price: "US$134", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/gorge-swing" },
-                    { name: "Quadbikes Tour", duration: "1h", price: "US$60", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/quadbikes-tour" },
-                    { name: "Safari Game Walk", duration: "3h", price: "US$132", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/safari-game-walk" },
-                    { name: "Village Tour", duration: "3h", price: "US$130", category: "tours", url: "https://www.heritageexpeditionsafrica.com/activity/village-tour" },
-                    { name: "Sunset Cruise – Signature Deck (Zambezi Explorer)", duration: "2h", price: "US$110", category: "cruises", url: "https://www.heritageexpeditionsafrica.com/activity/sunset-cruise-signature-deck-cruise-zambezi-explorer" },
-                    { name: "Game Drive – Stanley & Livingstone Reserve, Night Drive & Bush Dinner", duration: "3h 30m", price: "US$216", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/game-drive-stanley-and-livingstone-private-reserve-night-drive-and-bush-dinner" },
-                    { name: "Bamba E-Bikes Tour", duration: "2h 30m", price: "US$61", category: "tours", url: "https://www.heritageexpeditionsafrica.com/activity/bamba-e-bikes-tour" },
-                    { name: "Zambezi Spectacular (Helicopter)", duration: "25–30 min", price: "US$329", category: "flights", url: "https://www.heritageexpeditionsafrica.com/activity/zambezi-spectacular" },
-                    { name: "Scenic Helicopter Rides", duration: "1h 30m", price: "US$174", category: "flights", url: "https://www.heritageexpeditionsafrica.com/activity/scenic-helicopter-rides" },
-                    { name: "Bamba Tram Sunrise", duration: "2h 30m", price: "US$76", category: "tours", url: "https://www.heritageexpeditionsafrica.com/activity/bamba-tram-sunrise" },
-                    { name: "Boma Dinner", duration: "2h 45m", price: "US$75", category: "tours", url: "https://www.heritageexpeditionsafrica.com/activity/boma-dinner" },
-                    { name: "Bungee Jumping", duration: "20 min", price: "US$194", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/bungee-jumping" },
-                    { name: "Flight of the Angels (13–15 min Helicopter)", duration: "15 min", price: "US$174", category: "flights", url: "https://www.heritageexpeditionsafrica.com/activity/helicopter-short-flight-flight-of-the-angels" },
-                    { name: "Scenic Gorge Flight (20–22 min)", duration: "22 min", price: "US$271", category: "flights", url: "https://www.heritageexpeditionsafrica.com/activity/scenic-gorge-flight" },
-                    { name: "Adventure Jet Boat", duration: "2h 30m", price: "US$141", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/adventure-jet-boat" },
-                    { name: "Rafting and Gorge Swing", duration: "7h 30m", price: "US$274", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/rafting-and-gorge-swing" },
-                    { name: "Game Drive – Zambezi National Park", duration: "2h", price: "US$83", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/game-drive-zambezi-national-park" },
-                    { name: "Lion Walk", duration: "2h 15m", price: "US$160", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/lion-walk" },
-                    { name: "Cheetah Walk", duration: "1h 45m", price: "US$160", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/cheetah-walk" },
-                    { name: "Riversong Luxury Cruise", duration: "2h", price: "US$100", category: "cruises", url: "https://www.heritageexpeditionsafrica.com/activity/riversong-luxury-cruise" },
-                    { name: "White-Water Rafting", duration: "7h 30m", price: "US$174", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/white-water-rafting" },
-                    { name: "Dinner Cruise", duration: "3h", price: "US$116", category: "cruises", url: "https://www.heritageexpeditionsafrica.com/activity/dinner-cruise" },
-                    { name: "Victoria Falls River Drift", duration: "3h 30m", price: "US$120", category: "cruises", url: "https://www.heritageexpeditionsafrica.com/activity/victoria-falls-river-drift" },
-                    { name: "Chobe Day Trip", duration: "12h", price: "US$178", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/chobe-day-trip" },
-                    { name: "Tandem Gorge Swing", duration: "20 min", price: "US$201", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/tandem-gorge-swing" },
-                    { name: "Tandem Zip Line", duration: "20 min", price: "US$162", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/tandem-zip-line" },
-                    { name: "Elephant Encounter", duration: "3h", price: "US$169", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/elephant-encounter" },
-                    { name: "Canopy Tour", duration: "20 min", price: "US$81", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/canopy-tour" },
-                    { name: "HEXA Bikes Hire", duration: "8h", price: "US$25", category: "tours", url: "https://www.heritageexpeditionsafrica.com/activity/hexa-bikes-hire" },
-                    { name: "Sunset Cruise – Luxury Deck (Zambezi Explorer)", duration: "2h", price: "US$69", category: "cruises", url: "https://www.heritageexpeditionsafrica.com/activity/sunset-cruise-luxury-deck-zambezi-explorer" },
-                    { name: "Standard Sunset Cruise", duration: "2h", price: "US$52", category: "cruises", url: "https://www.heritageexpeditionsafrica.com/activity/standard-sunset-cruise" },
-                    { name: "Flying Fox", duration: "20 min", price: "US$69", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/flying-fox" },
-                    { name: "Game Drive – Stanley & Livingstone Private Reserve", duration: "2h", price: "US$159", category: "safari", url: "https://www.heritageexpeditionsafrica.com/activity/game-drive-stanley-and-livingstone-private-reserve" },
-                    { name: "Zip Line", duration: "20 min", price: "US$108", category: "adrenaline", url: "https://www.heritageexpeditionsafrica.com/activity/zip-line" }
-                ]
+                    {
+                        name: "Traditional Village Tour",
+                        duration: "",
+                        price: "US$70",
+                        category: "tours",
+                        url: "https://www.heritageexpeditionsafrica.com/tour/traditional-village-tour"
+                    },
+                    {
+                        name: "Guided Tour of the Falls",
+                        duration: "",
+                        price: "US$32",
+                        category: "tours",
+                        url: "https://www.heritageexpeditionsafrica.com/tour/guided-tour-of-the-falls"
+                    },
+                    {
+                        name: "Zambezi Royal Cruise",
+                        duration: "2h",
+                        price: "US$102",
+                        category: "cruises",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/zambezi-royal-cruise"
+                    },
+                    {
+                        name: "Gorge Swing",
+                        duration: "20 min",
+                        price: "US$134",
+                        category: "adrenaline",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/gorge-swing"
+                    },
+                    {
+                        name: "Quadbikes Tour",
+                        duration: "1h",
+                        price: "US$60",
+                        category: "adrenaline",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/quadbikes-tour"
+                    },
+                    {
+                        name: "Safari Game Walk",
+                        duration: "3h",
+                        price: "US$132",
+                        category: "safari",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/safari-game-walk"
+                    },
+                    {
+                        name: "Village Tour",
+                        duration: "3h",
+                        price: "US$130",
+                        category: "tours",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/village-tour"
+                    },
+                    {
+                        name: "Sunset Cruise – Signature Deck (Zambezi Explorer)",
+                        duration: "2h",
+                        price: "US$110",
+                        category: "cruises",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/sunset-cruise-signature-deck-cruise-zambezi-explorer"
+                    },
+                    {
+                        name: "Game Drive – Stanley & Livingstone Reserve, Night Drive & Bush Dinner",
+                        duration: "3h 30m",
+                        price: "US$216",
+                        category: "safari",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/game-drive-stanley-and-livingstone-private-reserve-night-drive-and-bush-dinner"
+                    },
+                    {
+                        name: "Bamba E-Bikes Tour",
+                        duration: "2h 30m",
+                        price: "US$61",
+                        category: "tours",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/bamba-e-bikes-tour"
+                    },
+                    {
+                        name: "Zambezi Spectacular (Helicopter)",
+                        duration: "25–30 min",
+                        price: "US$329",
+                        category: "flights",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/zambezi-spectacular"
+                    },
+                    {
+                        name: "Scenic Helicopter Rides",
+                        duration: "1h 30m",
+                        price: "US$174",
+                        category: "flights",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/scenic-helicopter-rides"
+                    },
+                    {
+                        name: "Bamba Tram Sunrise",
+                        duration: "2h 30m",
+                        price: "US$76",
+                        category: "tours",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/bamba-tram-sunrise"
+                    },
+                    {
+                        name: "Boma Dinner",
+                        duration: "2h 45m",
+                        price: "US$75",
+                        category: "tours",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/boma-dinner"
+                    },
+                    {
+                        name: "Bungee Jumping",
+                        duration: "20 min",
+                        price: "US$194",
+                        category: "adrenaline",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/bungee-jumping"
+                    },
+                    {
+                        name: "Flight of the Angels (13–15 min Helicopter)",
+                        duration: "15 min",
+                        price: "US$174",
+                        category: "flights",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/helicopter-short-flight-flight-of-the-angels"
+                    },
+                    {
+                        name: "Scenic Gorge Flight (20–22 min)",
+                        duration: "22 min",
+                        price: "US$271",
+                        category: "flights",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/scenic-gorge-flight"
+                    },
+                    {
+                        name: "Adventure Jet Boat",
+                        duration: "2h 30m",
+                        price: "US$141",
+                        category: "adrenaline",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/adventure-jet-boat"
+                    },
+                    {
+                        name: "Rafting and Gorge Swing",
+                        duration: "7h 30m",
+                        price: "US$274",
+                        category: "adrenaline",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/rafting-and-gorge-swing"
+                    },
+                    {
+                        name: "Game Drive – Zambezi National Park",
+                        duration: "2h",
+                        price: "US$83",
+                        category: "safari",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/game-drive-zambezi-national-park"
+                    },
+                    {
+                        name: "Lion Walk",
+                        duration: "2h 15m",
+                        price: "US$160",
+                        category: "safari",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/lion-walk"
+                    },
+                    {
+                        name: "Cheetah Walk",
+                        duration: "1h 45m",
+                        price: "US$160",
+                        category: "safari",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/cheetah-walk"
+                    },
+                    {
+                        name: "Riversong Luxury Cruise",
+                        duration: "2h",
+                        price: "US$100",
+                        category: "cruises",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/riversong-luxury-cruise"
+                    },
+                    {
+                        name: "White-Water Rafting",
+                        duration: "7h 30m",
+                        price: "US$174",
+                        category: "adrenaline",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/white-water-rafting"
+                    },
+                    {
+                        name: "Dinner Cruise",
+                        duration: "3h",
+                        price: "US$116",
+                        category: "cruises",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/dinner-cruise"
+                    },
+                    {
+                        name: "Victoria Falls River Drift",
+                        duration: "3h 30m",
+                        price: "US$120",
+                        category: "cruises",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/victoria-falls-river-drift"
+                    },
+                    {
+                        name: "Chobe Day Trip",
+                        duration: "12h",
+                        price: "US$178",
+                        category: "safari",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/chobe-day-trip"
+                    },
+                    {
+                        name: "Tandem Gorge Swing",
+                        duration: "20 min",
+                        price: "US$201",
+                        category: "adrenaline",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/tandem-gorge-swing"
+                    },
+                    {
+                        name: "Tandem Zip Line",
+                        duration: "20 min",
+                        price: "US$162",
+                        category: "adrenaline",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/tandem-zip-line"
+                    },
+                    {
+                        name: "Elephant Encounter",
+                        duration: "3h",
+                        price: "US$169",
+                        category: "safari",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/elephant-encounter"
+                    },
+                    {
+                        name: "Canopy Tour",
+                        duration: "20 min",
+                        price: "US$81",
+                        category: "adrenaline",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/canopy-tour"
+                    },
+                    {
+                        name: "HEXA Bikes Hire",
+                        duration: "8h",
+                        price: "US$25",
+                        category: "tours",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/hexa-bikes-hire"
+                    },
+                    {
+                        name: "Sunset Cruise – Luxury Deck (Zambezi Explorer)",
+                        duration: "2h",
+                        price: "US$69",
+                        category: "cruises",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/sunset-cruise-luxury-deck-zambezi-explorer"
+                    },
+                    {
+                        name: "Standard Sunset Cruise",
+                        duration: "2h",
+                        price: "US$52",
+                        category: "cruises",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/standard-sunset-cruise"
+                    },
+                    {
+                        name: "Flying Fox",
+                        duration: "20 min",
+                        price: "US$69",
+                        category: "adrenaline",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/flying-fox"
+                    },
+                    {
+                        name: "Game Drive – Stanley & Livingstone Private Reserve",
+                        duration: "2h",
+                        price: "US$159",
+                        category: "safari",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/game-drive-stanley-and-livingstone-private-reserve"
+                    },
+                    {
+                        name: "Zip Line",
+                        duration: "20 min",
+                        price: "US$108",
+                        category: "adrenaline",
+                        url: "https://www.heritageexpeditionsafrica.com/activity/zip-line"
+                    }
+                ],
+                itemTranslationNote: "Activity names stay in English since booking happens on Heritage Expeditions Africa's own English-language site."
             },
             restaurant: {
                 name: "Rainbow Delights",
                 bannerImage: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200",
-                allergyNote: "To our guests with food sensitivities or allergies: we cannot ensure that menu items do not contain ingredients that might cause an allergic reaction. Please consider this when ordering.",
+                allergyNote: {
+                    en: "To our guests with food sensitivities or allergies: we cannot ensure that menu items do not contain ingredients that might cause an allergic reaction. Please consider this when ordering.",
+                    fr: "Pour nos clients ayant des sensibilités ou des allergies alimentaires : nous ne pouvons garantir que les plats de la carte ne contiennent pas d'ingrédients susceptibles de provoquer une réaction allergique. Merci d'en tenir compte lors de votre commande.",
+                    de: "Für Gäste mit Lebensmittelunverträglichkeiten oder Allergien: Wir können nicht garantieren, dass die Gerichte auf der Speisekarte keine Zutaten enthalten, die eine allergische Reaktion auslösen könnten. Bitte berücksichtigen Sie dies bei Ihrer Bestellung.",
+                    zh: "对于有食物敏感或过敏的宾客：我们无法保证菜单中的菜品不含可能引起过敏反应的成分，点餐时请留意。"
+                },
                 categories: [
-                    { id: "omelettes", label: "Fresh Omelettes", items: [
-                        { name: "Bacon Temptation Omelette", price: "US$10", desc: "Loaded with strips of crispy bacon, a rich cheese sauce, pancake and Cheddar cheese and diced tomatoes.", img: "" },
-                        { name: "Spinach & Mushroom Omelette", price: "US$10", desc: "Fresh spinach and mushrooms folded into a classic omelette.", img: "" },
-                        { name: "Rainbow Omelette", price: "US$10", desc: "Fresh spinach, mushrooms, onions and cheese, topped with rich hollandaise and diced tomatoes.", img: "" },
-                        { name: "Garden Omelette", price: "US$10", desc: "An abundance of fresh green peppers, mushrooms, onions, tomatoes and Cheddar cheese.", img: "" }
-                    ]},
-                    { id: "breakfast-combos", label: "Breakfast Combinations", items: [
-                        { name: "The Must-Have Breakfast", price: "US$7", desc: "Two eggs, two bacon strips, two pork sausage links, two pieces of ham, hash browns and two buttermilk pancakes.", img: "" },
-                        { name: "Minute Steaks & Eggs", price: "US$9", desc: "Tender Zimbabwean Select steak served with three eggs and three buttermilk pancakes.", img: "" },
-                        { name: "Steak, Egg & Chips", price: "US$18", desc: "Grilled, grass-fed Zimbabwean Select sirloin steak, grilled onions and tomato, served with two eggs.", img: "" },
-                        { name: "Gazebo Combo", price: "US$10", desc: "Two grilled sausage links served with two eggs, hash browns and two buttermilk pancakes.", img: "" },
-                        { name: "Split Decision Breakfast", price: "US$6", desc: "Two eggs, two crispy bacon strips, two sausage links and two triangles of French toast.", img: "" },
-                        { name: "Eggs Benedict", price: "US$7", desc: "Traditional-style bacon on an English muffin topped with two poached eggs and hollandaise. Served with hash browns.", img: "" }
-                    ]},
-                    { id: "toast-waffles-crepes", label: "French Toast, Waffles & Sweet Crepes", items: [
-                        { name: "Strawberry Banana French Toast", price: "US$5", desc: "Four French toast triangles with cool strawberries, banana and whipped topping.", img: "" },
-                        { name: "Whole Wheat French Toast Combo", price: "US$10", desc: "Whole wheat French toast with banana, scrambled eggs and two strips of bacon.", img: "" },
-                        { name: "French Toast", price: "US$5", desc: "Six fluffy triangle-shaped slices topped with jam or natural honey and powdered sugar.", img: "" },
-                        { name: "Waffle Combo", price: "US$10", desc: "Belgian waffle with two eggs, choice of bacon or sausage links, strawberry topping and cinnamon apple compote.", img: "" },
-                        { name: "Banana Danish Fruit Pancake", price: "US$10", desc: "Two pancakes filled with Danish, cool strawberries and sweet cream cheese, topped with banana.", img: "" },
-                        { name: "Zimbabwean Pancake", price: "US$6", desc: "Four delicate pancakes with Zim butter.", img: "" },
-                        { name: "Rainbow Pancakes", price: "US$10", desc: "Two eggs, two bacon strips and two pork sausage links with your choice of crepe.", img: "" },
-                        { name: "Fresh Fruit Crepes", price: "US$8", desc: "Two crepes topped with fresh fruit, low-fat strawberry yoghurt and granola.", img: "" }
-                    ]},
-                    { id: "pancake-combos", label: "World Famous Pancake Combos", items: [
-                        { name: "Three Eggs & Pancakes", price: "US$12", desc: "Three eggs with buttermilk pancakes. Choice of bacon, sausage links, corned beef hash or pork sausage.", img: "" },
-                        { name: "Double Blueberry Pancakes", price: "US$8", desc: "Four buttermilk pancakes filled with blueberries, warm compote and whipped topping.", img: "" },
-                        { name: "Strawberry Banana Pancakes", price: "US$7", desc: "Four pancakes filled with banana, crowned with strawberries and whipped topping.", img: "" }
-                    ]},
-                    { id: "savory-crepes", label: "Savory Crepes, Soups & Double Take", items: [
-                        { name: "Vegetarian Stuffed Crepes", price: "US$5", desc: "Zim cheese, scrambled eggs, spinach, mushrooms and onions, topped with hollandaise.", img: "" },
-                        { name: "Chicken & Spinach Crepes", price: "US$8", desc: "Chicken, spinach, mushrooms and onions in two crepes with Swiss cheese and hollandaise.", img: "" },
-                        { name: "Bacon & Cheddar Stuffed Crepes", price: "Ask your server", desc: "Scrambled eggs, Cheddar and bacon, topped with cheddar and sour cream.", img: "" },
-                        { name: "Soup of the Day", price: "US$5", desc: "Freshly made daily.", img: "" },
-                        { name: "Double Take", price: "US$12", desc: "Pick a starter (salad, fruit or loaded potato & bacon soup) and a half sandwich or soup of the day.", img: "" }
-                    ]},
-                    { id: "sandwiches-burgers", label: "Sandwiches & Burgers", note: "Served with your choice of seasoned fries & onion rings", items: [
-                        { name: "Cheese Steak Stacker", price: "US$12", desc: "Grilled rib-eye steak and onions topped with melted Cheddar on a grilled roll.", img: "" },
-                        { name: "Chicken & Bacon Club Sandwich", price: "US$10", desc: "Roast chicken, crispy bacon, Cheddar, tomato, lettuce and mayonnaise.", img: "" },
-                        { name: "The Double Decker", price: "US$12", desc: "Six strips of crispy bacon, lettuce, tomato and mayonnaise on white toast.", img: "" },
-                        { name: "Tuscan Chicken Griller", price: "US$12", desc: "Grilled chicken breast with melting cheese, oven-roasted tomatoes and lettuce.", img: "" },
-                        { name: "Bacon & Beef Burgers", price: "US$12", desc: "Hickory-smoked bacon blended into the patty. All-beef available on request.", img: "" },
-                        { name: "Rainbow Burger", price: "US$12", desc: "Thick, juicy beef burger with melting cheese, lettuce, tomato and caramelised onions.", img: "" },
-                        { name: "Monster Bacon & Beef Cheeseburger", price: "US$15", desc: "Two patties, American and Provolone cheese, Romano-Parmesan bun.", img: "" }
-                    ]},
-                    { id: "nibbles", label: "Nibbles", items: [
-                        { name: "Chicken Fajita Quesadilla", price: "US$6", desc: "Grilled chicken, onions, peppers and tomatoes with Cheddar and Jack cheese, sour cream and salsa.", img: "" },
-                        { name: "Macaroni & Cheese", price: "US$10", desc: "", img: "" },
-                        { name: "Crispy Chicken Tenders & Fries", price: "US$10", desc: "Breaded, crispy-fried chicken strips with honey mustard.", img: "" },
-                        { name: "Onion Rings", price: "US$10", desc: "", img: "" }
-                    ]},
-                    { id: "salads", label: "Fresh Salads", items: [
-                        { name: "Grilled Chicken Caesar Salad", price: "US$9", desc: "Iceberg lettuce, croutons and tomato in Caesar dressing, topped with grilled chicken and parmesan.", img: "" },
-                        { name: "Crispy Chicken Salad", price: "US$10", desc: "Garden greens, crispy chicken, tomatoes, bacon, cheese and a hardboiled egg.", img: "" },
-                        { name: "Vumba Goat Cheese Salad", price: "US$15", desc: "Cereal-crusted goat cheese, baby leaves, berries and cherry tomatoes in balsamic vinaigrette.", img: "" }
-                    ]},
-                    { id: "dinner", label: "Fresh Dinner", items: [
-                        { name: "Zim Prime Steak of the Day", price: "US$18", desc: "Cooked just the way you like it, seasoned potatoes and steamed broccoli.", img: "" },
-                        { name: "Sirloin Steak Tips Dinner", price: "US$18", desc: "Sirloin tips grilled with onions, mashed potatoes and steamed broccoli.", img: "" },
-                        { name: "Freshly Grilled Tilapia", price: "US$15", desc: "Pan-seared tilapia, sautéed mushrooms, onions, tomatoes and balsamic glaze.", img: "" },
-                        { name: "Tempura Fried Prawns", price: "US$18", desc: "Golden butter-fried shrimp with vegetables, potatoes and sweet chilli & ginger sauce.", img: "" },
-                        { name: "Lemon & Herb Chicken", price: "US$15", desc: "Seared quarter chicken marinated with rosemary, garlic and lemon.", img: "" },
-                        { name: "Grilled Balsamic-Glazed Chicken", price: "US$15", desc: "Boneless chicken breast, sautéed mushrooms, onions, tomatoes and balsamic glaze.", img: "" },
-                        { name: "Onion Pot Roast", price: "US$18", desc: "Slow-cooked beef stew or braised local chicken, choice of starch.", img: "" },
-                        { name: "Pan Fried Mushrooms", price: "US$10", desc: "Lightly cooked seasonal mushrooms with vegetables and a choice of starch.", img: "" }
-                    ]},
-                    { id: "top5", label: "Top 5 Dishes", items: [
-                        { name: "Honey Glazed \"Pork Ribs\" Hawaii", price: "US$16", desc: "", img: "" },
-                        { name: "Amulonga Pasta with Mushrooms", price: "US$12", desc: "", img: "" },
-                        { name: "Grilled Tozho Steaks", price: "US$16", desc: "", img: "" },
-                        { name: "House Pizza", price: "US$12", desc: "", img: "" },
-                        { name: "Evolution Wrap", price: "US$15", desc: "", img: "" }
-                    ]},
-                    { id: "desserts", label: "Delicious Desserts", items: [
-                        { name: "Fruit Bowl", price: "US$5", desc: "Refreshing seasonal fresh fruit salad.", img: "" },
-                        { name: "Ice Cream Sundae", price: "US$5", desc: "Vanilla ice cream, hot fudge or strawberry topping, whipped topping and a cherry.", img: "" },
-                        { name: "Fruit Crepe", price: "US$5", desc: "Vanilla ice cream and whipped topping with strawberry, blueberry or cinnamon apple compote.", img: "" },
-                        { name: "Chef's Cake of the Day", price: "US$6", desc: "Ask your waiter.", img: "" }
-                    ]},
-                    { id: "kinder", label: "Kinder Café (12 & Under)", items: [
-                        { name: "Funny Pancake", price: "US$7", desc: "Buttermilk pancake with strawberry eyes, whipped-topping nose and banana smile.", img: "" },
-                        { name: "The Rascal", price: "US$8", desc: "Fruit crepe with vanilla ice cream and whipped topping.", img: "" },
-                        { name: "Silver Five", price: "US$7", desc: "Five silver-dollar buttermilk pancakes with scrambled egg and crispy onion.", img: "" },
-                        { name: "Fresh Toast", price: "US$6", desc: "Two triangles of French toast with two crispy bacon strips.", img: "" },
-                        { name: "Scrambled Egg & Pancake", price: "US$7", desc: "Scrambled egg with one buttermilk pancake.", img: "" },
-                        { name: "Crispy Chicken Strips", price: "US$7", desc: "Served with fresh fruit.", img: "" },
-                        { name: "Kids Cheeseburger", price: "US$5", desc: "Served with fresh chips.", img: "" },
-                        { name: "Grilled Cheese Sandwich", price: "US$10", desc: "Served with fresh chips.", img: "" },
-                        { name: "Fish Goujons", price: "US$10", desc: "Crispy fried fish, chips and coleslaw.", img: "" },
-                        { name: "Jonny's Fresh Fruit Dish", price: "US$10", desc: "A refreshing dish of seasonal fruit.", img: "" },
-                        { name: "Kids Drinks", price: "US$2", desc: "Soft drinks, chocolate milk, milkshake or hot chocolate.", img: "" },
-                        { name: "Kids Ice Cream Sundae", price: "US$3", desc: "", img: "" }
-                    ]},
-                    { id: "asian-corner", label: "Asian Corner", items: [
-                        { name: "Traditional Asian Soup", price: "US$5", desc: "Clear consommé with beef cubes, chicken strips, noodles and garlic.", img: "" },
-                        { name: "Pork & Prawn Stir Fry", price: "US$15", desc: "Classic Asian infusion presented with basmati rice.", img: "" },
-                        { name: "Chicken Kong Pao", price: "US$8", desc: "Stir-fried chicken breast cubes, chillies and assorted peppers.", img: "" },
-                        { name: "Prawn & Chicken Noodle", price: "US$18", desc: "Chicken and prawns with pasta in a creamy coconut chilli sauce.", img: "" }
-                    ]}
+                    {
+                        id: "omelettes",
+                        label: {
+                            en: "Fresh Omelettes",
+                            fr: "Omelettes Fraîches",
+                            de: "Frische Omeletts",
+                            zh: "新鲜蛋卷"
+                        },
+                        items: [
+                            {
+                                name: "Bacon Temptation Omelette",
+                                price: "US$10",
+                                desc: "Loaded with strips of crispy bacon, a rich cheese sauce, pancake and Cheddar cheese and diced tomatoes.",
+                                img: ""
+                            },
+                            {
+                                name: "Spinach & Mushroom Omelette",
+                                price: "US$10",
+                                desc: "Fresh spinach and mushrooms folded into a classic omelette.",
+                                img: ""
+                            },
+                            {
+                                name: "Rainbow Omelette",
+                                price: "US$10",
+                                desc: "Fresh spinach, mushrooms, onions and cheese, topped with rich hollandaise and diced tomatoes.",
+                                img: ""
+                            },
+                            {
+                                name: "Garden Omelette",
+                                price: "US$10",
+                                desc: "An abundance of fresh green peppers, mushrooms, onions, tomatoes and Cheddar cheese.",
+                                img: ""
+                            }
+                        ]
+                    },
+                    {
+                        id: "breakfast-combos",
+                        label: {
+                            en: "Breakfast Combinations",
+                            fr: "Formules Petit-déjeuner",
+                            de: "Frühstückskombinationen",
+                            zh: "早餐套餐"
+                        },
+                        items: [
+                            {
+                                name: "The Must-Have Breakfast",
+                                price: "US$7",
+                                desc: "Two eggs, two bacon strips, two pork sausage links, two pieces of ham, hash browns and two buttermilk pancakes.",
+                                img: ""
+                            },
+                            {
+                                name: "Minute Steaks & Eggs",
+                                price: "US$9",
+                                desc: "Tender Zimbabwean Select steak served with three eggs and three buttermilk pancakes.",
+                                img: ""
+                            },
+                            {
+                                name: "Steak, Egg & Chips",
+                                price: "US$18",
+                                desc: "Grilled, grass-fed Zimbabwean Select sirloin steak, grilled onions and tomato, served with two eggs.",
+                                img: ""
+                            },
+                            {
+                                name: "Gazebo Combo",
+                                price: "US$10",
+                                desc: "Two grilled sausage links served with two eggs, hash browns and two buttermilk pancakes.",
+                                img: ""
+                            },
+                            {
+                                name: "Split Decision Breakfast",
+                                price: "US$6",
+                                desc: "Two eggs, two crispy bacon strips, two sausage links and two triangles of French toast.",
+                                img: ""
+                            },
+                            {
+                                name: "Eggs Benedict",
+                                price: "US$7",
+                                desc: "Traditional-style bacon on an English muffin topped with two poached eggs and hollandaise. Served with hash browns.",
+                                img: ""
+                            }
+                        ]
+                    },
+                    {
+                        id: "toast-waffles-crepes",
+                        label: {
+                            en: "French Toast, Waffles & Sweet Crepes",
+                            fr: "Pain Perdu, Gaufres & Crêpes Sucrées",
+                            de: "French Toast, Waffeln & Süße Crêpes",
+                            zh: "法式吐司、华夫饼与甜可丽饼"
+                        },
+                        items: [
+                            {
+                                name: "Strawberry Banana French Toast",
+                                price: "US$5",
+                                desc: "Four French toast triangles with cool strawberries, banana and whipped topping.",
+                                img: ""
+                            },
+                            {
+                                name: "Whole Wheat French Toast Combo",
+                                price: "US$10",
+                                desc: "Whole wheat French toast with banana, scrambled eggs and two strips of bacon.",
+                                img: ""
+                            },
+                            {
+                                name: "French Toast",
+                                price: "US$5",
+                                desc: "Six fluffy triangle-shaped slices topped with jam or natural honey and powdered sugar.",
+                                img: ""
+                            },
+                            {
+                                name: "Waffle Combo",
+                                price: "US$10",
+                                desc: "Belgian waffle with two eggs, choice of bacon or sausage links, strawberry topping and cinnamon apple compote.",
+                                img: ""
+                            },
+                            {
+                                name: "Banana Danish Fruit Pancake",
+                                price: "US$10",
+                                desc: "Two pancakes filled with Danish, cool strawberries and sweet cream cheese, topped with banana.",
+                                img: ""
+                            },
+                            {
+                                name: "Zimbabwean Pancake",
+                                price: "US$6",
+                                desc: "Four delicate pancakes with Zim butter.",
+                                img: ""
+                            },
+                            {
+                                name: "Rainbow Pancakes",
+                                price: "US$10",
+                                desc: "Two eggs, two bacon strips and two pork sausage links with your choice of crepe.",
+                                img: ""
+                            },
+                            {
+                                name: "Fresh Fruit Crepes",
+                                price: "US$8",
+                                desc: "Two crepes topped with fresh fruit, low-fat strawberry yoghurt and granola.",
+                                img: ""
+                            }
+                        ]
+                    },
+                    {
+                        id: "pancake-combos",
+                        label: {
+                            en: "World Famous Pancake Combos",
+                            fr: "Formules Pancakes Renommées",
+                            de: "Weltberühmte Pancake-Kombis",
+                            zh: "招牌美式煎饼套餐"
+                        },
+                        items: [
+                            {
+                                name: "Three Eggs & Pancakes",
+                                price: "US$12",
+                                desc: "Three eggs with buttermilk pancakes. Choice of bacon, sausage links, corned beef hash or pork sausage.",
+                                img: ""
+                            },
+                            {
+                                name: "Double Blueberry Pancakes",
+                                price: "US$8",
+                                desc: "Four buttermilk pancakes filled with blueberries, warm compote and whipped topping.",
+                                img: ""
+                            },
+                            {
+                                name: "Strawberry Banana Pancakes",
+                                price: "US$7",
+                                desc: "Four pancakes filled with banana, crowned with strawberries and whipped topping.",
+                                img: ""
+                            }
+                        ]
+                    },
+                    {
+                        id: "savory-crepes",
+                        label: {
+                            en: "Savory Crepes, Soups & Double Take",
+                            fr: "Crêpes Salées, Soupes & Double Take",
+                            de: "Herzhafte Crêpes, Suppen & Double Take",
+                            zh: "咸味可丽饼、汤品及双拼套餐"
+                        },
+                        items: [
+                            {
+                                name: "Vegetarian Stuffed Crepes",
+                                price: "US$5",
+                                desc: "Zim cheese, scrambled eggs, spinach, mushrooms and onions, topped with hollandaise.",
+                                img: ""
+                            },
+                            {
+                                name: "Chicken & Spinach Crepes",
+                                price: "US$8",
+                                desc: "Chicken, spinach, mushrooms and onions in two crepes with Swiss cheese and hollandaise.",
+                                img: ""
+                            },
+                            {
+                                name: "Bacon & Cheddar Stuffed Crepes",
+                                price: "Ask your server",
+                                desc: "Scrambled eggs, Cheddar and bacon, topped with cheddar and sour cream.",
+                                img: ""
+                            },
+                            {
+                                name: "Soup of the Day",
+                                price: "US$5",
+                                desc: "Freshly made daily.",
+                                img: ""
+                            },
+                            {
+                                name: "Double Take",
+                                price: "US$12",
+                                desc: "Pick a starter (salad, fruit or loaded potato & bacon soup) and a half sandwich or soup of the day.",
+                                img: ""
+                            }
+                        ]
+                    },
+                    {
+                        id: "sandwiches-burgers",
+                        label: {
+                            en: "Sandwiches & Burgers",
+                            fr: "Sandwichs & Burgers",
+                            de: "Sandwiches & Burger",
+                            zh: "三明治与汉堡"
+                        },
+                        note: {
+                            en: "Served with your choice of seasoned fries & onion rings",
+                            fr: "Servi avec votre choix de frites assaisonnées et d'oignons frits",
+                            de: "Serviert mit gewürzten Pommes frites oder Zwiebelringen nach Wahl",
+                            zh: "配以调味薯条或洋葱圈（可选）"
+                        },
+                        items: [
+                            {
+                                name: "Cheese Steak Stacker",
+                                price: "US$12",
+                                desc: "Grilled rib-eye steak and onions topped with melted Cheddar on a grilled roll.",
+                                img: ""
+                            },
+                            {
+                                name: "Chicken & Bacon Club Sandwich",
+                                price: "US$10",
+                                desc: "Roast chicken, crispy bacon, Cheddar, tomato, lettuce and mayonnaise.",
+                                img: ""
+                            },
+                            {
+                                name: "The Double Decker",
+                                price: "US$12",
+                                desc: "Six strips of crispy bacon, lettuce, tomato and mayonnaise on white toast.",
+                                img: ""
+                            },
+                            {
+                                name: "Tuscan Chicken Griller",
+                                price: "US$12",
+                                desc: "Grilled chicken breast with melting cheese, oven-roasted tomatoes and lettuce.",
+                                img: ""
+                            },
+                            {
+                                name: "Bacon & Beef Burgers",
+                                price: "US$12",
+                                desc: "Hickory-smoked bacon blended into the patty. All-beef available on request.",
+                                img: ""
+                            },
+                            {
+                                name: "Rainbow Burger",
+                                price: "US$12",
+                                desc: "Thick, juicy beef burger with melting cheese, lettuce, tomato and caramelised onions.",
+                                img: ""
+                            },
+                            {
+                                name: "Monster Bacon & Beef Cheeseburger",
+                                price: "US$15",
+                                desc: "Two patties, American and Provolone cheese, Romano-Parmesan bun.",
+                                img: ""
+                            }
+                        ]
+                    },
+                    {
+                        id: "nibbles",
+                        label: {
+                            en: "Nibbles",
+                            fr: "Amuse-bouches",
+                            de: "Snacks",
+                            zh: "小食"
+                        },
+                        items: [
+                            {
+                                name: "Chicken Fajita Quesadilla",
+                                price: "US$6",
+                                desc: "Grilled chicken, onions, peppers and tomatoes with Cheddar and Jack cheese, sour cream and salsa.",
+                                img: ""
+                            },
+                            {
+                                name: "Macaroni & Cheese",
+                                price: "US$10",
+                                desc: "",
+                                img: ""
+                            },
+                            {
+                                name: "Crispy Chicken Tenders & Fries",
+                                price: "US$10",
+                                desc: "Breaded, crispy-fried chicken strips with honey mustard.",
+                                img: ""
+                            },
+                            {
+                                name: "Onion Rings",
+                                price: "US$10",
+                                desc: "",
+                                img: ""
+                            }
+                        ]
+                    },
+                    {
+                        id: "salads",
+                        label: {
+                            en: "Fresh Salads",
+                            fr: "Salades Fraîches",
+                            de: "Frische Salate",
+                            zh: "新鲜沙拉"
+                        },
+                        items: [
+                            {
+                                name: "Grilled Chicken Caesar Salad",
+                                price: "US$9",
+                                desc: "Iceberg lettuce, croutons and tomato in Caesar dressing, topped with grilled chicken and parmesan.",
+                                img: ""
+                            },
+                            {
+                                name: "Crispy Chicken Salad",
+                                price: "US$10",
+                                desc: "Garden greens, crispy chicken, tomatoes, bacon, cheese and a hardboiled egg.",
+                                img: ""
+                            },
+                            {
+                                name: "Vumba Goat Cheese Salad",
+                                price: "US$15",
+                                desc: "Cereal-crusted goat cheese, baby leaves, berries and cherry tomatoes in balsamic vinaigrette.",
+                                img: ""
+                            }
+                        ]
+                    },
+                    {
+                        id: "dinner",
+                        label: {
+                            en: "Fresh Dinner",
+                            fr: "Dîner",
+                            de: "Abendessen",
+                            zh: "晚餐主菜"
+                        },
+                        items: [
+                            {
+                                name: "Zim Prime Steak of the Day",
+                                price: "US$18",
+                                desc: "Cooked just the way you like it, seasoned potatoes and steamed broccoli.",
+                                img: ""
+                            },
+                            {
+                                name: "Sirloin Steak Tips Dinner",
+                                price: "US$18",
+                                desc: "Sirloin tips grilled with onions, mashed potatoes and steamed broccoli.",
+                                img: ""
+                            },
+                            {
+                                name: "Freshly Grilled Tilapia",
+                                price: "US$15",
+                                desc: "Pan-seared tilapia, sautéed mushrooms, onions, tomatoes and balsamic glaze.",
+                                img: ""
+                            },
+                            {
+                                name: "Tempura Fried Prawns",
+                                price: "US$18",
+                                desc: "Golden butter-fried shrimp with vegetables, potatoes and sweet chilli & ginger sauce.",
+                                img: ""
+                            },
+                            {
+                                name: "Lemon & Herb Chicken",
+                                price: "US$15",
+                                desc: "Seared quarter chicken marinated with rosemary, garlic and lemon.",
+                                img: ""
+                            },
+                            {
+                                name: "Grilled Balsamic-Glazed Chicken",
+                                price: "US$15",
+                                desc: "Boneless chicken breast, sautéed mushrooms, onions, tomatoes and balsamic glaze.",
+                                img: ""
+                            },
+                            {
+                                name: "Onion Pot Roast",
+                                price: "US$18",
+                                desc: "Slow-cooked beef stew or braised local chicken, choice of starch.",
+                                img: ""
+                            },
+                            {
+                                name: "Pan Fried Mushrooms",
+                                price: "US$10",
+                                desc: "Lightly cooked seasonal mushrooms with vegetables and a choice of starch.",
+                                img: ""
+                            }
+                        ]
+                    },
+                    {
+                        id: "top5",
+                        label: {
+                            en: "Top 5 Dishes",
+                            fr: "Top 5 des Plats",
+                            de: "Top 5 Gerichte",
+                            zh: "五大热门菜品"
+                        },
+                        items: [
+                            {
+                                name: "Honey Glazed \"Pork Ribs\" Hawaii",
+                                price: "US$16",
+                                desc: "",
+                                img: ""
+                            },
+                            {
+                                name: "Amulonga Pasta with Mushrooms",
+                                price: "US$12",
+                                desc: "",
+                                img: ""
+                            },
+                            {
+                                name: "Grilled Tozho Steaks",
+                                price: "US$16",
+                                desc: "",
+                                img: ""
+                            },
+                            {
+                                name: "House Pizza",
+                                price: "US$12",
+                                desc: "",
+                                img: ""
+                            },
+                            {
+                                name: "Evolution Wrap",
+                                price: "US$15",
+                                desc: "",
+                                img: ""
+                            }
+                        ]
+                    },
+                    {
+                        id: "desserts",
+                        label: {
+                            en: "Delicious Desserts",
+                            fr: "Délicieux Desserts",
+                            de: "Köstliche Desserts",
+                            zh: "美味甜点"
+                        },
+                        items: [
+                            {
+                                name: "Fruit Bowl",
+                                price: "US$5",
+                                desc: "Refreshing seasonal fresh fruit salad.",
+                                img: ""
+                            },
+                            {
+                                name: "Ice Cream Sundae",
+                                price: "US$5",
+                                desc: "Vanilla ice cream, hot fudge or strawberry topping, whipped topping and a cherry.",
+                                img: ""
+                            },
+                            {
+                                name: "Fruit Crepe",
+                                price: "US$5",
+                                desc: "Vanilla ice cream and whipped topping with strawberry, blueberry or cinnamon apple compote.",
+                                img: ""
+                            },
+                            {
+                                name: "Chef's Cake of the Day",
+                                price: "US$6",
+                                desc: "Ask your waiter.",
+                                img: ""
+                            }
+                        ]
+                    },
+                    {
+                        id: "kinder",
+                        label: {
+                            en: "Kinder Café (12 & Under)",
+                            fr: "Kinder Café (12 ans et moins)",
+                            de: "Kinder Café (bis 12 Jahre)",
+                            zh: "儿童餐厅（12岁以下）"
+                        },
+                        items: [
+                            {
+                                name: "Funny Pancake",
+                                price: "US$7",
+                                desc: "Buttermilk pancake with strawberry eyes, whipped-topping nose and banana smile.",
+                                img: ""
+                            },
+                            {
+                                name: "The Rascal",
+                                price: "US$8",
+                                desc: "Fruit crepe with vanilla ice cream and whipped topping.",
+                                img: ""
+                            },
+                            {
+                                name: "Silver Five",
+                                price: "US$7",
+                                desc: "Five silver-dollar buttermilk pancakes with scrambled egg and crispy onion.",
+                                img: ""
+                            },
+                            {
+                                name: "Fresh Toast",
+                                price: "US$6",
+                                desc: "Two triangles of French toast with two crispy bacon strips.",
+                                img: ""
+                            },
+                            {
+                                name: "Scrambled Egg & Pancake",
+                                price: "US$7",
+                                desc: "Scrambled egg with one buttermilk pancake.",
+                                img: ""
+                            },
+                            {
+                                name: "Crispy Chicken Strips",
+                                price: "US$7",
+                                desc: "Served with fresh fruit.",
+                                img: ""
+                            },
+                            {
+                                name: "Kids Cheeseburger",
+                                price: "US$5",
+                                desc: "Served with fresh chips.",
+                                img: ""
+                            },
+                            {
+                                name: "Grilled Cheese Sandwich",
+                                price: "US$10",
+                                desc: "Served with fresh chips.",
+                                img: ""
+                            },
+                            {
+                                name: "Fish Goujons",
+                                price: "US$10",
+                                desc: "Crispy fried fish, chips and coleslaw.",
+                                img: ""
+                            },
+                            {
+                                name: "Jonny's Fresh Fruit Dish",
+                                price: "US$10",
+                                desc: "A refreshing dish of seasonal fruit.",
+                                img: ""
+                            },
+                            {
+                                name: "Kids Drinks",
+                                price: "US$2",
+                                desc: "Soft drinks, chocolate milk, milkshake or hot chocolate.",
+                                img: ""
+                            },
+                            {
+                                name: "Kids Ice Cream Sundae",
+                                price: "US$3",
+                                desc: "",
+                                img: ""
+                            }
+                        ]
+                    },
+                    {
+                        id: "asian-corner",
+                        label: {
+                            en: "Asian Corner",
+                            fr: "Coin Asiatique",
+                            de: "Asien-Ecke",
+                            zh: "亚洲美食角"
+                        },
+                        items: [
+                            {
+                                name: "Traditional Asian Soup",
+                                price: "US$5",
+                                desc: "Clear consommé with beef cubes, chicken strips, noodles and garlic.",
+                                img: ""
+                            },
+                            {
+                                name: "Pork & Prawn Stir Fry",
+                                price: "US$15",
+                                desc: "Classic Asian infusion presented with basmati rice.",
+                                img: ""
+                            },
+                            {
+                                name: "Chicken Kong Pao",
+                                price: "US$8",
+                                desc: "Stir-fried chicken breast cubes, chillies and assorted peppers.",
+                                img: ""
+                            },
+                            {
+                                name: "Prawn & Chicken Noodle",
+                                price: "US$18",
+                                desc: "Chicken and prawns with pasta in a creamy coconut chilli sauce.",
+                                img: ""
+                            }
+                        ]
+                    }
+                ],
+                itemTranslationNote: "Dish names and descriptions are currently English-only. To translate an item, add optional name_fr/name_de/name_zh and desc_fr/desc_de/desc_zh fields to that item in config.json; the app will use them automatically once index.html is updated to read them."
+            },
+            about: {
+                categories: [
+                    {
+                        id: "overview",
+                        label: {
+                            en: "Overview",
+                            fr: "Aperçu",
+                            de: "Übersicht",
+                            zh: "概览"
+                        },
+                        paragraphs: {
+                            en: [
+                                "A'Zambezi River Lodge sits on the banks of the Zambezi River on the edge of Zambezi National Park, near Victoria Falls. The location offers river frontage, a jetty, and views of African wildlife, prized for its tranquility and seclusion."
+                            ],
+                            fr: [
+                                "A'Zambezi River Lodge est situé sur les rives du fleuve Zambèze, en bordure du parc national du Zambèze, à proximité de Victoria Falls. Le site offre un accès direct au fleuve, une jetée et des vues sur la faune africaine, apprécié pour sa tranquillité et son isolement."
+                            ],
+                            de: [
+                                "Die A'Zambezi River Lodge liegt am Ufer des Sambesi, am Rand des Zambezi-Nationalparks, in der Nähe der Victoriafälle. Der Standort bietet Flussfront, einen Steg und Ausblicke auf die afrikanische Tierwelt und ist für seine Ruhe und Abgeschiedenheit bekannt."
+                            ],
+                            zh: [
+                                "A'Zambezi River Lodge坐落于赞比西河畔，毗邻赞比西国家公园，靠近维多利亚瀑布。得天独厚的河景、专属码头及非洲野生动物景观，使其以宁静私密著称。"
+                            ]
+                        },
+                        rows: []
+                    },
+                    {
+                        id: "rooms",
+                        label: {
+                            en: "Rooms",
+                            fr: "Chambres",
+                            de: "Zimmer",
+                            zh: "客房"
+                        },
+                        paragraphs: {
+                            en: [
+                                "Guest rooms feature standard double, queen or king size beds, free high-speed Wi-Fi, individually controlled air conditioning, a bathroom with bathtub and shower, a 32\" LCD TV with satellite news, a direct-dial phone, hair dryer, in-room safe, and mosquito net and repellents. Rooms are either river-facing or garden-facing."
+                            ],
+                            fr: [
+                                "Les chambres disposent de lits doubles, queen ou king size, d'une connexion Wi-Fi gratuite à haut débit, d'une climatisation individuelle, d'une salle de bain avec baignoire et douche, d'une télévision LCD 32 pouces avec chaînes d'actualités par satellite, d'un téléphone à ligne directe, d'un sèche-cheveux, d'un coffre-fort et d'une moustiquaire avec répulsifs. Les chambres donnent soit sur le fleuve, soit sur le jardin."
+                            ],
+                            de: [
+                                "Die Gästezimmer verfügen über Doppel-, Queen- oder Kingsize-Betten, kostenloses Highspeed-WLAN, individuell regulierbare Klimaanlage, ein Bad mit Badewanne und Dusche, einen 32-Zoll-LCD-Fernseher mit Satelliten-Nachrichten, ein Direktwahltelefon, einen Föhn, einen Zimmersafe sowie Moskitonetz und Repellents. Die Zimmer sind entweder zum Fluss oder zum Garten ausgerichtet."
+                            ],
+                            zh: [
+                                "客房配备标准双人床、大床或特大床，免费高速WiFi，独立控温空调，配有浴缸及淋浴的卫浴间，32英寸卫星新闻液晶电视，直拨电话，吹风机，房内保险箱，以及蚊帐和驱蚊用品。客房分为河景房和花园景观房。"
+                            ]
+                        },
+                        rows: [
+                            {
+                                label: {
+                                    en: "Luxury King Suites",
+                                    fr: "Suites King de Luxe",
+                                    de: "Luxus-King-Suiten",
+                                    zh: "豪华大床套房"
+                                },
+                                value: "2"
+                            },
+                            {
+                                label: {
+                                    en: "Queen Suites",
+                                    fr: "Suites Queen",
+                                    de: "Queen-Suiten",
+                                    zh: "大床套房"
+                                },
+                                value: "2"
+                            },
+                            {
+                                label: {
+                                    en: "Standard Double",
+                                    fr: "Chambre Double Standard",
+                                    de: "Standard-Doppelzimmer",
+                                    zh: "标准双人房"
+                                },
+                                value: "44"
+                            },
+                            {
+                                label: {
+                                    en: "Standard Twin (some interleading)",
+                                    fr: "Chambre Twin Standard (certaines communicantes)",
+                                    de: "Standard-Zweibettzimmer (teils verbunden)",
+                                    zh: "标准双床房（部分可连通）"
+                                },
+                                value: "37"
+                            },
+                            {
+                                label: {
+                                    en: "Paraplegic Rooms",
+                                    fr: "Chambres pour personnes à mobilité réduite",
+                                    de: "Zimmer für Rollstuhlfahrer",
+                                    zh: "无障碍客房"
+                                },
+                                value: "2 (1 twin, 1 double)"
+                            }
+                        ]
+                    },
+                    {
+                        id: "dining",
+                        label: {
+                            en: "Dining & Bars",
+                            fr: "Restauration & Bars",
+                            de: "Restaurants & Bars",
+                            zh: "餐饮与酒吧"
+                        },
+                        paragraphs: {
+                            en: [
+                                "Amulonga Bar is the main hotel bar, with a deck overlooking the Zambezi River.",
+                                "Zambezi Bar is a Zimbabwean-style rondavel bar, ideal for pre-dinner drinks.",
+                                "Amulonga Restaurant is an award-winning open-air restaurant seating 120 guests, blending modern and African cuisine with traditional entertainment during dinner."
+                            ],
+                            fr: [
+                                "Le bar Amulonga est le bar principal de l'hôtel, avec une terrasse donnant sur le fleuve Zambèze.",
+                                "Le Zambezi Bar est un bar de style rondavel zimbabwéen, idéal pour un apéritif avant le dîner.",
+                                "Le restaurant Amulonga est un restaurant en plein air primé, pouvant accueillir 120 convives, qui associe cuisine moderne et africaine à des animations traditionnelles pendant le dîner."
+                            ],
+                            de: [
+                                "Die Amulonga Bar ist die Hauptbar des Hotels mit einer Terrasse mit Blick auf den Sambesi.",
+                                "Die Zambezi Bar ist eine Bar im simbabwischen Rondavel-Stil, ideal für einen Aperitif vor dem Abendessen.",
+                                "Das Amulonga Restaurant ist ein preisgekröntes Open-Air-Restaurant mit Platz für 120 Gäste, das moderne und afrikanische Küche mit traditioneller Unterhaltung beim Abendessen verbindet."
+                            ],
+                            zh: [
+                                "Amulonga酒吧是酒店的主酒吧，设有可俯瞰赞比西河的露台。",
+                                "Zambezi酒吧是一间津巴布韦传统圆屋风格酒吧，非常适合餐前小酌。",
+                                "Amulonga餐厅是一家屡获殊荣的露天餐厅，可容纳120位宾客，将现代与非洲美食相结合，晚餐时段还设有传统表演。"
+                            ]
+                        },
+                        rows: [
+                            {
+                                label: {
+                                    en: "Breakfast",
+                                    fr: "Petit-déjeuner",
+                                    de: "Frühstück",
+                                    zh: "早餐"
+                                },
+                                value: "6:30 – 10:00"
+                            },
+                            {
+                                label: {
+                                    en: "Lunch",
+                                    fr: "Déjeuner",
+                                    de: "Mittagessen",
+                                    zh: "午餐"
+                                },
+                                value: "12:30 – 14:00"
+                            },
+                            {
+                                label: {
+                                    en: "Dinner",
+                                    fr: "Dîner",
+                                    de: "Abendessen",
+                                    zh: "晚餐"
+                                },
+                                value: "19:00 – 21:30"
+                            }
+                        ]
+                    },
+                    {
+                        id: "conferencing",
+                        label: {
+                            en: "Conferencing",
+                            fr: "Conférences",
+                            de: "Konferenzen",
+                            zh: "会议设施"
+                        },
+                        paragraphs: {
+                            en: [
+                                "Three conference rooms are available, the largest seating up to 100 delegates cinema-style, plus garden banquets for up to 300 guests by the river.",
+                                "Equipment provided: LCD projector, screen, PA system, flipchart and stands."
+                            ],
+                            fr: [
+                                "Trois salles de conférence sont disponibles, la plus grande pouvant accueillir jusqu'à 100 délégués en style cinéma, ainsi que des banquets de jardin pour jusqu'à 300 invités au bord du fleuve.",
+                                "Équipement fourni : projecteur LCD, écran, système de sonorisation, tableau à feuilles mobiles et supports."
+                            ],
+                            de: [
+                                "Es stehen drei Konferenzräume zur Verfügung, der größte bietet Platz für bis zu 100 Teilnehmer im Kinostil, zusätzlich Gartenbankette für bis zu 300 Gäste am Fluss.",
+                                "Bereitgestellte Ausstattung: LCD-Projektor, Leinwand, PA-Anlage, Flipchart und Ständer."
+                            ],
+                            zh: [
+                                "酒店设有三间会议室，最大可容纳100人（剧院式排列），并可在河畔花园举办最多300人的宴会。",
+                                "提供设备：液晶投影仪、屏幕、扩音系统、活动挂图及支架。"
+                            ]
+                        },
+                        rows: [
+                            {
+                                label: {
+                                    en: "Inyathi Room – Cinema / Theatre",
+                                    fr: "Salle Inyathi – Cinéma / Théâtre",
+                                    de: "Inyathi-Raum – Kino/Theater",
+                                    zh: "Inyathi会议厅 – 剧院式"
+                                },
+                                value: "100"
+                            },
+                            {
+                                label: {
+                                    en: "Inyathi Room – Conference / School Room",
+                                    fr: "Salle Inyathi – Conférence / Salle de classe",
+                                    de: "Inyathi-Raum – Konferenz/Schulraum",
+                                    zh: "Inyathi会议厅 – 课桌式"
+                                },
+                                value: "80"
+                            },
+                            {
+                                label: {
+                                    en: "Inyathi Room – U-Shape",
+                                    fr: "Salle Inyathi – Forme en U",
+                                    de: "Inyathi-Raum – U-Form",
+                                    zh: "Inyathi会议厅 – U型"
+                                },
+                                value: "50"
+                            },
+                            {
+                                label: {
+                                    en: "Inyathi Room – Hollow Square",
+                                    fr: "Salle Inyathi – Carré creux",
+                                    de: "Inyathi-Raum – Hohlquadrat",
+                                    zh: "Inyathi会议厅 – 回字型"
+                                },
+                                value: "60"
+                            },
+                            {
+                                label: {
+                                    en: "Inyathi Room – Board Room",
+                                    fr: "Salle Inyathi – Salle de conseil",
+                                    de: "Inyathi-Raum – Boardroom",
+                                    zh: "Inyathi会议厅 – 董事会式"
+                                },
+                                value: "60"
+                            },
+                            {
+                                label: {
+                                    en: "Inyathi Room – Cocktail",
+                                    fr: "Salle Inyathi – Cocktail",
+                                    de: "Inyathi-Raum – Empfang",
+                                    zh: "Inyathi会议厅 – 鸡尾酒会"
+                                },
+                                value: "120"
+                            },
+                            {
+                                label: {
+                                    en: "Inyathi Room – Dinner Banquet",
+                                    fr: "Salle Inyathi – Banquet dînatoire",
+                                    de: "Inyathi-Raum – Bankett",
+                                    zh: "Inyathi会议厅 – 晚宴"
+                                },
+                                value: "80"
+                            },
+                            {
+                                label: {
+                                    en: "Sebastian Boardroom – Cinema-style",
+                                    fr: "Salle Sebastian – Style cinéma",
+                                    de: "Sebastian-Boardroom – Kinostil",
+                                    zh: "Sebastian董事会室 – 剧院式"
+                                },
+                                value: "40"
+                            },
+                            {
+                                label: {
+                                    en: "Sebastian Boardroom – Board Room",
+                                    fr: "Salle Sebastian – Salle de conseil",
+                                    de: "Sebastian-Boardroom – Boardroom",
+                                    zh: "Sebastian董事会室 – 董事会式"
+                                },
+                                value: "15"
+                            }
+                        ]
+                    },
+                    {
+                        id: "facilities",
+                        label: {
+                            en: "Facilities & Services",
+                            fr: "Installations & Services",
+                            de: "Einrichtungen & Services",
+                            zh: "设施与服务"
+                        },
+                        paragraphs: {
+                            en: [],
+                            fr: [],
+                            de: [],
+                            zh: []
+                        },
+                        rows: [
+                            {
+                                label: {
+                                    en: "High-speed Wi-Fi",
+                                    fr: "Wi-Fi haut débit",
+                                    de: "Highspeed-WLAN",
+                                    zh: "高速WiFi"
+                                },
+                                value: ""
+                            },
+                            {
+                                label: {
+                                    en: "Outdoor pool & children's pool",
+                                    fr: "Piscine extérieure et piscine pour enfants",
+                                    de: "Außenpool & Kinderpool",
+                                    zh: "室外泳池及儿童泳池"
+                                },
+                                value: ""
+                            },
+                            {
+                                label: {
+                                    en: "16-hour room service",
+                                    fr: "Service en chambre 16h/24",
+                                    de: "16-Stunden-Zimmerservice",
+                                    zh: "16小时客房送餐服务"
+                                },
+                                value: ""
+                            },
+                            {
+                                label: {
+                                    en: "Reading corner",
+                                    fr: "Coin lecture",
+                                    de: "Leseecke",
+                                    zh: "阅读角"
+                                },
+                                value: ""
+                            },
+                            {
+                                label: {
+                                    en: "Same-day laundry & valet",
+                                    fr: "Blanchisserie et service de voiturier le jour même",
+                                    de: "Wäscheservice & Concierge am selben Tag",
+                                    zh: "当日洗衣及行李管家服务"
+                                },
+                                value: ""
+                            },
+                            {
+                                label: {
+                                    en: "Beauty spa",
+                                    fr: "Spa de beauté",
+                                    de: "Beauty-Spa",
+                                    zh: "美容水疗中心"
+                                },
+                                value: ""
+                            },
+                            {
+                                label: {
+                                    en: "Airport transfers",
+                                    fr: "Transferts aéroport",
+                                    de: "Flughafentransfers",
+                                    zh: "机场接送服务"
+                                },
+                                value: ""
+                            },
+                            {
+                                label: {
+                                    en: "Babysitting on request",
+                                    fr: "Garde d'enfants sur demande",
+                                    de: "Babysitting auf Anfrage",
+                                    zh: "可预约保姆服务"
+                                },
+                                value: ""
+                            },
+                            {
+                                label: {
+                                    en: "Breakfast, lunch & dinner cruises",
+                                    fr: "Croisières petit-déjeuner, déjeuner et dîner",
+                                    de: "Frühstücks-, Mittags- und Abendkreuzfahrten",
+                                    zh: "早餐、午餐及晚餐游船"
+                                },
+                                value: ""
+                            },
+                            {
+                                label: {
+                                    en: "Activity desks",
+                                    fr: "Bureaux d'activités",
+                                    de: "Aktivitäten-Schalter",
+                                    zh: "活动预订处"
+                                },
+                                value: ""
+                            },
+                            {
+                                label: {
+                                    en: "Outdoor wedding venue on the riverbank",
+                                    fr: "Lieu de mariage en plein air au bord du fleuve",
+                                    de: "Outdoor-Hochzeitslocation am Flussufer",
+                                    zh: "河畔户外婚礼场地"
+                                },
+                                value: ""
+                            },
+                            {
+                                label: {
+                                    en: "Iron & ironing board / electrical adapters on request",
+                                    fr: "Fer et planche à repasser / adaptateurs électriques sur demande",
+                                    de: "Bügeleisen & Bügelbrett / Adapter auf Anfrage",
+                                    zh: "熨斗及烫衣板／电源转换插头（可申请）"
+                                },
+                                value: ""
+                            },
+                            {
+                                label: {
+                                    en: "Concierge with shoe-polishing",
+                                    fr: "Service de conciergerie avec cirage de chaussures",
+                                    de: "Concierge mit Schuhputz-Service",
+                                    zh: "礼宾服务（含擦鞋服务）"
+                                },
+                                value: ""
+                            },
+                            {
+                                label: {
+                                    en: "Car wash",
+                                    fr: "Lavage de voiture",
+                                    de: "Autowäsche",
+                                    zh: "洗车服务"
+                                },
+                                value: ""
+                            },
+                            {
+                                label: {
+                                    en: "Curio shop",
+                                    fr: "Boutique de curiosités",
+                                    de: "Souvenirladen",
+                                    zh: "特产礼品店"
+                                },
+                                value: ""
+                            },
+                            {
+                                label: {
+                                    en: "Complimentary scheduled shuttles to town & the Rainforest",
+                                    fr: "Navettes gratuites programmées vers la ville et la forêt tropicale",
+                                    de: "Kostenlose planmäßige Shuttles in die Stadt & zum Regenwald",
+                                    zh: "免费定时班车往返市区及雨林"
+                                },
+                                value: ""
+                            }
+                        ]
+                    },
+                    {
+                        id: "distances",
+                        label: {
+                            en: "Nearby Distances",
+                            fr: "Distances à proximité",
+                            de: "Entfernungen",
+                            zh: "周边距离"
+                        },
+                        paragraphs: {
+                            en: [
+                                "5 minutes from Victoria Falls town, 20 minutes from Victoria Falls International Airport."
+                            ],
+                            fr: [
+                                "À 5 minutes de la ville de Victoria Falls, à 20 minutes de l'aéroport international de Victoria Falls."
+                            ],
+                            de: [
+                                "5 Minuten von der Stadt Victoria Falls entfernt, 20 Minuten vom internationalen Flughafen Victoria Falls."
+                            ],
+                            zh: [
+                                "距维多利亚瀑布市区5分钟车程，距维多利亚瀑布国际机场20分钟车程。"
+                            ]
+                        },
+                        rows: [
+                            {
+                                label: {
+                                    en: "Victoria Falls Rainforest",
+                                    fr: "Forêt tropicale de Victoria Falls",
+                                    de: "Regenwald von Victoria Falls",
+                                    zh: "维多利亚瀑布雨林"
+                                },
+                                value: "7 km"
+                            },
+                            {
+                                label: {
+                                    en: "David Livingstone Statue",
+                                    fr: "Statue de David Livingstone",
+                                    de: "David-Livingstone-Statue",
+                                    zh: "戴维·利文斯通雕像"
+                                },
+                                value: "7 km"
+                            },
+                            {
+                                label: {
+                                    en: "Victoria Falls Bridge",
+                                    fr: "Pont de Victoria Falls",
+                                    de: "Victoria-Falls-Brücke",
+                                    zh: "维多利亚瀑布大桥"
+                                },
+                                value: "7 km"
+                            },
+                            {
+                                label: {
+                                    en: "Crocodile Farm",
+                                    fr: "Ferme aux crocodiles",
+                                    de: "Krokodilfarm",
+                                    zh: "鳄鱼农场"
+                                },
+                                value: "0.15 km"
+                            },
+                            {
+                                label: {
+                                    en: "Snake Pit",
+                                    fr: "Fosse aux serpents",
+                                    de: "Schlangengrube",
+                                    zh: "蛇坑"
+                                },
+                                value: "5 km"
+                            },
+                            {
+                                label: {
+                                    en: "Big Tree",
+                                    fr: "Grand Arbre (Big Tree)",
+                                    de: "Großer Baum (Big Tree)",
+                                    zh: "大树景点"
+                                },
+                                value: "4 km"
+                            },
+                            {
+                                label: {
+                                    en: "Kalundu Island",
+                                    fr: "Île de Kalundu",
+                                    de: "Kalundu-Insel",
+                                    zh: "卡伦杜岛"
+                                },
+                                value: "1 km"
+                            }
+                        ]
+                    },
+                    {
+                        id: "contact",
+                        label: {
+                            en: "Contact Us",
+                            fr: "Nous contacter",
+                            de: "Kontakt",
+                            zh: "联系我们"
+                        },
+                        paragraphs: {
+                            en: [],
+                            fr: [],
+                            de: [],
+                            zh: []
+                        },
+                        rows: [
+                            {
+                                label: {
+                                    en: "Address",
+                                    fr: "Adresse",
+                                    de: "Adresse",
+                                    zh: "地址"
+                                },
+                                value: "308 Parkway Drive, Victoria Falls"
+                            },
+                            {
+                                label: {
+                                    en: "Phone",
+                                    fr: "Téléphone",
+                                    de: "Telefon",
+                                    zh: "电话"
+                                },
+                                value: "+263 (8328) 44561-4",
+                                href: "tel:+263832844561"
+                            },
+                            {
+                                label: {
+                                    en: "Email",
+                                    fr: "E-mail",
+                                    de: "E-Mail",
+                                    zh: "电子邮箱"
+                                },
+                                value: "reservations.azambezi@rtg.co.zw",
+                                href: "mailto:reservations.azambezi@rtg.co.zw"
+                            }
+                        ]
+                    }
                 ]
-            }
+            },
+            policies: [
+                {
+                    title: {
+                        en: "Nature Awareness",
+                        fr: "Sensibilisation à la nature",
+                        de: "Hinweis zur Tierwelt",
+                        zh: "野生动物提示"
+                    },
+                    desc: {
+                        en: "As we are located directly on the Zambezi river bank, please keep balcony doors closed to prevent wildlife and monkeys from entering.",
+                        fr: "Étant situés directement sur les rives du Zambèze, veuillez garder les portes du balcon fermées pour empêcher la faune et les singes d'entrer.",
+                        de: "Da wir direkt am Ufer des Sambesi liegen, halten Sie bitte die Balkontüren geschlossen, um Wildtiere und Affen fernzuhalten.",
+                        zh: "由于酒店紧邻赞比西河岸，请保持阳台门关闭，以防止野生动物和猴子进入房间。"
+                    }
+                },
+                {
+                    title: {
+                        en: "Pool & Bar",
+                        fr: "Piscine et Bar",
+                        de: "Pool & Bar",
+                        zh: "泳池与酒吧"
+                    },
+                    desc: {
+                        en: "Open 08:00 – 22:00. Please use the dedicated towels provided at the pool deck station.",
+                        fr: "Ouvert de 08h00 à 22h00. Veuillez utiliser les serviettes dédiées disponibles à la station de la terrasse de la piscine.",
+                        de: "Geöffnet von 08:00 bis 22:00 Uhr. Bitte benutzen Sie die dafür vorgesehenen Handtücher an der Poolterrasse.",
+                        zh: "开放时间08:00–22:00。请使用泳池区提供的专用毛巾。"
+                    }
+                },
+                {
+                    title: {
+                        en: "Sustainability",
+                        fr: "Durabilité",
+                        de: "Nachhaltigkeit",
+                        zh: "可持续发展"
+                    },
+                    desc: {
+                        en: "Help us preserve the Victoria Falls ecosystem. We encourage reusing linen to save water.",
+                        fr: "Aidez-nous à préserver l'écosystème de Victoria Falls. Nous encourageons la réutilisation du linge pour économiser l'eau.",
+                        de: "Helfen Sie uns, das Ökosystem der Victoriafälle zu schützen. Wir empfehlen die Wiederverwendung von Wäsche, um Wasser zu sparen.",
+                        zh: "请协助我们保护维多利亚瀑布生态环境。我们鼓励重复使用床品和毛巾以节约用水。"
+                    }
+                }
+            ]
         };
-
         const UI_TEXT = {
             en: {
                 welcome: "Experience the River",
@@ -312,15 +1893,194 @@
                 close: "Close",
                 loading: "Loading the lodge…",
                 loadError: "Showing offline content — could not reach config.json.",
-                bookOnWhatsApp: "Book on WhatsApp"
+                bookOnWhatsApp: "Book on WhatsApp",
+                welcomeTo: "Welcome to",
+                tapToStart: "Tap below to get started",
+                chooseLanguage: "Please choose your language",
+                guestNameLabel: "Guest Name",
+                guestNamePlaceholder: "e.g. David Livingstone",
+                roomPhoneLabel: "Room No / Phone",
+                roomPhonePlaceholder: "e.g. Room 204",
+                accessConciergeBtn: "Access Concierge",
+                networkNameLabel: "Network Name",
+                passkeyLabel: "Passkey",
+                nextShuttleLabel: "Next Shuttle",
+                departingNow: "Departing now",
+                tomorrowTag: "(Tomorrow)",
+                minAbbrev: "min",
+                aboutTitle: "About A'Zambezi",
+                aboutRowLabel: "About A'Zambezi River Lodge",
+                heritageWebsiteLabel: "Heritage Expeditions Website",
+                busRouteLabel: "Bus Route:",
+                toRainforestLabel: "To Rainforest",
+                fromRainforestLabel: "From Rainforest",
+                bookPrivateTaxiBtn: "Book Private Taxi",
+                bookPrivateShuttleMsg: "Book Private Shuttle",
+                bookActivityMsg: "Hello! I would like to book: ",
+                orderMsgPrefix: "Order: ",
+                nothingInCategory: "Nothing in this category right now."
+            },
+            fr: {
+                welcome: "Vivez le Fleuve",
+                subtitle: "Le seul lodge en bord de fleuve à Victoria Falls.",
+                accessButton: "Se connecter",
+                captureTitle: "Bienvenue chez vous",
+                captureSub: "Dites-nous qui séjourne avec nous.",
+                wifiTitle: "WiFi du Lodge",
+                wifiSub: "Profitez d'un internet haut débit illimité.",
+                copyPass: "Copier la clé",
+                copied: "Prêt à coller !",
+                continuePortal: "Explorer le Lodge",
+                portalTitle: "Concierge du Fleuve",
+                services: "Services aux Clients",
+                info: "Informations sur le Lodge",
+                roomService: "Menu Rainbow Delights",
+                heritage: "Heritage Expeditions",
+                heritageActivities: "Réserver une activité",
+                shuttle: "Navette Ville & Forêt Tropicale",
+                policies: "Consignes aux Clients",
+                localAttractions: "Aventure & Safari",
+                deptDirectory: "Annuaire du Lodge",
+                sponsoredLabel: "Service Partenaire Essentiel",
+                waMessage: "Bonjour Concierge A'Zambezi ! J'ai besoin d'aide pour ",
+                close: "Fermer",
+                loading: "Chargement du lodge…",
+                loadError: "Affichage du contenu hors ligne — impossible d'accéder à config.json.",
+                bookOnWhatsApp: "Réserver sur WhatsApp",
+                welcomeTo: "Bienvenue à",
+                tapToStart: "Appuyez ci-dessous pour commencer",
+                chooseLanguage: "Veuillez choisir votre langue",
+                guestNameLabel: "Nom du client",
+                guestNamePlaceholder: "ex. David Livingstone",
+                roomPhoneLabel: "N° de chambre / Téléphone",
+                roomPhonePlaceholder: "ex. Chambre 204",
+                accessConciergeBtn: "Accéder au concierge",
+                networkNameLabel: "Nom du réseau",
+                passkeyLabel: "Mot de passe",
+                nextShuttleLabel: "Prochaine navette",
+                departingNow: "Départ imminent",
+                tomorrowTag: "(Demain)",
+                minAbbrev: "min",
+                aboutTitle: "À propos d'A'Zambezi",
+                aboutRowLabel: "À propos d'A'Zambezi River Lodge",
+                heritageWebsiteLabel: "Site de Heritage Expeditions",
+                busRouteLabel: "Itinéraire du bus :",
+                toRainforestLabel: "Vers la forêt tropicale",
+                fromRainforestLabel: "Depuis la forêt tropicale",
+                bookPrivateTaxiBtn: "Réserver un taxi privé",
+                bookPrivateShuttleMsg: "Réserver une navette privée",
+                bookActivityMsg: "Bonjour ! Je souhaite réserver : ",
+                orderMsgPrefix: "Commande : ",
+                nothingInCategory: "Rien dans cette catégorie pour le moment."
+            },
+            de: {
+                welcome: "Erleben Sie den Fluss",
+                subtitle: "Die einzige Lodge direkt am Fluss in Victoria Falls.",
+                accessButton: "Verbinden",
+                captureTitle: "Willkommen zu Hause",
+                captureSub: "Teilen Sie uns mit, wer bei uns übernachtet.",
+                wifiTitle: "Lodge-WLAN",
+                wifiSub: "Genießen Sie unbegrenztes Highspeed-Internet.",
+                copyPass: "Schlüssel kopieren",
+                copied: "Bereit zum Einfügen!",
+                continuePortal: "Lodge entdecken",
+                portalTitle: "Fluss-Concierge",
+                services: "Gästeservice",
+                info: "Lodge-Informationen",
+                roomService: "Rainbow Delights Speisekarte",
+                heritage: "Heritage Expeditions",
+                heritageActivities: "Aktivität buchen",
+                shuttle: "Shuttle Stadt & Regenwald",
+                policies: "Gästerichtlinien",
+                localAttractions: "Abenteuer & Safari",
+                deptDirectory: "Lodge-Verzeichnis",
+                sponsoredLabel: "Wichtiger Partnerservice",
+                waMessage: "Hallo A'Zambezi Concierge! Ich brauche Hilfe bei ",
+                close: "Schließen",
+                loading: "Lodge wird geladen…",
+                loadError: "Offline-Inhalte werden angezeigt — config.json nicht erreichbar.",
+                bookOnWhatsApp: "Über WhatsApp buchen",
+                welcomeTo: "Willkommen im",
+                tapToStart: "Tippen Sie unten, um zu beginnen",
+                chooseLanguage: "Bitte wählen Sie Ihre Sprache",
+                guestNameLabel: "Gastname",
+                guestNamePlaceholder: "z. B. David Livingstone",
+                roomPhoneLabel: "Zimmernr. / Telefon",
+                roomPhonePlaceholder: "z. B. Zimmer 204",
+                accessConciergeBtn: "Concierge öffnen",
+                networkNameLabel: "Netzwerkname",
+                passkeyLabel: "Passwort",
+                nextShuttleLabel: "Nächster Shuttle",
+                departingNow: "Fährt jetzt ab",
+                tomorrowTag: "(Morgen)",
+                minAbbrev: "Min.",
+                aboutTitle: "Über A'Zambezi",
+                aboutRowLabel: "Über A'Zambezi River Lodge",
+                heritageWebsiteLabel: "Heritage Expeditions Website",
+                busRouteLabel: "Busroute:",
+                toRainforestLabel: "Zum Regenwald",
+                fromRainforestLabel: "Vom Regenwald",
+                bookPrivateTaxiBtn: "Privates Taxi buchen",
+                bookPrivateShuttleMsg: "Privaten Shuttle buchen",
+                bookActivityMsg: "Hallo! Ich möchte Folgendes buchen: ",
+                orderMsgPrefix: "Bestellung: ",
+                nothingInCategory: "Derzeit nichts in dieser Kategorie."
+            },
+            zh: {
+                welcome: "感受赞比西河",
+                subtitle: "维多利亚瀑布唯一的河畔旅舍。",
+                accessButton: "连接网络",
+                captureTitle: "欢迎回家",
+                captureSub: "请告诉我们入住客人的信息。",
+                wifiTitle: "旅舍WiFi",
+                wifiSub: "尽享无限高速网络。",
+                copyPass: "复制密码",
+                copied: "已复制，可粘贴！",
+                continuePortal: "探索旅舍",
+                portalTitle: "河畔礼宾服务",
+                services: "宾客服务",
+                info: "旅舍信息",
+                roomService: "Rainbow Delights 菜单",
+                heritage: "Heritage Expeditions",
+                heritageActivities: "预订活动",
+                shuttle: "市区与雨林班车",
+                policies: "住客须知",
+                localAttractions: "探险与野生动物游猎",
+                deptDirectory: "旅舍电话簿",
+                sponsoredLabel: "重要合作服务",
+                waMessage: "您好，A'Zambezi礼宾部！我需要帮助：",
+                close: "关闭",
+                loading: "正在加载…",
+                loadError: "正在显示离线内容——无法连接config.json。",
+                bookOnWhatsApp: "通过WhatsApp预订",
+                welcomeTo: "欢迎来到",
+                tapToStart: "点击下方开始",
+                chooseLanguage: "请选择您的语言",
+                guestNameLabel: "客人姓名",
+                guestNamePlaceholder: "例如：David Livingstone",
+                roomPhoneLabel: "房间号/电话",
+                roomPhonePlaceholder: "例如：204号房",
+                accessConciergeBtn: "进入礼宾服务",
+                networkNameLabel: "网络名称",
+                passkeyLabel: "密码",
+                nextShuttleLabel: "下一班班车",
+                departingNow: "即将发车",
+                tomorrowTag: "（明天）",
+                minAbbrev: "分钟",
+                aboutTitle: "关于A'Zambezi",
+                aboutRowLabel: "关于A'Zambezi River Lodge旅舍",
+                heritageWebsiteLabel: "Heritage Expeditions 官网",
+                busRouteLabel: "班车路线：",
+                toRainforestLabel: "前往雨林",
+                fromRainforestLabel: "从雨林返回",
+                bookPrivateTaxiBtn: "预订专车",
+                bookPrivateShuttleMsg: "预订专属班车",
+                bookActivityMsg: "您好！我想预订：",
+                orderMsgPrefix: "点餐：",
+                nothingInCategory: "该类别暂无内容。"
             }
         };
 
-        const POLICIES = [
-            { title: "Nature Awareness", desc: "As we are located directly on the Zambezi river bank, please keep balcony doors closed to prevent wildlife and monkeys from entering." },
-            { title: "Pool & Bar", desc: "Open 08:00 – 22:00. Please use the dedicated towels provided at the pool deck station." },
-            { title: "Sustainability", desc: "Help us preserve the Victoria Falls ecosystem. We encourage reusing linen to save water." }
-        ];
 
         // --- Global State ---
         let CONFIG = null;
@@ -334,8 +2094,15 @@
             detailModal: null,
             activeMenuTab: null,
             activeActivityTab: null,
+            activeAboutTab: null,
             copyStatus: false
         };
+
+        // Refresh the portal every 30s so the "Next Shuttle" countdown stays
+        // accurate without the guest needing to reopen the app.
+        setInterval(() => {
+            if (state.view === 'portal' && !state.detailModal) render();
+        }, 30000);
 
         const appContainer = document.getElementById('app');
 
@@ -348,10 +2115,51 @@
             if (type === 'activities' && !state.activeActivityTab) {
                 state.activeActivityTab = CONFIG.activities.categories[0].id;
             }
+            if (type === 'about' && !state.activeAboutTab) {
+                state.activeAboutTab = CONFIG.about.categories[0].id;
+            }
             render();
+        }
+
+        // Works out the next scheduled shuttle departure relative to right
+        // now, and how long until it leaves. Rolls over to tomorrow's first
+        // departure once the day's last shuttle has gone.
+        function getNextShuttle(schedule, lang) {
+            const t = UI_TEXT[lang] || UI_TEXT.en;
+            const toMinutes = (hhmm) => {
+                const [h, m] = hhmm.split(':').map(Number);
+                return h * 60 + m;
+            };
+            const now = new Date();
+            const nowMinutes = now.getHours() * 60 + now.getMinutes();
+            const sorted = schedule
+                .map(s => ({ time: s.toRainforest, mins: toMinutes(s.toRainforest) }))
+                .sort((a, b) => a.mins - b.mins);
+
+            let next = sorted.find(s => s.mins > nowMinutes);
+            let isTomorrow = false;
+            if (!next) { next = sorted[0]; isTomorrow = true; }
+
+            let diff = next.mins - nowMinutes;
+            if (isTomorrow) diff += 24 * 60;
+
+            let countdown;
+            if (diff <= 0) {
+                countdown = t.departingNow;
+            } else {
+                const h = Math.floor(diff / 60);
+                const m = diff % 60;
+                const timePart = h > 0 ? `${h}h ${m}m` : `${m} ${t.minAbbrev}`;
+                if (lang === 'fr') countdown = `dans ${timePart}`;
+                else if (lang === 'zh') countdown = `${timePart}后`;
+                else countdown = `in ${timePart}`; // en, de both read naturally with "in"
+            }
+
+            return { time: next.time, isTomorrow, countdown };
         }
         function setMenuTab(id) { state.activeMenuTab = id; render(); }
         function setActivityTab(id) { state.activeActivityTab = id; render(); }
+        function setAboutTab(id) { state.activeAboutTab = id; render(); }
 
         function handleImageLoad(img) { img.classList.add('loaded'); }
         function handleImageError(img) {
@@ -403,23 +2211,38 @@
             `;
         }
 
+        const LANGUAGES = [
+            { code: 'en', label: 'English', flag: '🇬🇧' },
+            { code: 'fr', label: 'Français', flag: '🇫🇷' },
+            { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
+            { code: 'zh', label: '中文', flag: '🇨🇳' }
+        ];
+
+        function setLang(lang) { state.lang = lang; }
+
         function renderLanguage() {
+            const t = UI_TEXT[state.lang] || UI_TEXT.en;
             return `
                 <div class="min-h-screen flex flex-col items-center justify-center p-6 text-center bg-white">
                     <img src="${CONFIG.hotel.logoUrl}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-24 h-24 mb-6 rounded-full object-cover border-4 border-slate-100 shadow-sm" />
-                    <h1 class="text-2xl font-bold text-slate-800 mb-2">Welcome to ${CONFIG.hotel.name}</h1>
-                    <p class="text-slate-500 mb-8">Tap below to get started</p>
+                    <h1 class="text-2xl font-bold text-slate-800 mb-2">${t.welcomeTo} ${CONFIG.hotel.name}</h1>
+                    <p class="text-slate-500 mb-8">${t.chooseLanguage}</p>
                     ${configError ? `<p class="text-[11px] text-amber-600 bg-amber-50 border border-amber-100 rounded-xl px-4 py-2 mb-6 max-w-xs">${UI_TEXT.en.loadError}</p>` : ''}
-                    <button onclick="setView('landing')" class="w-full max-w-xs flex items-center justify-between p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-lodge-teal hover:bg-sky-50 transition-all group">
-                        <span class="font-bold text-slate-700 flex-1 text-left">Continue</span>
-                        <i data-lucide="chevron-right" class="text-slate-400 group-hover:text-lodge-teal" size="18"></i>
-                    </button>
+                    <div class="grid grid-cols-1 w-full max-w-xs gap-3">
+                        ${LANGUAGES.map(l => `
+                            <button onclick="setLang('${l.code}'); setView('landing')" class="flex items-center justify-between p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-lodge-teal hover:bg-sky-50 transition-all group">
+                                <span class="text-2xl mr-3">${l.flag}</span>
+                                <span class="font-bold text-slate-700 flex-1 text-left">${l.label}</span>
+                                <i data-lucide="chevron-right" class="text-slate-400 group-hover:text-lodge-teal" size="18"></i>
+                            </button>
+                        `).join('')}
+                    </div>
                 </div>
             `;
         }
 
         function renderLanding() {
-            const t = UI_TEXT.en;
+            const t = UI_TEXT[state.lang] || UI_TEXT.en;
             return `
                 <div class="min-h-screen bg-white flex flex-col">
                     <div class="h-[45%] relative flex items-center justify-center overflow-hidden">
@@ -438,7 +2261,7 @@
                             </div>
                             <div class="flex-1">
                                 <span class="text-[10px] font-bold text-lodge-teal uppercase tracking-widest block mb-0.5">${t.sponsoredLabel}</span>
-                                <h4 class="text-sm font-bold text-slate-800 leading-tight">${CONFIG.sponsored.title}</h4>
+                                <h4 class="text-sm font-bold text-slate-800 leading-tight">${CONFIG.sponsored.title[state.lang] || CONFIG.sponsored.title.en}</h4>
                                 <p class="text-[11px] text-slate-500">${CONFIG.sponsored.company}</p>
                             </div>
                             <a href="${CONFIG.sponsored.link}" target="_blank" class="p-2.5 bg-white rounded-full border border-slate-200 shadow-sm active:scale-90 transition-transform">
@@ -460,7 +2283,7 @@
         }
 
         function renderCapture() {
-            const t = UI_TEXT.en;
+            const t = UI_TEXT[state.lang] || UI_TEXT.en;
             const isReady = state.guestName && state.guestContact;
             return `
                 <div class="min-h-screen bg-slate-50 p-6 flex flex-col">
@@ -471,20 +2294,20 @@
                     <div class="bg-white p-8 rounded-[32px] shadow-sm border border-slate-100 flex-1 max-w-md mx-auto w-full">
                         <div class="space-y-6">
                             <div>
-                                <label class="block text-xs font-bold text-slate-400 uppercase mb-2 ml-1">Guest Name</label>
+                                <label class="block text-xs font-bold text-slate-400 uppercase mb-2 ml-1">${t.guestNameLabel}</label>
                                 <div class="relative">
                                     <i data-lucide="user" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size="18"></i>
-                                    <input type="text" id="guest-name-input" placeholder="e.g. David Livingstone"
+                                    <input type="text" id="guest-name-input" placeholder="${t.guestNamePlaceholder}"
                                         oninput="updateCaptureState()"
                                         value="${state.guestName}"
                                         class="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-lodge-teal focus:outline-none transition-all" />
                                 </div>
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-400 uppercase mb-2 ml-1">Room No / Phone</label>
+                                <label class="block text-xs font-bold text-slate-400 uppercase mb-2 ml-1">${t.roomPhoneLabel}</label>
                                 <div class="relative">
                                     <i data-lucide="key" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size="18"></i>
-                                    <input type="text" id="guest-contact-input" placeholder="e.g. Room 204"
+                                    <input type="text" id="guest-contact-input" placeholder="${t.roomPhonePlaceholder}"
                                         oninput="updateCaptureState()"
                                         value="${state.guestContact}"
                                         class="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-lodge-teal focus:outline-none transition-all" />
@@ -492,7 +2315,7 @@
                             </div>
                             <button onclick="setView('wifi')" id="capture-submit-btn" ${!isReady ? 'disabled' : ''}
                                 class="w-full py-5 rounded-2xl font-bold mt-4 transition-all ${isReady ? 'bg-lodge-teal text-white shadow-lg active:scale-95' : 'bg-slate-200 text-slate-400 cursor-not-allowed'}">
-                                Access Concierge
+                                ${t.accessConciergeBtn}
                             </button>
                         </div>
                     </div>
@@ -501,7 +2324,7 @@
         }
 
         function renderWifi() {
-            const t = UI_TEXT.en;
+            const t = UI_TEXT[state.lang] || UI_TEXT.en;
             return `
                 <div class="min-h-screen bg-lodge-teal p-6 flex flex-col text-white">
                     <div class="flex-1 flex flex-col items-center justify-center text-center">
@@ -513,11 +2336,11 @@
 
                         <div class="bg-white rounded-[40px] p-10 w-full max-w-sm text-slate-800 shadow-2xl relative">
                             <div class="mb-8">
-                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Network Name</span>
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">${t.networkNameLabel}</span>
                                 <p class="text-xl font-bold text-lodge-teal">${CONFIG.wifi.ssid}</p>
                             </div>
                             <div class="mb-10">
-                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Passkey</span>
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">${t.passkeyLabel}</span>
                                 <p class="text-3xl font-mono font-bold tracking-tight text-slate-900">${CONFIG.wifi.password}</p>
                             </div>
                             <button onclick="copyToClipboard()" class="w-full py-4 rounded-2xl font-bold flex items-center justify-center space-x-2 transition-all active:scale-95 ${state.copyStatus ? 'bg-green-500 text-white' : 'bg-slate-100 text-slate-800'}">
@@ -535,7 +2358,8 @@
         }
 
         function renderPortal() {
-            const t = UI_TEXT.en;
+            const t = UI_TEXT[state.lang] || UI_TEXT.en;
+            const nextShuttle = getNextShuttle(CONFIG.shuttle.schedule, state.lang);
             return `
                 <div class="min-h-screen bg-slate-50 pb-24">
                     <div class="bg-white px-6 py-6 border-b border-slate-100 sticky top-0 z-50 flex items-center justify-between">
@@ -576,10 +2400,20 @@
                         <section>
                             <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-[2.5px] px-2 mb-4">${t.info}</h3>
                             <div class="bg-white rounded-[28px] shadow-sm border border-slate-100 divide-y divide-slate-100 overflow-hidden">
+                                <button onclick="setDetailModal('shuttle')" class="w-full p-5 flex items-center justify-between text-left hover:bg-slate-50 transition-colors">
+                                    <div class="flex items-center space-x-4 text-slate-700">
+                                        <i data-lucide="clock" class="text-slate-400" size="18"></i>
+                                        <div>
+                                            <span class="text-sm font-semibold block">${t.nextShuttleLabel}: ${nextShuttle.time}${nextShuttle.isTomorrow ? ' ' + t.tomorrowTag : ''}</span>
+                                            <span class="text-[11px] font-bold text-lodge-teal">${nextShuttle.countdown}</span>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="chevron-right" class="text-slate-300" size="16"></i>
+                                </button>
                                 <div class="p-5 flex items-center justify-between">
                                     <div class="flex items-center space-x-4 text-slate-700">
                                         <i data-lucide="calendar" class="text-slate-400" size="18"></i>
-                                        <span class="text-sm font-semibold">${CONFIG.checkout}</span>
+                                        <span class="text-sm font-semibold">${CONFIG.checkout[state.lang] || CONFIG.checkout.en}</span>
                                     </div>
                                 </div>
                                 <button onclick="setDetailModal('departments')" class="w-full p-5 flex items-center justify-between text-left hover:bg-slate-50 transition-colors">
@@ -589,10 +2423,17 @@
                                     </div>
                                     <i data-lucide="chevron-right" class="text-slate-300" size="16"></i>
                                 </button>
+                                <button onclick="setDetailModal('about')" class="w-full p-5 flex items-center justify-between text-left hover:bg-slate-50 transition-colors">
+                                    <div class="flex items-center space-x-4 text-slate-700">
+                                        <i data-lucide="info" class="text-slate-400" size="18"></i>
+                                        <span class="text-sm font-semibold">${t.aboutRowLabel}</span>
+                                    </div>
+                                    <i data-lucide="chevron-right" class="text-slate-300" size="16"></i>
+                                </button>
                                 <a href="${CONFIG.links.heritage}" target="_blank" class="w-full p-5 flex items-center justify-between text-left hover:bg-slate-50 transition-colors">
                                     <div class="flex items-center space-x-4 text-slate-700">
                                         <i data-lucide="map-pin" class="text-slate-400" size="18"></i>
-                                        <span class="text-sm font-semibold">${t.heritage} Website</span>
+                                        <span class="text-sm font-semibold">${t.heritageWebsiteLabel}</span>
                                     </div>
                                     <i data-lucide="external-link" class="text-slate-300" size="16"></i>
                                 </a>
@@ -611,15 +2452,43 @@
 
         function renderModal() {
             if (!state.detailModal) return '';
-            const t = UI_TEXT.en;
+            const t = UI_TEXT[state.lang] || UI_TEXT.en;
+            const L = (obj) => (obj && (obj[state.lang] || obj.en)) || '';
             let title = '', body = '';
 
-            if (state.detailModal === 'policies') {
+            if (state.detailModal === 'about') {
+                title = t.aboutTitle;
+                const cats = CONFIG.about.categories;
+                const active = cats.find(c => c.id === state.activeAboutTab) || cats[0];
+                body = `
+                    <div class="sticky -top-6 -mx-6 px-6 pt-1 pb-3 bg-slate-50/95 backdrop-blur z-10 mb-4">
+                        <div class="flex space-x-2 overflow-x-auto tab-scroll pb-1">
+                            ${cats.map(c => `
+                                <button onclick="setAboutTab('${c.id}')" class="flex-shrink-0 px-4 py-2 rounded-full text-xs font-bold border transition-all ${c.id === active.id ? 'bg-lodge-teal text-white border-lodge-teal' : 'bg-white text-slate-500 border-slate-200'}">
+                                    ${L(c.label)}
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ${(L(active.paragraphs) || []).map(p => `<p class="text-sm text-slate-500 leading-relaxed mb-3">${p}</p>`).join('')}
+                    ${active.rows.length ? `
+                        <div class="bg-white rounded-[28px] border border-slate-100 overflow-hidden shadow-sm mt-2">
+                            ${active.rows.map(r => `
+                                <div class="flex items-center justify-between p-4 border-b last:border-0 border-slate-100">
+                                    <span class="font-semibold text-slate-700 text-sm pr-3">${L(r.label)}</span>
+                                    ${r.value ? (r.href ? `<a href="${r.href}" class="font-bold text-lodge-teal text-sm text-right">${r.value}</a>` : `<span class="font-bold text-lodge-teal text-sm text-right">${r.value}</span>`) : ''}
+                                </div>
+                            `).join('')}
+                        </div>
+                    ` : ''}
+                `;
+
+            } else if (state.detailModal === 'policies') {
                 title = t.policies;
-                body = POLICIES.map(item => `
+                body = CONFIG.policies.map(item => `
                     <div class="p-6 bg-white rounded-3xl border border-slate-100 mb-4 shadow-sm">
-                        <h4 class="font-bold text-lodge-teal mb-2">${item.title}</h4>
-                        <p class="text-sm text-slate-500 leading-relaxed">${item.desc}</p>
+                        <h4 class="font-bold text-lodge-teal mb-2">${L(item.title)}</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">${L(item.desc)}</p>
                     </div>
                 `).join('');
 
@@ -637,15 +2506,15 @@
                         <div class="flex space-x-2 overflow-x-auto tab-scroll pb-1">
                             ${cats.map(c => `
                                 <button onclick="setMenuTab('${c.id}')" class="flex-shrink-0 px-4 py-2 rounded-full text-xs font-bold border transition-all ${c.id === active.id ? 'bg-lodge-teal text-white border-lodge-teal' : 'bg-white text-slate-500 border-slate-200'}">
-                                    ${c.label}
+                                    ${L(c.label)}
                                 </button>
                             `).join('')}
                         </div>
                     </div>
-                    ${active.note ? `<p class="text-xs text-slate-400 italic px-1 mb-3">${active.note}</p>` : ''}
+                    ${active.note ? `<p class="text-xs text-slate-400 italic px-1 mb-3">${L(active.note)}</p>` : ''}
                     <div class="space-y-3">
                         ${active.items.map(item => `
-                            <button onclick="window.open('${waLink('Order: ' + item.name)}')" class="w-full text-left flex items-start bg-white p-5 rounded-3xl border border-slate-100 shadow-sm active:bg-slate-50 transition-colors">
+                            <button onclick="window.open('${waLink(t.orderMsgPrefix + item.name)}')" class="w-full text-left flex items-start bg-white p-5 rounded-3xl border border-slate-100 shadow-sm active:bg-slate-50 transition-colors">
                                 ${item.img ? `
                                     <div class="w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 flex-shrink-0 mr-4">
                                         <img src="${item.img}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
@@ -659,7 +2528,7 @@
                             </button>
                         `).join('')}
                     </div>
-                    <p class="text-[10px] text-slate-400 italic px-1 pt-6">${CONFIG.restaurant.allergyNote}</p>
+                    <p class="text-[10px] text-slate-400 italic px-1 pt-6">${L(CONFIG.restaurant.allergyNote)}</p>
                 `;
 
             } else if (state.detailModal === 'activities') {
@@ -677,13 +2546,13 @@
                     ` : ''}
                     <div class="mb-4 p-4 bg-sky-50 rounded-2xl border border-sky-100 text-center">
                         <p class="text-[10px] font-bold text-lodge-teal uppercase tracking-widest">${act.provider}</p>
-                        <p class="text-xs text-slate-500 italic">${act.tagline}</p>
+                        <p class="text-xs text-slate-500 italic">${L(act.tagline)}</p>
                     </div>
                     <div class="sticky -top-6 -mx-6 px-6 pt-1 pb-3 bg-slate-50/95 backdrop-blur z-10 mb-4">
                         <div class="flex space-x-2 overflow-x-auto tab-scroll pb-1">
                             ${cats.map(c => `
                                 <button onclick="setActivityTab('${c.id}')" class="flex-shrink-0 px-4 py-2 rounded-full text-xs font-bold border transition-all ${c.id === active.id ? 'bg-lodge-teal text-white border-lodge-teal' : 'bg-white text-slate-500 border-slate-200'}">
-                                    ${c.label}
+                                    ${L(c.label)}
                                 </button>
                             `).join('')}
                         </div>
@@ -700,10 +2569,11 @@
                                     <i data-lucide="chevron-right" class="text-slate-300" size="16"></i>
                                 </div>
                             </button>
-                        `).join('') : `<p class="p-6 text-sm text-slate-400 text-center">Nothing in this category right now.</p>`}
+                        `).join('') : `<p class="p-6 text-sm text-slate-400 text-center">${t.nothingInCategory}</p>`}
                     </div>
-                    <p class="text-[10px] text-slate-400 italic px-1 pt-4">${act.note}</p>
-                                    `;
+                    <p class="text-[10px] text-slate-400 italic px-1 pt-4">${L(act.note)}</p>
+                    <button onclick="window.open('${waLink(t.bookActivityMsg)}')" class="w-full mt-6 py-5 bg-lodge-teal text-white rounded-3xl font-black shadow-lg shadow-sky-50 active:scale-95 transition-all">${t.bookOnWhatsApp}</button>
+                `;
 
             } else if (state.detailModal === 'shuttle') {
                 title = t.shuttle;
@@ -716,12 +2586,12 @@
                             </div>
                         ` : ''}
                         <div class="p-4 bg-slate-100 text-slate-600 text-xs rounded-2xl border border-slate-200">
-                            <strong>Bus Route:</strong> ${s.route.join(' ➔ ')}
+                            <strong>${t.busRouteLabel}</strong> ${s.route.join(' ➔ ')}
                         </div>
                         <div class="bg-white rounded-[32px] border border-slate-100 overflow-hidden shadow-sm">
                             <div class="flex items-center justify-between px-5 py-3 bg-slate-50 border-b border-slate-100">
-                                <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">To Rainforest</span>
-                                <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">From Rainforest</span>
+                                <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">${t.toRainforestLabel}</span>
+                                <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">${t.fromRainforestLabel}</span>
                             </div>
                             ${s.schedule.map(item => `
                                 <div class="flex items-center justify-between p-5 border-b last:border-0 border-slate-100">
@@ -733,8 +2603,8 @@
                                 </div>
                             `).join('')}
                         </div>
-                        ${s.notes.map(n => `<p class="text-[11px] text-slate-400 px-2 italic">* ${n}</p>`).join('')}
-                        <button onclick="window.open('${waLink('Book Private Shuttle')}')" class="w-full py-5 bg-lodge-teal text-white rounded-3xl font-black shadow-lg shadow-sky-50 active:scale-95 transition-all">Book Private Taxi</button>
+                        ${(L(s.notes) || []).map(n => `<p class="text-[11px] text-slate-400 px-2 italic">* ${n}</p>`).join('')}
+                        <button onclick="window.open('${waLink(t.bookPrivateShuttleMsg)}')" class="w-full py-5 bg-lodge-teal text-white rounded-3xl font-black shadow-lg shadow-sky-50 active:scale-95 transition-all">${t.bookPrivateTaxiBtn}</button>
                     </div>
                 `;
 
@@ -744,7 +2614,7 @@
                     <div class="bg-white rounded-[32px] border border-slate-100 overflow-hidden shadow-sm">
                         ${CONFIG.departments.map(item => `
                             <div class="flex items-center justify-between p-5 border-b last:border-0 border-slate-100">
-                                <span class="font-bold text-slate-700 text-sm">${item.name}</span>
+                                <span class="font-bold text-slate-700 text-sm">${L(item.name)}</span>
                                 <div class="flex items-center space-x-3 bg-slate-50 px-4 py-2.5 rounded-2xl border border-slate-100">
                                     <i data-lucide="phone" class="text-lodge-teal" size="14"></i>
                                     <span class="font-mono font-black text-lodge-teal text-sm">${item.ext}</span>
