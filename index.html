@@ -8,7 +8,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        
+
         :root {
             --lodge-teal: #00b5e2;
             --lodge-grey: #58595b;
@@ -21,6 +21,12 @@
         .animate-slide-up {
             animation: slideUp 0.3s ease-out forwards;
         }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin 1s linear infinite;
+        }
         body {
             font-family: 'Inter', sans-serif;
             -webkit-tap-highlight-color: transparent;
@@ -29,197 +35,350 @@
         .bg-lodge-teal { background-color: var(--lodge-teal); }
         .text-lodge-teal { color: var(--lodge-teal); }
         .border-lodge-teal { border-color: var(--lodge-teal); }
-        
-        /* Smooth image fade in */
+
         img { opacity: 0; transition: opacity 0.3s ease-in; }
         img.loaded { opacity: 1; }
 
-        /* Prevent auto-zoom on iOS inputs */
         input { font-size: 16px !important; }
+
+        .tab-scroll::-webkit-scrollbar { display: none; }
+        .tab-scroll { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body>
     <div id="app"></div>
 
     <script>
-        /** * ADMIN CONFIGURATION */
-        const APP_CONFIG = {
-            hotelName: "A'Zambezi River Lodge",
-            logoUrl: "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&q=80&w=200", 
-            wifi: {
-                ssid: "AZambezi_Guest_WiFi",
-                password: "RiverSideRelax",
+        /**
+         * ============================================================
+         *  ADMIN CONTENT
+         *  ------------------------------------------------------------
+         *  In production this app loads all of its content from
+         *  "config.json", a plain-text file that sits next to this
+         *  index.html on the web server. Hotel staff can update the
+         *  WiFi password, menu, activity prices, phone directory or
+         *  shuttle timetable by editing that ONE file and re-uploading
+         *  it — no code changes, no redeploy of this page required.
+         *
+         *  DEFAULT_CONFIG below is only a fallback used if config.json
+         *  cannot be fetched (for example when this file is opened
+         *  directly, or previewed outside of a real web server). Keep
+         *  it in sync with config.json if you want the offline/preview
+         *  experience to match production, but it is NOT the file
+         *  staff should edit day-to-day.
+         * ============================================================
+         */
+        const DEFAULT_CONFIG = {
+            hotel: {
+                name: "A'Zambezi River Lodge",
+                logoUrl: "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&q=80&w=200",
+                heroImage: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=1200"
             },
-            contacts: {
-                whatsapp: "263772123456",
-                frontDesk: "+263 13 44561",
-            },
-            links: {
-                menu: "https://example.com/menu.pdf",
-                heritage: "https://heritageexpeditionsafrica.com/",
-            },
+            wifi: { ssid: "AZambezi_Guest_WiFi", password: "RiverSideRelax" },
+            contacts: { whatsapp: "263772123456", frontDesk: "+263 13 44561" },
+            links: { heritage: "https://heritageexpeditionsafrica.com/" },
             sponsored: {
                 title: "24-Hour Medical Care",
                 company: "Victoria Falls Medical Centre",
                 image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=400",
                 link: "https://example.com/medical-centre"
             },
-            languages: [
-                { code: 'en', label: 'English', flag: '🇺🇸' },
-                { code: 'fr', label: 'Français', flag: '🇫🇷' },
+            checkout: "Departure: 11:00 AM",
+            departments: [
+                { name: "Reception", ext: "41322 / 41321" },
+                { name: "General Manager", ext: "41311" },
+                { name: "Guest Relations", ext: "41312" },
+                { name: "Accountant", ext: "41314" },
+                { name: "Front Office Manager", ext: "399" },
+                { name: "F&B Manager", ext: "398" },
+                { name: "F&B Control", ext: "394" },
+                { name: "HR", ext: "41332" },
+                { name: "Bar", ext: "41333" },
+                { name: "Restaurant", ext: "41335" },
+                { name: "Maintenance", ext: "338" },
+                { name: "Housekeeping", ext: "305" },
+                { name: "Stores", ext: "342" },
+                { name: "Accounts – Justin / Fadzai", ext: "41339" },
+                { name: "Accounts – Rutendo", ext: "397" },
+                { name: "Security Desk", ext: "354" },
+                { name: "Security – Gate", ext: "396" },
+                { name: "Laundry", ext: "337" },
+                { name: "Kitchen", ext: "340" },
+                { name: "Heritage Desk", ext: "41340" },
+                { name: "Reservations", ext: "41301" }
             ],
-            content: {
-                en: {
-                    heroImage: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=1200",
-                    attractions: [
-                        { title: "The Victoria Falls", dist: "10 min drive", desc: "One of the Seven Natural Wonders of the World. Our shuttle departs throughout the day.", img: "https://images.unsplash.com/photo-1604537466158-719b1972edd8?auto=format&fit=crop&q=80&w=600" },
-                        { title: "Zambezi Sunset Cruise", dist: "On-site Pier", desc: "Witness the majestic African sunset while viewing hippos and crocodiles directly from the hotel launch pier.", img: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=600" },
-                        { title: "Elephant Cafe", dist: "15 min drive", desc: "A unique fine-dining experience in the presence of rescued elephants.", img: "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&q=80&w=600" }
-                    ],
-                    policies: [
-                        { title: "Nature Awareness", desc: "As we are located directly on the Zambezi river bank, please keep balcony doors closed to prevent wildlife and monkeys from entering." },
-                        { title: "Pool & Bar", desc: "Open 08:00 - 22:00. Please use dedicated towels provided at the pool deck station." },
-                        { title: "Sustainability", desc: "Help us preserve Victoria Falls ecosystem. We encourage reusing linen to save water." }
-                    ],
-                    menuPreview: [
-                        { name: "Flame Grilled Zambezi Bream", price: "$15", desc: "Fresh river bream fillet with lemon-garlic butter and seasonal greens.", img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=400" },
-                        { name: "Rare Roast Venison of the Day", price: "$18", desc: "Served with traditional coriander pap, grilled baby corn and red wine compote.", img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400" },
-                        { name: "Warthog Baguette", price: "$14", desc: "Grilled marinated warthog minute steaks on a garlic baguette with fresh salad.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=400" },
-                        { name: "Zimbabwean Beef Fillet Steak", price: "$20", desc: "Grass-fed local grilled beef finished with thyme and garlic butter, served with wedges.", img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&q=80&w=400" }
-                    ],
-                    drinksPreview: [
-                        { name: "Zambezi Lager", price: "$4", desc: "Zimbabwe's legendary local premium lager. Crisp and refreshing." },
-                        { name: "Elephant Gin & Tonic", price: "$8", desc: "Premium local botanical gin mixed with crisp Indian tonic and a twist of lime." },
-                        { name: "Malawi Shandy", price: "$5", desc: "Classic combination of ginger ale, lemonade, and dashed bitters." },
-                        { name: "Rock Shandy", price: "$5", desc: "Perfect poolside quencher: half lemonade, half sparkling water, and Angostura bitters." }
-                    ],
-                    shuttle: [
-                        { time: "09:05 AM", route: "Lodge → Victoria Falls Town → Rainforest" },
-                        { time: "11:05 AM", route: "Lodge → Victoria Falls Town → Rainforest" },
-                        { time: "12:05 PM", route: "Lodge → Victoria Falls Town → Rainforest" },
-                        { time: "01:05 PM", route: "Lodge → Victoria Falls Town → Rainforest" },
-                        { time: "04:05 PM", route: "Lodge → Victoria Falls Town → Rainforest" }
-                    ],
-                    departments: [
-                        { name: "Front Desk", ext: "0" },
-                        { name: "Housekeeping", ext: "101" },
-                        { name: "Maintenance", ext: "102" },
-                        { name: "Room Service", ext: "103" },
-                        { name: "Safari Desk", ext: "105" }
-                    ]
-                },
-                fr: {
-                    heroImage: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=1200",
-                    attractions: [
-                        { title: "Les Chutes Victoria", dist: "10 min en voiture", desc: "L'une des sept merveilles naturelles du monde.", img: "https://images.unsplash.com/photo-1604537466158-719b1972edd8?auto=format&fit=crop&q=80&w=600" },
-                        { title: "Croisière au Zambèze", dist: "Jetée", desc: "Admirez le majestueux coucher de soleil africain.", img: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=600" },
-                        { title: "Elephant Cafe", dist: "15 min", desc: "Dîner gastronomique avec des éléphants.", img: "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&q=80&w=600" }
-                    ],
-                    policies: [
-                        { title: "Conscience Naturelle", desc: "Veuillez garder les portes des balcons fermées contre les singes." },
-                        { title: "Piscine", desc: "Ouvert 08:00 - 22:00." },
-                        { title: "Écologie", desc: "Préservons ensemble le Zambèze." }
-                    ],
-                    menuPreview: [
-                        { name: "Brème du Zambèze Grillée", price: "$15", desc: "Poisson frais avec beurre citron-ail et légumes.", img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=400" },
-                        { name: "Filet de Venaison", price: "$18", desc: "Rôti de gibier du jour servi avec du pap à la coriandre.", img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400" },
-                        { name: "Baguette de Phacochère", price: "$14", desc: "Steaks de phacochère marinés sur baguette à l'ail.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=400" }
-                    ],
-                    drinksPreview: [
-                        { name: "Zambezi Lager", price: "$4", desc: "Bière blonde locale premium croustillante." },
-                        { name: "Elephant Gin & Tonic", price: "$8", desc: "Gin artisanal local avec tonic et lime." }
-                    ],
-                    shuttle: [
-                        { time: "09h05", route: "Lodge → Centre-ville → Rainforest" },
-                        { time: "11h05", route: "Lodge → Centre-ville → Rainforest" }
-                    ],
-                    departments: [
-                        { name: "Réception", ext: "0" },
-                        { name: "Ménage", ext: "101" },
-                        { name: "Maintenance", ext: "102" },
-                        { name: "Service en Chambre", ext: "103" },
-                        { name: "Bureau Safari", ext: "105" }
-                    ]
-                }
+            shuttle: {
+                heading: "Shuttle Bus Timetable",
+                bannerImage: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=1200",
+                route: ["A'Zambezi River Lodge", "Victoria Falls Rainbow Hotel", "Marula Café / Batoka Safaris", "Rainforest"],
+                schedule: [
+                    { toRainforest: "09:05", fromRainforest: "09:50" },
+                    { toRainforest: "11:05", fromRainforest: "11:50" },
+                    { toRainforest: "12:05", fromRainforest: "12:50" },
+                    { toRainforest: "13:05", fromRainforest: "13:50" },
+                    { toRainforest: "16:05", fromRainforest: "16:50" }
+                ],
+                notes: [
+                    "Pick-up and drop-off points: Marula Café / Batoka Safaris, and The Rainforest.",
+                    "Clients wishing to board the bus from the hotel should notify the porter and be at Reception by the pick-up times above.",
+                    "For the return trip, notify the driver where you need to be picked up and the time."
+                ]
             },
-            translations: {
-                en: {
-                    welcome: "Experience the River",
-                    subtitle: "The only river-front lodge in Victoria Falls.",
-                    accessButton: "Get Connected",
-                    captureTitle: "Welcome Home",
-                    captureSub: "Let us know who is staying with us.",
-                    wifiTitle: "Lodge WiFi",
-                    wifiSub: "Enjoy unlimited high-speed internet.",
-                    copyPass: "Copy Key",
-                    copied: "Ready to Paste!",
-                    continuePortal: "Explore the Lodge",
-                    portalTitle: "River Concierge",
-                    services: "Guest Services",
-                    dining: "Dining & Drinks",
-                    info: "Lodge Information",
-                    roomService: "Room Service Menu",
-                    heritage: "Heritage Expeditions",
-                    shuttle: "Town & Rainforest Shuttle",
-                    restaurantMenu: "Amulonga Restaurant & Deck Bar",
-                    policies: "Guest Guidelines",
-                    checkout: "Departure: 11:00 AM",
-                    localAttractions: "Adventure & Safari",
-                    deptDirectory: "Lodge Directory",
-                    sponsoredLabel: "Essential Partner Service",
-                    waMessage: "Hello A'Zambezi Concierge! I need help with ",
-                    close: "Close"
-                },
-                fr: {
-                    welcome: "Vivez le Fleuve",
-                    subtitle: "Le seul lodge au bord de l'eau à Victoria Falls.",
-                    accessButton: "Se Connecter",
-                    captureTitle: "Bienvenue",
-                    captureSub: "Dites-nous qui séjourne avec nous.",
-                    wifiTitle: "WiFi du Lodge",
-                    wifiSub: "Internet haut débit illimité.",
-                    copyPass: "Copier",
-                    copied: "Copié !",
-                    continuePortal: "Explorer le Lodge",
-                    portalTitle: "Concierge",
-                    services: "Services",
-                    dining: "Restauration",
-                    info: "Informations",
-                    roomService: "Menu Restauration",
-                    heritage: "Expéditions Heritage",
-                    shuttle: "Navette Rainforest",
-                    restaurantMenu: "Amulonga Restaurant & Bar",
-                    policies: "Consignes",
-                    checkout: "Départ : 11h00",
-                    localAttractions: "Safari & Aventure",
-                    deptDirectory: "Répertoire",
-                    sponsoredLabel: "Partenaire Essentiel",
-                    waMessage: "Bonjour Concierge A'Zambezi ! ",
-                    close: "Fermer"
-                }
+            activities: {
+                provider: "Heritage Expeditions Africa",
+                tagline: "Dream. Explore. Discover…",
+                bannerImage: "https://images.unsplash.com/photo-1604537466158-719b1972edd8?auto=format&fit=crop&q=80&w=1200",
+                sectionImages: { adrenaline: "", safari: "", toursAndTransfers: "", helicopter: "" },
+                combos: [
+                    { name: "Zambezi Game Drive + Standard Sunset Cruise", price: "US$130 per person", note: "Including park fees", desc: "A combo that blends wild game viewing with a tranquil sunset cruise on the mighty Zambezi River.", img: "" },
+                    { name: "Flight of Angels + Game Drive", price: "US$270 per person", note: "Including park fees", desc: "Soar above the Falls on a 12–13 minute helicopter flight, then continue with a 3-hour game drive.", img: "" },
+                    { name: "Flight of Angels + Standard Sunset Cruise", price: "US$250 per person", note: "Including park fees", desc: "An aerial view of the Falls, followed by a 2-hour sunset cruise on the Zambezi.", img: "" },
+                    { name: "Flight of Angels + Standard Sunset Cruise + Game Drive", price: "US$310 per person", note: "Including park fees", desc: "The ultimate full-day combo: helicopter flight, game drive and sunset river cruise.", img: "" }
+                ],
+                riverAndAir: [
+                    { name: "Zambezi Game Drive", price: "US$83 per person", note: "Excluding park fees", desc: "A thrilling three-hour game drive in Zambezi National Park.", img: "" },
+                    { name: "Zambezi Standard Sunset Cruise", price: "US$52 per person", note: "Excluding park fees", desc: "Glide along the Zambezi at sunset, spotting hippo, crocodile and birdlife.", img: "" },
+                    { name: "Flight of Angels", price: "US$210 per person", note: "Including park fees, drinks and snacks", desc: "A 12–13 minute helicopter flight over the Falls.", img: "" },
+                    { name: "Zambezi Dinner Cruise", price: "US$122 per person", note: "Including transfer and park fees", desc: "Exceptional dining paired with breathtaking Zambezi scenery.", img: "" },
+                    { name: "The Boma Dinner and Drum Show", price: "US$75 per person", note: "Including transfers", desc: "Local cuisine, dance and interactive drumming.", img: "" }
+                ],
+                adrenaline: [
+                    { name: "White Water Rafting", price: "US$174", parkFee: "US$12" },
+                    { name: "Bungee Jumping", price: "US$194", parkFee: "US$6" },
+                    { name: "Gorge Swing", price: "US$134", parkFee: "US$6" },
+                    { name: "Tandem Gorge Swing", price: "US$201", parkFee: "US$6" },
+                    { name: "Zip Line", price: "US$108", parkFee: "US$6" },
+                    { name: "Tandem Zip Line", price: "US$162", parkFee: "US$6" },
+                    { name: "Flying Fox", price: "US$69", parkFee: "US$6" },
+                    { name: "Canopy Tour", price: "US$81", parkFee: "US$6" },
+                    { name: "High Wire Pass", price: "US$208", parkFee: "US$6" },
+                    { name: "Quad Bike Tour", price: "US$90", parkFee: "—" },
+                    { name: "Adventure Jet Boat", price: "US$141", parkFee: "US$10" },
+                    { name: "Rafting & Gorge Swing", price: "US$274", parkFee: "US$18" }
+                ],
+                safari: [
+                    { name: "Game Drive Zambezi National Park", price: "US$83", parkFee: "Int $16 / SADC $14 / Local $6" },
+                    { name: "Safari Game Walk", price: "US$132", parkFee: "US$18" },
+                    { name: "Elephant Encounter", price: "US$169", parkFee: "US$24" },
+                    { name: "Chobe Day Trip", price: "US$178", parkFee: "US$20" },
+                    { name: "Lion Walk", price: "US$160", parkFee: "US$10" },
+                    { name: "Cheetah Walk", price: "US$160", parkFee: "US$10" },
+                    { name: "Horse Back Safari", price: "US$171", parkFee: "US$30" },
+                    { name: "Game Drive Private Reserve", price: "US$159", parkFee: "US$18" },
+                    { name: "Night Game Drive + Bush Dinner", price: "US$159", parkFee: "US$18" },
+                    { name: "Dinner Game Drive, Zambezi National Park", price: "US$216", parkFee: "US$10" },
+                    { name: "Bush Dinner", price: "US$216", parkFee: "US$10" },
+                    { name: "Elephant Ride", price: "US$160", parkFee: "US$10" }
+                ],
+                toursAndTransfers: [
+                    { name: "Traditional Village Tour", price: "US$70 per person", note: "Park fees: Int $32, SADC $35" },
+                    { name: "Guided Tour of the Falls", price: "US$32 per person", note: "Park fees: SADC $35" },
+                    { name: "Boma Dinner", price: "US$75 per person", note: "Transfers included, excluding drinks" },
+                    { name: "Transfer – Livingstone Airport", price: "US$55 per person one way", note: "US$27 per person sharing one way" },
+                    { name: "Transfer – Kasane Airport", price: "US$100 per person one way", note: "US$50 per person sharing one way" },
+                    { name: "Transfer – Victoria Falls Int'l Airport", price: "US$15 per person one way", note: "US$10 per person sharing one way" },
+                    { name: "Victoria Falls Town Shuttle", price: "US$30 per person one way", note: "US$10 per person sharing one way" },
+                    { name: "Bamba Tram – Sunrise Run", price: "US$76 per person" },
+                    { name: "Victoria Falls Bike / Bamba Bike", price: "US$61 per person" },
+                    { name: "Simunye Theatre", price: "US$58 per person", note: "Excluding transfers" }
+                ],
+                helicopter: [
+                    { name: "Helicopter Flight – 22 minutes", price: "US$321" },
+                    { name: "Zambezi Spectacular – 25 minutes", price: "US$379" }
+                ]
+            },
+            restaurant: {
+                name: "Rainbow Delights",
+                bannerImage: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200",
+                allergyNote: "To our guests with food sensitivities or allergies: we cannot ensure that menu items do not contain ingredients that might cause an allergic reaction. Please consider this when ordering.",
+                categories: [
+                    { id: "omelettes", label: "Fresh Omelettes", items: [
+                        { name: "Bacon Temptation Omelette", price: "US$10", desc: "Loaded with strips of crispy bacon, a rich cheese sauce, pancake and Cheddar cheese and diced tomatoes.", img: "" },
+                        { name: "Spinach & Mushroom Omelette", price: "US$10", desc: "Fresh spinach and mushrooms folded into a classic omelette.", img: "" },
+                        { name: "Rainbow Omelette", price: "US$10", desc: "Fresh spinach, mushrooms, onions and cheese, topped with rich hollandaise and diced tomatoes.", img: "" },
+                        { name: "Garden Omelette", price: "US$10", desc: "An abundance of fresh green peppers, mushrooms, onions, tomatoes and Cheddar cheese.", img: "" }
+                    ]},
+                    { id: "breakfast-combos", label: "Breakfast Combinations", items: [
+                        { name: "The Must-Have Breakfast", price: "US$7", desc: "Two eggs, two bacon strips, two pork sausage links, two pieces of ham, hash browns and two buttermilk pancakes.", img: "" },
+                        { name: "Minute Steaks & Eggs", price: "US$9", desc: "Tender Zimbabwean Select steak served with three eggs and three buttermilk pancakes.", img: "" },
+                        { name: "Steak, Egg & Chips", price: "US$18", desc: "Grilled, grass-fed Zimbabwean Select sirloin steak, grilled onions and tomato, served with two eggs.", img: "" },
+                        { name: "Gazebo Combo", price: "US$10", desc: "Two grilled sausage links served with two eggs, hash browns and two buttermilk pancakes.", img: "" },
+                        { name: "Split Decision Breakfast", price: "US$6", desc: "Two eggs, two crispy bacon strips, two sausage links and two triangles of French toast.", img: "" },
+                        { name: "Eggs Benedict", price: "US$7", desc: "Traditional-style bacon on an English muffin topped with two poached eggs and hollandaise. Served with hash browns.", img: "" }
+                    ]},
+                    { id: "toast-waffles-crepes", label: "French Toast, Waffles & Sweet Crepes", items: [
+                        { name: "Strawberry Banana French Toast", price: "US$5", desc: "Four French toast triangles with cool strawberries, banana and whipped topping.", img: "" },
+                        { name: "Whole Wheat French Toast Combo", price: "US$10", desc: "Whole wheat French toast with banana, scrambled eggs and two strips of bacon.", img: "" },
+                        { name: "French Toast", price: "US$5", desc: "Six fluffy triangle-shaped slices topped with jam or natural honey and powdered sugar.", img: "" },
+                        { name: "Waffle Combo", price: "US$10", desc: "Belgian waffle with two eggs, choice of bacon or sausage links, strawberry topping and cinnamon apple compote.", img: "" },
+                        { name: "Banana Danish Fruit Pancake", price: "US$10", desc: "Two pancakes filled with Danish, cool strawberries and sweet cream cheese, topped with banana.", img: "" },
+                        { name: "Zimbabwean Pancake", price: "US$6", desc: "Four delicate pancakes with Zim butter.", img: "" },
+                        { name: "Rainbow Pancakes", price: "US$10", desc: "Two eggs, two bacon strips and two pork sausage links with your choice of crepe.", img: "" },
+                        { name: "Fresh Fruit Crepes", price: "US$8", desc: "Two crepes topped with fresh fruit, low-fat strawberry yoghurt and granola.", img: "" }
+                    ]},
+                    { id: "pancake-combos", label: "World Famous Pancake Combos", items: [
+                        { name: "Three Eggs & Pancakes", price: "US$12", desc: "Three eggs with buttermilk pancakes. Choice of bacon, sausage links, corned beef hash or pork sausage.", img: "" },
+                        { name: "Double Blueberry Pancakes", price: "US$8", desc: "Four buttermilk pancakes filled with blueberries, warm compote and whipped topping.", img: "" },
+                        { name: "Strawberry Banana Pancakes", price: "US$7", desc: "Four pancakes filled with banana, crowned with strawberries and whipped topping.", img: "" }
+                    ]},
+                    { id: "savory-crepes", label: "Savory Crepes, Soups & Double Take", items: [
+                        { name: "Vegetarian Stuffed Crepes", price: "US$5", desc: "Zim cheese, scrambled eggs, spinach, mushrooms and onions, topped with hollandaise.", img: "" },
+                        { name: "Chicken & Spinach Crepes", price: "US$8", desc: "Chicken, spinach, mushrooms and onions in two crepes with Swiss cheese and hollandaise.", img: "" },
+                        { name: "Bacon & Cheddar Stuffed Crepes", price: "Ask your server", desc: "Scrambled eggs, Cheddar and bacon, topped with cheddar and sour cream.", img: "" },
+                        { name: "Soup of the Day", price: "US$5", desc: "Freshly made daily.", img: "" },
+                        { name: "Double Take", price: "US$12", desc: "Pick a starter (salad, fruit or loaded potato & bacon soup) and a half sandwich or soup of the day.", img: "" }
+                    ]},
+                    { id: "sandwiches-burgers", label: "Sandwiches & Burgers", note: "Served with your choice of seasoned fries & onion rings", items: [
+                        { name: "Cheese Steak Stacker", price: "US$12", desc: "Grilled rib-eye steak and onions topped with melted Cheddar on a grilled roll.", img: "" },
+                        { name: "Chicken & Bacon Club Sandwich", price: "US$10", desc: "Roast chicken, crispy bacon, Cheddar, tomato, lettuce and mayonnaise.", img: "" },
+                        { name: "The Double Decker", price: "US$12", desc: "Six strips of crispy bacon, lettuce, tomato and mayonnaise on white toast.", img: "" },
+                        { name: "Tuscan Chicken Griller", price: "US$12", desc: "Grilled chicken breast with melting cheese, oven-roasted tomatoes and lettuce.", img: "" },
+                        { name: "Bacon & Beef Burgers", price: "US$12", desc: "Hickory-smoked bacon blended into the patty. All-beef available on request.", img: "" },
+                        { name: "Rainbow Burger", price: "US$12", desc: "Thick, juicy beef burger with melting cheese, lettuce, tomato and caramelised onions.", img: "" },
+                        { name: "Monster Bacon & Beef Cheeseburger", price: "US$15", desc: "Two patties, American and Provolone cheese, Romano-Parmesan bun.", img: "" }
+                    ]},
+                    { id: "nibbles", label: "Nibbles", items: [
+                        { name: "Chicken Fajita Quesadilla", price: "US$6", desc: "Grilled chicken, onions, peppers and tomatoes with Cheddar and Jack cheese, sour cream and salsa.", img: "" },
+                        { name: "Macaroni & Cheese", price: "US$10", desc: "", img: "" },
+                        { name: "Crispy Chicken Tenders & Fries", price: "US$10", desc: "Breaded, crispy-fried chicken strips with honey mustard.", img: "" },
+                        { name: "Onion Rings", price: "US$10", desc: "", img: "" }
+                    ]},
+                    { id: "salads", label: "Fresh Salads", items: [
+                        { name: "Grilled Chicken Caesar Salad", price: "US$9", desc: "Iceberg lettuce, croutons and tomato in Caesar dressing, topped with grilled chicken and parmesan.", img: "" },
+                        { name: "Crispy Chicken Salad", price: "US$10", desc: "Garden greens, crispy chicken, tomatoes, bacon, cheese and a hardboiled egg.", img: "" },
+                        { name: "Vumba Goat Cheese Salad", price: "US$15", desc: "Cereal-crusted goat cheese, baby leaves, berries and cherry tomatoes in balsamic vinaigrette.", img: "" }
+                    ]},
+                    { id: "dinner", label: "Fresh Dinner", items: [
+                        { name: "Zim Prime Steak of the Day", price: "US$18", desc: "Cooked just the way you like it, seasoned potatoes and steamed broccoli.", img: "" },
+                        { name: "Sirloin Steak Tips Dinner", price: "US$18", desc: "Sirloin tips grilled with onions, mashed potatoes and steamed broccoli.", img: "" },
+                        { name: "Freshly Grilled Tilapia", price: "US$15", desc: "Pan-seared tilapia, sautéed mushrooms, onions, tomatoes and balsamic glaze.", img: "" },
+                        { name: "Tempura Fried Prawns", price: "US$18", desc: "Golden butter-fried shrimp with vegetables, potatoes and sweet chilli & ginger sauce.", img: "" },
+                        { name: "Lemon & Herb Chicken", price: "US$15", desc: "Seared quarter chicken marinated with rosemary, garlic and lemon.", img: "" },
+                        { name: "Grilled Balsamic-Glazed Chicken", price: "US$15", desc: "Boneless chicken breast, sautéed mushrooms, onions, tomatoes and balsamic glaze.", img: "" },
+                        { name: "Onion Pot Roast", price: "US$18", desc: "Slow-cooked beef stew or braised local chicken, choice of starch.", img: "" },
+                        { name: "Pan Fried Mushrooms", price: "US$10", desc: "Lightly cooked seasonal mushrooms with vegetables and a choice of starch.", img: "" }
+                    ]},
+                    { id: "top5", label: "Top 5 Dishes", items: [
+                        { name: "Honey Glazed \"Pork Ribs\" Hawaii", price: "US$16", desc: "", img: "" },
+                        { name: "Amulonga Pasta with Mushrooms", price: "US$12", desc: "", img: "" },
+                        { name: "Grilled Tozho Steaks", price: "US$16", desc: "", img: "" },
+                        { name: "House Pizza", price: "US$12", desc: "", img: "" },
+                        { name: "Evolution Wrap", price: "US$15", desc: "", img: "" }
+                    ]},
+                    { id: "desserts", label: "Delicious Desserts", items: [
+                        { name: "Fruit Bowl", price: "US$5", desc: "Refreshing seasonal fresh fruit salad.", img: "" },
+                        { name: "Ice Cream Sundae", price: "US$5", desc: "Vanilla ice cream, hot fudge or strawberry topping, whipped topping and a cherry.", img: "" },
+                        { name: "Fruit Crepe", price: "US$5", desc: "Vanilla ice cream and whipped topping with strawberry, blueberry or cinnamon apple compote.", img: "" },
+                        { name: "Chef's Cake of the Day", price: "US$6", desc: "Ask your waiter.", img: "" }
+                    ]},
+                    { id: "kinder", label: "Kinder Café (12 & Under)", items: [
+                        { name: "Funny Pancake", price: "US$7", desc: "Buttermilk pancake with strawberry eyes, whipped-topping nose and banana smile.", img: "" },
+                        { name: "The Rascal", price: "US$8", desc: "Fruit crepe with vanilla ice cream and whipped topping.", img: "" },
+                        { name: "Silver Five", price: "US$7", desc: "Five silver-dollar buttermilk pancakes with scrambled egg and crispy onion.", img: "" },
+                        { name: "Fresh Toast", price: "US$6", desc: "Two triangles of French toast with two crispy bacon strips.", img: "" },
+                        { name: "Scrambled Egg & Pancake", price: "US$7", desc: "Scrambled egg with one buttermilk pancake.", img: "" },
+                        { name: "Crispy Chicken Strips", price: "US$7", desc: "Served with fresh fruit.", img: "" },
+                        { name: "Kids Cheeseburger", price: "US$5", desc: "Served with fresh chips.", img: "" },
+                        { name: "Grilled Cheese Sandwich", price: "US$10", desc: "Served with fresh chips.", img: "" },
+                        { name: "Fish Goujons", price: "US$10", desc: "Crispy fried fish, chips and coleslaw.", img: "" },
+                        { name: "Jonny's Fresh Fruit Dish", price: "US$10", desc: "A refreshing dish of seasonal fruit.", img: "" },
+                        { name: "Kids Drinks", price: "US$2", desc: "Soft drinks, chocolate milk, milkshake or hot chocolate.", img: "" },
+                        { name: "Kids Ice Cream Sundae", price: "US$3", desc: "", img: "" }
+                    ]},
+                    { id: "asian-corner", label: "Asian Corner", items: [
+                        { name: "Traditional Asian Soup", price: "US$5", desc: "Clear consommé with beef cubes, chicken strips, noodles and garlic.", img: "" },
+                        { name: "Pork & Prawn Stir Fry", price: "US$15", desc: "Classic Asian infusion presented with basmati rice.", img: "" },
+                        { name: "Chicken Kong Pao", price: "US$8", desc: "Stir-fried chicken breast cubes, chillies and assorted peppers.", img: "" },
+                        { name: "Prawn & Chicken Noodle", price: "US$18", desc: "Chicken and prawns with pasta in a creamy coconut chilli sauce.", img: "" }
+                    ]}
+                ]
             }
         };
 
+        const UI_TEXT = {
+            en: {
+                welcome: "Experience the River",
+                subtitle: "The only river-front lodge in Victoria Falls.",
+                accessButton: "Get Connected",
+                captureTitle: "Welcome Home",
+                captureSub: "Let us know who is staying with us.",
+                wifiTitle: "Lodge WiFi",
+                wifiSub: "Enjoy unlimited high-speed internet.",
+                copyPass: "Copy Key",
+                copied: "Ready to Paste!",
+                continuePortal: "Explore the Lodge",
+                portalTitle: "River Concierge",
+                services: "Guest Services",
+                info: "Lodge Information",
+                roomService: "Rainbow Delights Menu",
+                heritage: "Heritage Expeditions",
+                heritageActivities: "Book an Activity",
+                shuttle: "Town & Rainforest Shuttle",
+                policies: "Guest Guidelines",
+                localAttractions: "Adventure & Safari",
+                deptDirectory: "Lodge Directory",
+                sponsoredLabel: "Essential Partner Service",
+                waMessage: "Hello A'Zambezi Concierge! I need help with ",
+                close: "Close",
+                loading: "Loading the lodge…",
+                loadError: "Showing offline content — could not reach config.json.",
+                bookOnWhatsApp: "Book on WhatsApp"
+            }
+        };
+
+        const POLICIES = [
+            { title: "Nature Awareness", desc: "As we are located directly on the Zambezi river bank, please keep balcony doors closed to prevent wildlife and monkeys from entering." },
+            { title: "Pool & Bar", desc: "Open 08:00 – 22:00. Please use the dedicated towels provided at the pool deck station." },
+            { title: "Sustainability", desc: "Help us preserve the Victoria Falls ecosystem. We encourage reusing linen to save water." }
+        ];
+
         // --- Global State ---
+        let CONFIG = null;
+        let configError = false;
+        // Live activities fetched from /api/activities (a Vercel serverless
+        // function that pulls current pricing from Heritage Expeditions
+        // Africa's own website). Null until the fetch resolves; if it fails,
+        // stays null and the app falls back to CONFIG.activities from
+        // config.json instead. See /api/activities.js for details.
+        let LIVE_ACTIVITIES = null;
+        let liveActivitiesError = false;
+
+        const LIVE_TABS = [
+            { id: 'cruises', label: 'Cruises' },
+            { id: 'flights', label: 'Flights & Helicopter' },
+            { id: 'adrenaline', label: 'Adrenaline' },
+            { id: 'safari', label: 'Safari & Wildlife' },
+            { id: 'tours', label: 'Tours & Transfers' },
+            { id: 'other', label: 'More' }
+        ];
+
         let state = {
-            view: 'language',
+            view: 'loading',
             lang: 'en',
             guestName: '',
             guestContact: '',
-            detailModal: null, 
+            detailModal: null,
+            activeMenuTab: null,
+            activeActivityTab: 'combos',
+            activeLiveTab: 'cruises',
             copyStatus: false
         };
 
         const appContainer = document.getElementById('app');
 
         function setView(newView) { state.view = newView; render(); }
-        function setLang(newLang) { state.lang = newLang; }
-        function setDetailModal(type) { state.detailModal = type; render(); }
-        
-        function handleImageLoad(img) {
-            img.classList.add('loaded');
+        function setDetailModal(type) {
+            state.detailModal = type;
+            if (type === 'menu' && !state.activeMenuTab) {
+                state.activeMenuTab = CONFIG.restaurant.categories[0].id;
+            }
+            render();
         }
+        function setMenuTab(id) { state.activeMenuTab = id; render(); }
+        function setActivityTab(id) { state.activeActivityTab = id; render(); }
+        function setLiveTab(id) { state.activeLiveTab = id; render(); }
 
+        function handleImageLoad(img) { img.classList.add('loaded'); }
         function handleImageError(img) {
             img.style.display = 'none';
             img.parentElement.classList.add('bg-slate-100', 'flex', 'items-center', 'justify-center');
@@ -232,7 +391,6 @@
         function updateCaptureState() {
             state.guestName = document.getElementById('guest-name-input').value;
             state.guestContact = document.getElementById('guest-contact-input').value;
-            
             const btn = document.getElementById('capture-submit-btn');
             if (state.guestName.trim() && state.guestContact.trim()) {
                 btn.disabled = false;
@@ -244,66 +402,71 @@
         }
 
         function copyToClipboard() {
-            const pass = APP_CONFIG.wifi.password;
+            const pass = CONFIG.wifi.password;
             const textArea = document.createElement("textarea");
             textArea.value = pass;
             document.body.appendChild(textArea);
             textArea.select();
-            document.execCommand('copy');
+            try { document.execCommand('copy'); } catch (e) {}
             document.body.removeChild(textArea);
             state.copyStatus = true; render();
             setTimeout(() => { state.copyStatus = false; render(); }, 2000);
         }
 
+        function waLink(message) {
+            return `https://wa.me/${CONFIG.contacts.whatsapp}?text=${encodeURIComponent(message)}`;
+        }
+
         // --- View Renders ---
+
+        function renderLoading() {
+            return `
+                <div class="min-h-screen flex flex-col items-center justify-center bg-white text-center p-6">
+                    <div class="w-10 h-10 border-4 border-slate-100 border-t-lodge-teal rounded-full animate-spin-slow mb-4"></div>
+                    <p class="text-slate-400 text-sm font-semibold">${UI_TEXT.en.loading}</p>
+                </div>
+            `;
+        }
 
         function renderLanguage() {
             return `
                 <div class="min-h-screen flex flex-col items-center justify-center p-6 text-center bg-white">
-                    <img src="${APP_CONFIG.logoUrl}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-24 h-24 mb-6 rounded-full object-cover border-4 border-slate-100 shadow-sm" />
-                    <h1 class="text-2xl font-bold text-slate-800 mb-2">Welcome to A'Zambezi</h1>
-                    <p class="text-slate-500 mb-8">Please choose your language</p>
-                    <div class="grid grid-cols-1 w-full max-w-xs gap-3">
-                        ${APP_CONFIG.languages.map(l => `
-                            <button onclick="setLang('${l.code}'); setView('landing')" class="flex items-center justify-between p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-lodge-teal hover:bg-sky-50 transition-all group">
-                                <span class="text-2xl mr-3">${l.flag}</span>
-                                <span class="font-bold text-slate-700 flex-1 text-left">${l.label}</span>
-                                <i data-lucide="chevron-right" class="text-slate-400 group-hover:text-lodge-teal" size="18"></i>
-                            </button>
-                        `).join('')}
-                    </div>
+                    <img src="${CONFIG.hotel.logoUrl}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-24 h-24 mb-6 rounded-full object-cover border-4 border-slate-100 shadow-sm" />
+                    <h1 class="text-2xl font-bold text-slate-800 mb-2">Welcome to ${CONFIG.hotel.name}</h1>
+                    <p class="text-slate-500 mb-8">Tap below to get started</p>
+                    ${configError ? `<p class="text-[11px] text-amber-600 bg-amber-50 border border-amber-100 rounded-xl px-4 py-2 mb-6 max-w-xs">${UI_TEXT.en.loadError}</p>` : ''}
+                    <button onclick="setView('landing')" class="w-full max-w-xs flex items-center justify-between p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-lodge-teal hover:bg-sky-50 transition-all group">
+                        <span class="font-bold text-slate-700 flex-1 text-left">Continue</span>
+                        <i data-lucide="chevron-right" class="text-slate-400 group-hover:text-lodge-teal" size="18"></i>
+                    </button>
                 </div>
             `;
         }
 
         function renderLanding() {
-            const t = APP_CONFIG.translations[state.lang] || APP_CONFIG.translations['en'];
-            const content = APP_CONFIG.content[state.lang] || APP_CONFIG.content['en'];
+            const t = UI_TEXT.en;
             return `
                 <div class="min-h-screen bg-white flex flex-col">
                     <div class="h-[45%] relative flex items-center justify-center overflow-hidden">
-                        <img src="${content.heroImage}" onload="handleImageLoad(this)" class="absolute inset-0 w-full h-full object-cover" />
+                        <img src="${CONFIG.hotel.heroImage}" onload="handleImageLoad(this)" class="absolute inset-0 w-full h-full object-cover" />
                         <div class="absolute inset-0 bg-black/30 z-10"></div>
                         <div class="z-30 text-center px-6">
-                            <h1 class="text-white text-4xl font-bold mb-2 shadow-sm">${APP_CONFIG.hotelName}</h1>
+                            <h1 class="text-white text-4xl font-bold mb-2 shadow-sm">${CONFIG.hotel.name}</h1>
                             <p class="text-white/90 text-sm italic tracking-wide">${t.subtitle}</p>
                         </div>
                     </div>
-                    
+
                     <div class="flex-1 flex flex-col px-8 py-10 -mt-8 bg-white rounded-t-[32px] z-30 shadow-2xl overflow-y-auto">
                         <div class="mb-8 p-4 bg-slate-50 rounded-2xl border border-slate-100 flex items-center space-x-4">
                             <div class="w-16 h-16 rounded-xl flex-shrink-0 overflow-hidden bg-slate-200 flex items-center justify-center">
-                                <img src="${APP_CONFIG.sponsored.image}" 
-                                     onload="handleImageLoad(this)" 
-                                     onerror="handleImageError(this)" 
-                                     class="w-full h-full object-cover" />
+                                <img src="${CONFIG.sponsored.image}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
                             </div>
                             <div class="flex-1">
                                 <span class="text-[10px] font-bold text-lodge-teal uppercase tracking-widest block mb-0.5">${t.sponsoredLabel}</span>
-                                <h4 class="text-sm font-bold text-slate-800 leading-tight">${APP_CONFIG.sponsored.title}</h4>
-                                <p class="text-[11px] text-slate-500">${APP_CONFIG.sponsored.company}</p>
+                                <h4 class="text-sm font-bold text-slate-800 leading-tight">${CONFIG.sponsored.title}</h4>
+                                <p class="text-[11px] text-slate-500">${CONFIG.sponsored.company}</p>
                             </div>
-                            <a href="${APP_CONFIG.sponsored.link}" target="_blank" class="p-2.5 bg-white rounded-full border border-slate-200 shadow-sm active:scale-90 transition-transform">
+                            <a href="${CONFIG.sponsored.link}" target="_blank" class="p-2.5 bg-white rounded-full border border-slate-200 shadow-sm active:scale-90 transition-transform">
                                 <i data-lucide="external-link" size="16" class="text-lodge-teal"></i>
                             </a>
                         </div>
@@ -311,7 +474,7 @@
                         <div class="text-center mb-8">
                             <h2 class="text-2xl font-bold text-slate-800 mb-2">${t.welcome}</h2>
                         </div>
-                        
+
                         <button onclick="setView('capture')" class="w-full bg-lodge-teal text-white font-bold py-5 rounded-2xl shadow-lg shadow-sky-100 hover:brightness-110 active:scale-95 transition-all flex items-center justify-center space-x-3">
                             <span>${t.accessButton}</span>
                             <i data-lucide="wifi" size="20"></i>
@@ -322,7 +485,7 @@
         }
 
         function renderCapture() {
-            const t = APP_CONFIG.translations[state.lang] || APP_CONFIG.translations['en'];
+            const t = UI_TEXT.en;
             const isReady = state.guestName && state.guestContact;
             return `
                 <div class="min-h-screen bg-slate-50 p-6 flex flex-col">
@@ -336,8 +499,8 @@
                                 <label class="block text-xs font-bold text-slate-400 uppercase mb-2 ml-1">Guest Name</label>
                                 <div class="relative">
                                     <i data-lucide="user" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size="18"></i>
-                                    <input type="text" id="guest-name-input" placeholder="e.g. David Livingstone" 
-                                        oninput="updateCaptureState()" 
+                                    <input type="text" id="guest-name-input" placeholder="e.g. David Livingstone"
+                                        oninput="updateCaptureState()"
                                         value="${state.guestName}"
                                         class="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-lodge-teal focus:outline-none transition-all" />
                                 </div>
@@ -346,13 +509,13 @@
                                 <label class="block text-xs font-bold text-slate-400 uppercase mb-2 ml-1">Room No / Phone</label>
                                 <div class="relative">
                                     <i data-lucide="key" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size="18"></i>
-                                    <input type="text" id="guest-contact-input" placeholder="e.g. Room 204" 
-                                        oninput="updateCaptureState()" 
+                                    <input type="text" id="guest-contact-input" placeholder="e.g. Room 204"
+                                        oninput="updateCaptureState()"
                                         value="${state.guestContact}"
                                         class="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-lodge-teal focus:outline-none transition-all" />
                                 </div>
                             </div>
-                            <button onclick="setView('wifi')" id="capture-submit-btn" ${!isReady ? 'disabled' : ''} 
+                            <button onclick="setView('wifi')" id="capture-submit-btn" ${!isReady ? 'disabled' : ''}
                                 class="w-full py-5 rounded-2xl font-bold mt-4 transition-all ${isReady ? 'bg-lodge-teal text-white shadow-lg active:scale-95' : 'bg-slate-200 text-slate-400 cursor-not-allowed'}">
                                 Access Concierge
                             </button>
@@ -363,7 +526,7 @@
         }
 
         function renderWifi() {
-            const t = APP_CONFIG.translations[state.lang] || APP_CONFIG.translations['en'];
+            const t = UI_TEXT.en;
             return `
                 <div class="min-h-screen bg-lodge-teal p-6 flex flex-col text-white">
                     <div class="flex-1 flex flex-col items-center justify-center text-center">
@@ -372,15 +535,15 @@
                         </div>
                         <h2 class="text-3xl font-bold mb-2">${t.wifiTitle}</h2>
                         <p class="text-white/80 mb-10 text-sm font-light tracking-wide">${t.wifiSub}</p>
-                        
+
                         <div class="bg-white rounded-[40px] p-10 w-full max-w-sm text-slate-800 shadow-2xl relative">
                             <div class="mb-8">
                                 <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Network Name</span>
-                                <p class="text-xl font-bold text-lodge-teal">${APP_CONFIG.wifi.ssid}</p>
+                                <p class="text-xl font-bold text-lodge-teal">${CONFIG.wifi.ssid}</p>
                             </div>
                             <div class="mb-10">
                                 <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Passkey</span>
-                                <p class="text-3xl font-mono font-bold tracking-tight text-slate-900">${APP_CONFIG.wifi.password}</p>
+                                <p class="text-3xl font-mono font-bold tracking-tight text-slate-900">${CONFIG.wifi.password}</p>
                             </div>
                             <button onclick="copyToClipboard()" class="w-full py-4 rounded-2xl font-bold flex items-center justify-center space-x-2 transition-all active:scale-95 ${state.copyStatus ? 'bg-green-500 text-white' : 'bg-slate-100 text-slate-800'}">
                                 ${state.copyStatus ? '<i data-lucide="check" size="18"></i>' : '<i data-lucide="copy" size="18"></i>'}
@@ -397,21 +560,18 @@
         }
 
         function renderPortal() {
-            const t = APP_CONFIG.translations[state.lang] || APP_CONFIG.translations['en'];
+            const t = UI_TEXT.en;
             return `
                 <div class="min-h-screen bg-slate-50 pb-24">
                     <div class="bg-white px-6 py-6 border-b border-slate-100 sticky top-0 z-50 flex items-center justify-between">
                         <div class="flex items-center space-x-3">
                             <div class="w-10 h-10 rounded-full bg-slate-100 overflow-hidden border border-slate-100">
-                                <img src="${APP_CONFIG.logoUrl}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
+                                <img src="${CONFIG.hotel.logoUrl}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
                             </div>
                             <div>
                                 <h1 class="text-lg font-bold text-slate-800">${t.portalTitle}</h1>
-                                <p class="text-[9px] text-slate-400 uppercase font-black tracking-[1.5px]">${APP_CONFIG.hotelName}</p>
+                                <p class="text-[9px] text-slate-400 uppercase font-black tracking-[1.5px]">${CONFIG.hotel.name}</p>
                             </div>
-                        </div>
-                        <div class="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center active:bg-slate-100 transition-colors">
-                            <i data-lucide="search" class="text-slate-400" size="18"></i>
                         </div>
                     </div>
 
@@ -423,10 +583,10 @@
                                     <div class="p-3 bg-orange-50 rounded-2xl text-orange-500"><i data-lucide="utensils" size="24"></i></div>
                                     <span class="text-xs font-bold text-slate-700">${t.roomService}</span>
                                 </button>
-                                <a href="${APP_CONFIG.links.heritage}" target="_blank" class="bg-white p-6 rounded-[28px] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center space-y-3 active:scale-95 transition-all">
+                                <button onclick="setDetailModal('activities')" class="bg-white p-6 rounded-[28px] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center space-y-3 active:scale-95 transition-all">
                                     <div class="p-3 bg-sky-50 rounded-2xl text-lodge-teal"><i data-lucide="compass" size="24"></i></div>
-                                    <span class="text-xs font-bold text-slate-700">${t.heritage}</span>
-                                </a>
+                                    <span class="text-xs font-bold text-slate-700">${t.heritageActivities}</span>
+                                </button>
                                 <button onclick="setDetailModal('shuttle')" class="bg-white p-6 rounded-[28px] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center space-y-3 active:scale-95 transition-all">
                                     <div class="p-3 bg-purple-50 rounded-2xl text-purple-500"><i data-lucide="clock" size="24"></i></div>
                                     <span class="text-xs font-bold text-slate-700">${t.shuttle}</span>
@@ -444,7 +604,7 @@
                                 <div class="p-5 flex items-center justify-between">
                                     <div class="flex items-center space-x-4 text-slate-700">
                                         <i data-lucide="calendar" class="text-slate-400" size="18"></i>
-                                        <span class="text-sm font-semibold">${t.checkout}</span>
+                                        <span class="text-sm font-semibold">${CONFIG.checkout}</span>
                                     </div>
                                 </div>
                                 <button onclick="setDetailModal('departments')" class="w-full p-5 flex items-center justify-between text-left hover:bg-slate-50 transition-colors">
@@ -454,18 +614,18 @@
                                     </div>
                                     <i data-lucide="chevron-right" class="text-slate-300" size="16"></i>
                                 </button>
-                                <button onclick="setDetailModal('attractions')" class="w-full p-5 flex items-center justify-between text-left hover:bg-slate-50 transition-colors">
+                                <a href="${CONFIG.links.heritage}" target="_blank" class="w-full p-5 flex items-center justify-between text-left hover:bg-slate-50 transition-colors">
                                     <div class="flex items-center space-x-4 text-slate-700">
                                         <i data-lucide="map-pin" class="text-slate-400" size="18"></i>
-                                        <span class="text-sm font-semibold">${t.localAttractions}</span>
+                                        <span class="text-sm font-semibold">${t.heritage} Website</span>
                                     </div>
-                                    <i data-lucide="chevron-right" class="text-slate-300" size="16"></i>
-                                </button>
+                                    <i data-lucide="external-link" class="text-slate-300" size="16"></i>
+                                </a>
                             </div>
                         </section>
                     </div>
 
-                    <a href="https://wa.me/${APP_CONFIG.contacts.whatsapp}?text=${encodeURIComponent(t.waMessage)}" class="fixed bottom-8 right-6 w-16 h-16 bg-green-500 text-white rounded-full shadow-2xl flex items-center justify-center z-[100] ring-8 ring-green-500/5 active:scale-90 transition-transform">
+                    <a href="${waLink(t.waMessage)}" class="fixed bottom-8 right-6 w-16 h-16 bg-green-500 text-white rounded-full shadow-2xl flex items-center justify-center z-[100] ring-8 ring-green-500/5 active:scale-90 transition-transform">
                         <i data-lucide="message-square" fill="white" size="28"></i>
                     </a>
 
@@ -474,116 +634,229 @@
             `;
         }
 
+        function priceRow(item, extraNoteKey) {
+            return `
+                <div class="flex items-center justify-between p-4 border-b last:border-0 border-slate-100">
+                    <span class="font-semibold text-slate-700 text-sm pr-3">${item.name}</span>
+                    <div class="text-right flex-shrink-0">
+                        <span class="font-black text-lodge-teal text-sm block">${item.price}</span>
+                        ${item[extraNoteKey] ? `<span class="text-[10px] text-slate-400">${extraNoteKey === 'parkFee' ? 'Park fee: ' + item.parkFee : item.note}</span>` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
         function renderModal() {
             if (!state.detailModal) return '';
-            const t = APP_CONFIG.translations[state.lang] || APP_CONFIG.translations['en'];
-            const content = APP_CONFIG.content[state.lang] || APP_CONFIG.content['en'];
+            const t = UI_TEXT.en;
             let title = '', body = '';
 
-            if (state.detailModal === 'attractions') {
-                title = t.localAttractions;
-                body = content.attractions.map(item => `
-                    <div class="bg-white rounded-3xl border border-slate-100 overflow-hidden mb-6 shadow-sm">
-                        <div class="w-full h-44 overflow-hidden bg-slate-100">
-                            <img src="${item.img}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
-                        </div>
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h4 class="font-bold text-slate-800 text-lg">${item.title}</h4>
-                                <span class="text-[10px] bg-sky-50 text-lodge-teal px-3 py-1 rounded-full font-bold uppercase tracking-wider">${item.dist}</span>
-                            </div>
-                            <p class="text-sm text-slate-500 leading-relaxed">${item.desc}</p>
-                        </div>
-                    </div>
-                `).join('');
-            } else if (state.detailModal === 'policies') {
+            if (state.detailModal === 'policies') {
                 title = t.policies;
-                body = content.policies.map(item => `
+                body = POLICIES.map(item => `
                     <div class="p-6 bg-white rounded-3xl border border-slate-100 mb-4 shadow-sm">
                         <h4 class="font-bold text-lodge-teal mb-2">${item.title}</h4>
                         <p class="text-sm text-slate-500 leading-relaxed">${item.desc}</p>
                     </div>
                 `).join('');
+
             } else if (state.detailModal === 'menu') {
-                title = t.restaurantMenu;
+                title = CONFIG.restaurant.name;
+                const cats = CONFIG.restaurant.categories;
+                const active = cats.find(c => c.id === state.activeMenuTab) || cats[0];
                 body = `
-                    <div class="space-y-6">
-                        <div class="w-full h-48 overflow-hidden bg-slate-100 rounded-3xl shadow-sm">
-                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
+                    ${CONFIG.restaurant.bannerImage ? `
+                        <div class="w-full h-40 overflow-hidden bg-slate-100 rounded-3xl shadow-sm mb-4">
+                            <img src="${CONFIG.restaurant.bannerImage}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
                         </div>
-                        <div class="p-5 bg-orange-50 rounded-2xl text-orange-800 text-xs italic border border-orange-100 leading-relaxed">
-                            Experience modern international favorites combined with unique African traditional flavors on the banks of the mighty Zambezi.
+                    ` : ''}
+                    <div class="sticky -top-6 -mx-6 px-6 pt-1 pb-3 bg-slate-50/95 backdrop-blur z-10 mb-4">
+                        <div class="flex space-x-2 overflow-x-auto tab-scroll pb-1">
+                            ${cats.map(c => `
+                                <button onclick="setMenuTab('${c.id}')" class="flex-shrink-0 px-4 py-2 rounded-full text-xs font-bold border transition-all ${c.id === active.id ? 'bg-lodge-teal text-white border-lodge-teal' : 'bg-white text-slate-500 border-slate-200'}">
+                                    ${c.label}
+                                </button>
+                            `).join('')}
                         </div>
-                        
-                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider px-1">Amulonga Main Delicacies</h3>
-                        ${content.menuPreview.map(item => `
-                            <button onclick="window.open('https://wa.me/${APP_CONFIG.contacts.whatsapp}?text=Order: ${encodeURIComponent(item.name)}')" class="w-full text-left flex justify-between items-center bg-white p-5 rounded-3xl border border-slate-100 shadow-sm active:bg-slate-50 transition-colors">
-                                <div class="pr-4">
+                    </div>
+                    ${active.note ? `<p class="text-xs text-slate-400 italic px-1 mb-3">${active.note}</p>` : ''}
+                    <div class="space-y-3">
+                        ${active.items.map(item => `
+                            <button onclick="window.open('${waLink('Order: ' + item.name)}')" class="w-full text-left flex items-start bg-white p-5 rounded-3xl border border-slate-100 shadow-sm active:bg-slate-50 transition-colors">
+                                ${item.img ? `
+                                    <div class="w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 flex-shrink-0 mr-4">
+                                        <img src="${item.img}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
+                                    </div>
+                                ` : ''}
+                                <div class="pr-4 flex-1">
                                     <h4 class="font-bold text-slate-800 text-sm">${item.name}</h4>
-                                    <p class="text-[11px] text-slate-400 mt-1">${item.desc}</p>
+                                    ${item.desc ? `<p class="text-[11px] text-slate-400 mt-1 leading-relaxed">${item.desc}</p>` : ''}
                                 </div>
-                                <span class="font-black text-lodge-teal text-sm">${item.price}</span>
+                                <span class="font-black text-lodge-teal text-sm flex-shrink-0">${item.price}</span>
                             </button>
                         `).join('')}
+                    </div>
+                    <p class="text-[10px] text-slate-400 italic px-1 pt-6">${CONFIG.restaurant.allergyNote}</p>
+                `;
 
-                        ${content.drinksPreview ? `
-                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider px-1 pt-4">Amulonga Deck Bar Drinks</h3>
-                        <div class="space-y-3">
-                            ${content.drinksPreview.map(item => `
-                                <div class="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex justify-between items-center">
-                                    <div>
-                                        <h4 class="font-bold text-slate-800 text-sm">${item.name}</h4>
-                                        <p class="text-[11px] text-slate-400 mt-0.5">${item.desc}</p>
+            } else if (state.detailModal === 'activities' && LIVE_ACTIVITIES && LIVE_ACTIVITIES.length) {
+                title = t.localAttractions;
+                const activeId = state.activeLiveTab;
+                const grouped = {};
+                LIVE_TABS.forEach(tab => grouped[tab.id] = []);
+                LIVE_ACTIVITIES.forEach(item => {
+                    (grouped[item.category] || grouped.other).push(item);
+                });
+                const visibleTabs = LIVE_TABS.filter(tab => grouped[tab.id].length > 0);
+                const list = grouped[activeId] || [];
+
+                body = `
+                    <div class="mb-4 p-4 bg-sky-50 rounded-2xl border border-sky-100 text-center">
+                        <p class="text-[10px] font-bold text-lodge-teal uppercase tracking-widest">Heritage Expeditions Africa</p>
+                        <p class="text-xs text-slate-500 italic">Live pricing, updated automatically</p>
+                    </div>
+                    <div class="sticky -top-6 -mx-6 px-6 pt-1 pb-3 bg-slate-50/95 backdrop-blur z-10 mb-4">
+                        <div class="flex space-x-2 overflow-x-auto tab-scroll pb-1">
+                            ${visibleTabs.map(tab => `
+                                <button onclick="setLiveTab('${tab.id}')" class="flex-shrink-0 px-4 py-2 rounded-full text-xs font-bold border transition-all ${tab.id === activeId ? 'bg-lodge-teal text-white border-lodge-teal' : 'bg-white text-slate-500 border-slate-200'}">
+                                    ${tab.label}
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-[32px] border border-slate-100 overflow-hidden shadow-sm">
+                        ${list.length ? list.map(item => `
+                            <button onclick="window.open('${item.url}', '_blank')" class="w-full text-left flex items-center justify-between p-5 border-b last:border-0 border-slate-100 active:bg-slate-50 transition-colors">
+                                <div class="pr-3">
+                                    <h4 class="font-bold text-slate-800 text-sm">${item.name}</h4>
+                                    ${item.duration ? `<p class="text-[11px] text-slate-400 mt-0.5">${item.duration}</p>` : ''}
+                                </div>
+                                <div class="text-right flex-shrink-0 flex items-center space-x-2">
+                                    <span class="font-black text-lodge-teal text-sm">${item.price}</span>
+                                    <i data-lucide="chevron-right" class="text-slate-300" size="16"></i>
+                                </div>
+                            </button>
+                        `).join('') : `<p class="p-6 text-sm text-slate-400 text-center">Nothing in this category right now.</p>`}
+                    </div>
+                    <p class="text-[10px] text-slate-400 italic px-1 pt-4">Tap any activity to view full details and book directly with Heritage Expeditions Africa.</p>
+                    <button onclick="window.open('${waLink('Hello! I would like to book: ')}')" class="w-full mt-6 py-5 bg-lodge-teal text-white rounded-3xl font-black shadow-lg shadow-sky-50 active:scale-95 transition-all">${t.bookOnWhatsApp}</button>
+                `;
+
+            } else if (state.detailModal === 'activities') {
+                title = t.localAttractions;
+                const act = CONFIG.activities;
+                const tabs = [
+                    { id: 'combos', label: 'Combos' },
+                    { id: 'riverAndAir', label: 'Cruises & Flights' },
+                    { id: 'adrenaline', label: 'Adrenaline' },
+                    { id: 'safari', label: 'Safari' },
+                    { id: 'toursAndTransfers', label: 'Tours & Transfers' },
+                    { id: 'helicopter', label: 'Helicopter' }
+                ];
+                const activeId = state.activeActivityTab;
+                const list = act[activeId] || [];
+                const hasDesc = activeId === 'combos' || activeId === 'riverAndAir';
+                const noteKey = (activeId === 'adrenaline' || activeId === 'safari') ? 'parkFee' : 'note';
+
+                const sectionImg = act.sectionImages ? act.sectionImages[activeId] : '';
+                body = `
+                    ${act.bannerImage ? `
+                        <div class="w-full h-40 overflow-hidden bg-slate-100 rounded-3xl shadow-sm mb-4">
+                            <img src="${act.bannerImage}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
+                        </div>
+                    ` : ''}
+                    <div class="mb-4 p-4 bg-sky-50 rounded-2xl border border-sky-100 text-center">
+                        <p class="text-[10px] font-bold text-lodge-teal uppercase tracking-widest">${act.provider}</p>
+                        <p class="text-xs text-slate-500 italic">${act.tagline}</p>
+                    </div>
+                    <div class="sticky -top-6 -mx-6 px-6 pt-1 pb-3 bg-slate-50/95 backdrop-blur z-10 mb-4">
+                        <div class="flex space-x-2 overflow-x-auto tab-scroll pb-1">
+                            ${tabs.map(tab => `
+                                <button onclick="setActivityTab('${tab.id}')" class="flex-shrink-0 px-4 py-2 rounded-full text-xs font-bold border transition-all ${tab.id === activeId ? 'bg-lodge-teal text-white border-lodge-teal' : 'bg-white text-slate-500 border-slate-200'}">
+                                    ${tab.label}
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ${hasDesc ? `
+                        <div class="space-y-4">
+                            ${list.map(item => `
+                                <div class="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm">
+                                    ${item.img ? `
+                                        <div class="w-full h-36 overflow-hidden bg-slate-100">
+                                            <img src="${item.img}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
+                                        </div>
+                                    ` : ''}
+                                    <div class="p-6">
+                                        <div class="flex justify-between items-start mb-2 gap-3">
+                                            <h4 class="font-bold text-slate-800 text-sm">${item.name}</h4>
+                                            <span class="text-[10px] bg-sky-50 text-lodge-teal px-3 py-1 rounded-full font-bold uppercase tracking-wider flex-shrink-0">${item.price}</span>
+                                        </div>
+                                        <p class="text-xs text-slate-500 leading-relaxed mb-1">${item.desc}</p>
+                                        <p class="text-[10px] text-slate-400 italic">${item.note}</p>
                                     </div>
-                                    <span class="font-bold text-slate-700 text-sm ml-2">${item.price}</span>
                                 </div>
                             `).join('')}
                         </div>
+                    ` : `
+                        ${sectionImg ? `
+                            <div class="w-full h-36 overflow-hidden bg-slate-100 rounded-3xl shadow-sm mb-4">
+                                <img src="${sectionImg}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
+                            </div>
                         ` : ''}
-                    </div>
+                        <div class="bg-white rounded-[32px] border border-slate-100 overflow-hidden shadow-sm">
+                            ${list.map(item => priceRow(item, noteKey)).join('')}
+                        </div>
+                    `}
+                    <button onclick="window.open('${waLink('Hello! I would like to book: ')}')" class="w-full mt-6 py-5 bg-lodge-teal text-white rounded-3xl font-black shadow-lg shadow-sky-50 active:scale-95 transition-all">${t.bookOnWhatsApp}</button>
                 `;
+
             } else if (state.detailModal === 'shuttle') {
                 title = t.shuttle;
+                const s = CONFIG.shuttle;
                 body = `
                     <div class="space-y-6">
-                        <div class="w-full h-48 overflow-hidden bg-slate-100 rounded-3xl shadow-sm">
-                            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=600" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
-                        </div>
+                        ${s.bannerImage ? `
+                            <div class="w-full h-40 overflow-hidden bg-slate-100 rounded-3xl shadow-sm">
+                                <img src="${s.bannerImage}" onload="handleImageLoad(this)" onerror="handleImageError(this)" class="w-full h-full object-cover" />
+                            </div>
+                        ` : ''}
                         <div class="p-4 bg-slate-100 text-slate-600 text-xs rounded-2xl border border-slate-200">
-                            <strong>Bus Route:</strong> A'Zambezi River Lodge ➔ Victoria Falls Rainbow Hotel ➔ Marula Café/Batoka Safaris ➔ Rainforest.
+                            <strong>Bus Route:</strong> ${s.route.join(' ➔ ')}
                         </div>
                         <div class="bg-white rounded-[32px] border border-slate-100 overflow-hidden shadow-sm">
-                            ${content.shuttle.map(item => `
+                            <div class="flex items-center justify-between px-5 py-3 bg-slate-50 border-b border-slate-100">
+                                <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">To Rainforest</span>
+                                <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">From Rainforest</span>
+                            </div>
+                            ${s.schedule.map(item => `
                                 <div class="flex items-center justify-between p-5 border-b last:border-0 border-slate-100">
-                                    <div class="flex items-center space-x-4">
+                                    <div class="flex items-center space-x-3">
                                         <div class="w-2.5 h-2.5 bg-lodge-teal rounded-full shadow-sm"></div>
-                                        <span class="font-bold text-slate-800 text-sm">${item.time}</span>
+                                        <span class="font-bold text-slate-800 text-sm">${item.toRainforest}</span>
                                     </div>
-                                    <span class="text-[11px] text-slate-500 font-bold uppercase tracking-wide text-right">${item.route}</span>
+                                    <span class="font-bold text-slate-500 text-sm">${item.fromRainforest}</span>
                                 </div>
                             `).join('')}
                         </div>
-                        <div class="text-[11px] text-slate-400 px-2 italic">
-                            * Clients wishing to board the bus from the hotel should notify the porter at Reception by the pickup times above.
-                        </div>
-                        <button onclick="window.open('https://wa.me/${APP_CONFIG.contacts.whatsapp}?text=Book Private Shuttle')" class="w-full py-5 bg-lodge-teal text-white rounded-3xl font-black shadow-lg shadow-sky-50 active:scale-95 transition-all">Book Private Taxi</button>
+                        ${s.notes.map(n => `<p class="text-[11px] text-slate-400 px-2 italic">* ${n}</p>`).join('')}
+                        <button onclick="window.open('${waLink('Book Private Shuttle')}')" class="w-full py-5 bg-lodge-teal text-white rounded-3xl font-black shadow-lg shadow-sky-50 active:scale-95 transition-all">Book Private Taxi</button>
                     </div>
                 `;
+
             } else if (state.detailModal === 'departments') {
                 title = t.deptDirectory;
                 body = `
-                    <div class="space-y-5">
-                        <div class="bg-white rounded-[32px] border border-slate-100 overflow-hidden shadow-sm">
-                            ${content.departments.map(item => `
-                                <div class="flex items-center justify-between p-5 border-b last:border-0 border-slate-100">
-                                    <span class="font-bold text-slate-700 text-sm">${item.name}</span>
-                                    <div class="flex items-center space-x-3 bg-slate-50 px-4 py-2.5 rounded-2xl border border-slate-100">
-                                        <i data-lucide="phone" class="text-lodge-teal" size="14"></i>
-                                        <span class="font-mono font-black text-lodge-teal text-sm">${item.ext}</span>
-                                    </div>
+                    <div class="bg-white rounded-[32px] border border-slate-100 overflow-hidden shadow-sm">
+                        ${CONFIG.departments.map(item => `
+                            <div class="flex items-center justify-between p-5 border-b last:border-0 border-slate-100">
+                                <span class="font-bold text-slate-700 text-sm">${item.name}</span>
+                                <div class="flex items-center space-x-3 bg-slate-50 px-4 py-2.5 rounded-2xl border border-slate-100">
+                                    <i data-lucide="phone" class="text-lodge-teal" size="14"></i>
+                                    <span class="font-mono font-black text-lodge-teal text-sm">${item.ext}</span>
                                 </div>
-                            `).join('')}
-                        </div>
+                            </div>
+                        `).join('')}
                     </div>
                 `;
             }
@@ -608,19 +881,54 @@
 
         function render() {
             let html = '';
-            switch(state.view) {
+            switch (state.view) {
+                case 'loading': html = renderLoading(); break;
                 case 'language': html = renderLanguage(); break;
                 case 'landing':  html = renderLanding(); break;
                 case 'capture':  html = renderCapture(); break;
                 case 'wifi':     html = renderWifi(); break;
                 case 'portal':   html = renderPortal(); break;
-                default:         html = renderLanguage(); break;
+                default:         html = renderLoading(); break;
             }
             appContainer.innerHTML = html;
             lucide.createIcons();
         }
 
-        window.onload = render;
+        async function loadLiveActivities() {
+            try {
+                const res = await fetch('/api/activities', { cache: 'no-store' });
+                if (!res.ok) throw new Error('activities API responded ' + res.status);
+                const data = await res.json();
+                if (!data.activities || !data.activities.length) throw new Error('empty activities payload');
+                LIVE_ACTIVITIES = data.activities;
+                state.activeLiveTab = LIVE_ACTIVITIES[0].category || 'cruises';
+            } catch (err) {
+                // Silent by design: this is expected whenever the app is
+                // previewed outside of Vercel (no /api routes available), or
+                // if Heritage's site is briefly unreachable. The curated
+                // activities in config.json cover this automatically.
+                console.warn('Live activities unavailable, using config.json fallback:', err.message);
+                liveActivitiesError = true;
+            }
+            render();
+        }
+
+        async function loadConfig() {
+            try {
+                const res = await fetch('./config.json', { cache: 'no-store' });
+                if (!res.ok) throw new Error('config.json not reachable');
+                CONFIG = await res.json();
+            } catch (err) {
+                console.warn('Falling back to built-in content:', err.message);
+                CONFIG = DEFAULT_CONFIG;
+                configError = true;
+            }
+            state.view = 'language';
+            render();
+            loadLiveActivities();
+        }
+
+        window.onload = loadConfig;
     </script>
 </body>
 </html>
