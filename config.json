@@ -1,116 +1,233 @@
 {
   "hotel": {
     "name": "A'Zambezi River Lodge",
-    "logoUrl": "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&q=80&w=200",
-    "heroImage": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=1200"
+    "logoUrl": "https://i.ibb.co/Fqjz6r4V/azam-logo.jpg",
+    "heroImage": "https://i.ibb.co/fV635h07/AZambezi-River-Lodge-poolside1.jpg",
+    "address": "308 Parkway Drive, Victoria Falls"
   },
   "wifi": {
-    "ssid": "AZambezi_Guest_WiFi",
-    "password": "RiverSideRelax"
+    "ssid": "Azambezi: Rainbow Guest",
+    "password": "T6WQ4-MUYXZ"
   },
   "contacts": {
     "whatsapp": "263772123456",
-    "frontDesk": "+263 13 44561"
+    "frontDesk": "+263 (8328) 44561-4",
+    "email": "reservations.azambezi@rtg.co.zw"
   },
   "links": {
     "heritage": "https://heritageexpeditionsafrica.com/"
   },
   "sponsored": {
-    "title": "24-Hour Medical Care",
+    "title": {
+      "en": "24-Hour Medical Care",
+      "fr": "Soins médicaux 24h/24",
+      "de": "24-Stunden-Notarztdienst",
+      "zh": "24小时医疗服务"
+    },
     "company": "Victoria Falls Medical Centre",
     "image": "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=400",
     "link": "https://example.com/medical-centre"
   },
-  "checkout": "Departure: 11:00 AM",
+  "checkout": {
+    "en": "Departure: 11:00 AM",
+    "fr": "Départ : 11h00",
+    "de": "Abreise: 11:00 Uhr",
+    "zh": "退房时间：上午11:00"
+  },
   "departments": [
     {
-      "name": "Reception",
+      "name": {
+        "en": "Reception",
+        "fr": "Réception",
+        "de": "Rezeption",
+        "zh": "前台"
+      },
       "ext": "41322 / 41321"
     },
     {
-      "name": "General Manager",
+      "name": {
+        "en": "General Manager",
+        "fr": "Directeur Général",
+        "de": "Generaldirektor",
+        "zh": "总经理"
+      },
       "ext": "41311"
     },
     {
-      "name": "Guest Relations",
+      "name": {
+        "en": "Guest Relations",
+        "fr": "Relations Clients",
+        "de": "Gästebetreuung",
+        "zh": "客户关系部"
+      },
       "ext": "41312"
     },
     {
-      "name": "Accountant",
+      "name": {
+        "en": "Accountant",
+        "fr": "Comptable",
+        "de": "Buchhalter",
+        "zh": "会计部"
+      },
       "ext": "41314"
     },
     {
-      "name": "Front Office Manager",
+      "name": {
+        "en": "Front Office Manager",
+        "fr": "Chef de Réception",
+        "de": "Empfangsleiter",
+        "zh": "前厅经理"
+      },
       "ext": "399"
     },
     {
-      "name": "F&B Manager",
+      "name": {
+        "en": "F&B Manager",
+        "fr": "Directeur Restauration",
+        "de": "F&B-Manager",
+        "zh": "餐饮部经理"
+      },
       "ext": "398"
     },
     {
-      "name": "F&B Control",
+      "name": {
+        "en": "F&B Control",
+        "fr": "Contrôle Restauration",
+        "de": "F&B-Kontrolle",
+        "zh": "餐饮成本控制"
+      },
       "ext": "394"
     },
     {
-      "name": "HR",
+      "name": {
+        "en": "HR",
+        "fr": "Ressources Humaines",
+        "de": "Personalabteilung",
+        "zh": "人力资源部"
+      },
       "ext": "41332"
     },
     {
-      "name": "Bar",
+      "name": {
+        "en": "Bar",
+        "fr": "Bar",
+        "de": "Bar",
+        "zh": "酒吧"
+      },
       "ext": "41333"
     },
     {
-      "name": "Restaurant",
+      "name": {
+        "en": "Restaurant",
+        "fr": "Restaurant",
+        "de": "Restaurant",
+        "zh": "餐厅"
+      },
       "ext": "41335"
     },
     {
-      "name": "Maintenance",
+      "name": {
+        "en": "Maintenance",
+        "fr": "Maintenance",
+        "de": "Wartung",
+        "zh": "维修部"
+      },
       "ext": "338"
     },
     {
-      "name": "Housekeeping",
+      "name": {
+        "en": "Housekeeping",
+        "fr": "Entretien Ménager",
+        "de": "Housekeeping",
+        "zh": "客房部"
+      },
       "ext": "305"
     },
     {
-      "name": "Stores",
+      "name": {
+        "en": "Stores",
+        "fr": "Magasin",
+        "de": "Lager",
+        "zh": "仓库"
+      },
       "ext": "342"
     },
     {
-      "name": "Accounts – Justin / Fadzai",
+      "name": {
+        "en": "Accounts – Justin / Fadzai",
+        "fr": "Comptabilité – Justin / Fadzai",
+        "de": "Buchhaltung – Justin / Fadzai",
+        "zh": "账务部 – Justin / Fadzai"
+      },
       "ext": "41339"
     },
     {
-      "name": "Accounts – Rutendo",
+      "name": {
+        "en": "Accounts – Rutendo",
+        "fr": "Comptabilité – Rutendo",
+        "de": "Buchhaltung – Rutendo",
+        "zh": "账务部 – Rutendo"
+      },
       "ext": "397"
     },
     {
-      "name": "Security Desk",
+      "name": {
+        "en": "Security Desk",
+        "fr": "Poste de Sécurité",
+        "de": "Sicherheitsdienst",
+        "zh": "安保处"
+      },
       "ext": "354"
     },
     {
-      "name": "Security – Gate",
+      "name": {
+        "en": "Security – Gate",
+        "fr": "Sécurité – Portail",
+        "de": "Sicherheit – Tor",
+        "zh": "安保 – 大门"
+      },
       "ext": "396"
     },
     {
-      "name": "Laundry",
+      "name": {
+        "en": "Laundry",
+        "fr": "Blanchisserie",
+        "de": "Wäscherei",
+        "zh": "洗衣房"
+      },
       "ext": "337"
     },
     {
-      "name": "Kitchen",
+      "name": {
+        "en": "Kitchen",
+        "fr": "Cuisine",
+        "de": "Küche",
+        "zh": "厨房"
+      },
       "ext": "340"
     },
     {
-      "name": "Heritage Desk",
+      "name": {
+        "en": "Heritage Desk",
+        "fr": "Bureau Heritage",
+        "de": "Heritage-Schalter",
+        "zh": "Heritage服务台"
+      },
       "ext": "41340"
     },
     {
-      "name": "Reservations",
+      "name": {
+        "en": "Reservations",
+        "fr": "Réservations",
+        "de": "Reservierungen",
+        "zh": "预订部"
+      },
       "ext": "41301"
     }
   ],
   "shuttle": {
     "heading": "Shuttle Bus Timetable",
-    "bannerImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=1200",
+    "bannerImage": "https://i.ibb.co/kgR6b9YR/azam-shuttle.jpg",
     "route": [
       "A'Zambezi River Lodge",
       "Victoria Falls Rainbow Hotel",
@@ -147,30 +264,65 @@
   },
   "activities": {
     "provider": "Heritage Expeditions Africa",
-    "tagline": "Dream. Explore. Discover…",
+    "tagline": {
+      "en": "Dream. Explore. Discover…",
+      "fr": "Rêvez. Explorez. Découvrez…",
+      "de": "Träumen. Erkunden. Entdecken…",
+      "zh": "梦想·探索·发现…"
+    },
     "sourceUrl": "https://www.heritageexpeditionsafrica.com/destinations/victoria-falls",
-    "note": "Tap any activity to view full details and book directly on Heritage Expeditions Africa's site. Prices are per person and were last checked against heritageexpeditionsafrica.com — update this list here in config.json whenever their pricing changes.",
-    "bannerImage": "https://images.unsplash.com/photo-1604537466158-719b1972edd8?auto=format&fit=crop&q=80&w=1200",
+    "note": {
+      "en": "Tap any activity to view full details and book directly on Heritage Expeditions Africa's site. Prices are per person and were last checked against heritageexpeditionsafrica.com — update this list here in config.json whenever their pricing changes.",
+      "fr": "Appuyez sur une activité pour voir tous les détails et réserver directement sur le site de Heritage Expeditions Africa. Les prix sont par personne et ont été vérifiés sur heritageexpeditionsafrica.com — mettez à jour cette liste dans config.json en cas de changement de tarifs.",
+      "de": "Tippen Sie auf eine Aktivität, um alle Details zu sehen und direkt auf der Website von Heritage Expeditions Africa zu buchen. Die Preise verstehen sich pro Person und wurden zuletzt auf heritageexpeditionsafrica.com geprüft — aktualisieren Sie diese Liste in config.json, sobald sich die Preise ändern.",
+      "zh": "点击任意活动查看详情，并直接在Heritage Expeditions Africa官网上预订。价格为每人价格，最近一次核对时间以heritageexpeditionsafrica.com为准——如价格变动，请在config.json中更新此列表。"
+    },
+    "bannerImage": "https://i.ibb.co/S7xJBfbb/azam-activities.webp",
     "categories": [
       {
         "id": "cruises",
-        "label": "Cruises"
+        "label": {
+          "en": "Cruises",
+          "fr": "Croisières",
+          "de": "Kreuzfahrten",
+          "zh": "游船"
+        }
       },
       {
         "id": "flights",
-        "label": "Flights & Helicopter"
+        "label": {
+          "en": "Flights & Helicopter",
+          "fr": "Vols & Hélicoptère",
+          "de": "Flüge & Helikopter",
+          "zh": "飞行与直升机"
+        }
       },
       {
         "id": "adrenaline",
-        "label": "Adrenaline"
+        "label": {
+          "en": "Adrenaline",
+          "fr": "Adrénaline",
+          "de": "Adrenalin",
+          "zh": "极限刺激"
+        }
       },
       {
         "id": "safari",
-        "label": "Safari & Wildlife"
+        "label": {
+          "en": "Safari & Wildlife",
+          "fr": "Safari & Faune",
+          "de": "Safari & Tierwelt",
+          "zh": "野生动物游猎"
+        }
       },
       {
         "id": "tours",
-        "label": "Tours & Transfers"
+        "label": {
+          "en": "Tours & Transfers",
+          "fr": "Excursions & Transferts",
+          "de": "Touren & Transfers",
+          "zh": "游览与接送服务"
+        }
       }
     ],
     "items": [
@@ -433,16 +585,27 @@
         "category": "adrenaline",
         "url": "https://www.heritageexpeditionsafrica.com/activity/zip-line"
       }
-    ]
+    ],
+    "itemTranslationNote": "Activity names stay in English since booking happens on Heritage Expeditions Africa's own English-language site."
   },
   "restaurant": {
     "name": "Rainbow Delights",
     "bannerImage": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200",
-    "allergyNote": "To our guests with food sensitivities or allergies: we cannot ensure that menu items do not contain ingredients that might cause an allergic reaction. Please consider this when ordering.",
+    "allergyNote": {
+      "en": "To our guests with food sensitivities or allergies: we cannot ensure that menu items do not contain ingredients that might cause an allergic reaction. Please consider this when ordering.",
+      "fr": "Pour nos clients ayant des sensibilités ou des allergies alimentaires : nous ne pouvons garantir que les plats de la carte ne contiennent pas d'ingrédients susceptibles de provoquer une réaction allergique. Merci d'en tenir compte lors de votre commande.",
+      "de": "Für Gäste mit Lebensmittelunverträglichkeiten oder Allergien: Wir können nicht garantieren, dass die Gerichte auf der Speisekarte keine Zutaten enthalten, die eine allergische Reaktion auslösen könnten. Bitte berücksichtigen Sie dies bei Ihrer Bestellung.",
+      "zh": "对于有食物敏感或过敏的宾客：我们无法保证菜单中的菜品不含可能引起过敏反应的成分，点餐时请留意。"
+    },
     "categories": [
       {
         "id": "omelettes",
-        "label": "Fresh Omelettes",
+        "label": {
+          "en": "Fresh Omelettes",
+          "fr": "Omelettes Fraîches",
+          "de": "Frische Omeletts",
+          "zh": "新鲜蛋卷"
+        },
         "items": [
           {
             "name": "Bacon Temptation Omelette",
@@ -472,7 +635,12 @@
       },
       {
         "id": "breakfast-combos",
-        "label": "Breakfast Combinations",
+        "label": {
+          "en": "Breakfast Combinations",
+          "fr": "Formules Petit-déjeuner",
+          "de": "Frühstückskombinationen",
+          "zh": "早餐套餐"
+        },
         "items": [
           {
             "name": "The Must-Have Breakfast",
@@ -514,7 +682,12 @@
       },
       {
         "id": "toast-waffles-crepes",
-        "label": "French Toast, Waffles & Sweet Crepes",
+        "label": {
+          "en": "French Toast, Waffles & Sweet Crepes",
+          "fr": "Pain Perdu, Gaufres & Crêpes Sucrées",
+          "de": "French Toast, Waffeln & Süße Crêpes",
+          "zh": "法式吐司、华夫饼与甜可丽饼"
+        },
         "items": [
           {
             "name": "Strawberry Banana French Toast",
@@ -568,7 +741,12 @@
       },
       {
         "id": "pancake-combos",
-        "label": "World Famous Pancake Combos",
+        "label": {
+          "en": "World Famous Pancake Combos",
+          "fr": "Formules Pancakes Renommées",
+          "de": "Weltberühmte Pancake-Kombis",
+          "zh": "招牌美式煎饼套餐"
+        },
         "items": [
           {
             "name": "Three Eggs & Pancakes",
@@ -592,7 +770,12 @@
       },
       {
         "id": "savory-crepes",
-        "label": "Savory Crepes, Soups & Double Take",
+        "label": {
+          "en": "Savory Crepes, Soups & Double Take",
+          "fr": "Crêpes Salées, Soupes & Double Take",
+          "de": "Herzhafte Crêpes, Suppen & Double Take",
+          "zh": "咸味可丽饼、汤品及双拼套餐"
+        },
         "items": [
           {
             "name": "Vegetarian Stuffed Crepes",
@@ -628,8 +811,18 @@
       },
       {
         "id": "sandwiches-burgers",
-        "label": "Sandwiches & Burgers",
-        "note": "Served with your choice of seasoned fries & onion rings",
+        "label": {
+          "en": "Sandwiches & Burgers",
+          "fr": "Sandwichs & Burgers",
+          "de": "Sandwiches & Burger",
+          "zh": "三明治与汉堡"
+        },
+        "note": {
+          "en": "Served with your choice of seasoned fries & onion rings",
+          "fr": "Servi avec votre choix de frites assaisonnées et d'oignons frits",
+          "de": "Serviert mit gewürzten Pommes frites oder Zwiebelringen nach Wahl",
+          "zh": "配以调味薯条或洋葱圈（可选）"
+        },
         "items": [
           {
             "name": "Cheese Steak Stacker",
@@ -677,7 +870,12 @@
       },
       {
         "id": "nibbles",
-        "label": "Nibbles",
+        "label": {
+          "en": "Nibbles",
+          "fr": "Amuse-bouches",
+          "de": "Snacks",
+          "zh": "小食"
+        },
         "items": [
           {
             "name": "Chicken Fajita Quesadilla",
@@ -707,7 +905,12 @@
       },
       {
         "id": "salads",
-        "label": "Fresh Salads",
+        "label": {
+          "en": "Fresh Salads",
+          "fr": "Salades Fraîches",
+          "de": "Frische Salate",
+          "zh": "新鲜沙拉"
+        },
         "items": [
           {
             "name": "Grilled Chicken Caesar Salad",
@@ -731,7 +934,12 @@
       },
       {
         "id": "dinner",
-        "label": "Fresh Dinner",
+        "label": {
+          "en": "Fresh Dinner",
+          "fr": "Dîner",
+          "de": "Abendessen",
+          "zh": "晚餐主菜"
+        },
         "items": [
           {
             "name": "Zim Prime Steak of the Day",
@@ -785,7 +993,12 @@
       },
       {
         "id": "top5",
-        "label": "Top 5 Dishes",
+        "label": {
+          "en": "Top 5 Dishes",
+          "fr": "Top 5 des Plats",
+          "de": "Top 5 Gerichte",
+          "zh": "五大热门菜品"
+        },
         "items": [
           {
             "name": "Honey Glazed \"Pork Ribs\" Hawaii",
@@ -821,7 +1034,12 @@
       },
       {
         "id": "desserts",
-        "label": "Delicious Desserts",
+        "label": {
+          "en": "Delicious Desserts",
+          "fr": "Délicieux Desserts",
+          "de": "Köstliche Desserts",
+          "zh": "美味甜点"
+        },
         "items": [
           {
             "name": "Fruit Bowl",
@@ -851,7 +1069,12 @@
       },
       {
         "id": "kinder",
-        "label": "Kinder Café (12 & Under)",
+        "label": {
+          "en": "Kinder Café (12 & Under)",
+          "fr": "Kinder Café (12 ans et moins)",
+          "de": "Kinder Café (bis 12 Jahre)",
+          "zh": "儿童餐厅（12岁以下）"
+        },
         "items": [
           {
             "name": "Funny Pancake",
@@ -929,7 +1152,12 @@
       },
       {
         "id": "asian-corner",
-        "label": "Asian Corner",
+        "label": {
+          "en": "Asian Corner",
+          "fr": "Coin Asiatique",
+          "de": "Asien-Ecke",
+          "zh": "亚洲美食角"
+        },
         "items": [
           {
             "name": "Traditional Asian Soup",
@@ -957,6 +1185,614 @@
           }
         ]
       }
+    ],
+    "itemTranslationNote": "Dish names and descriptions are currently English-only. To translate an item, add optional name_fr/name_de/name_zh and desc_fr/desc_de/desc_zh fields to that item in config.json; the app will use them automatically once index.html is updated to read them."
+  },
+  "about": {
+    "categories": [
+      {
+        "id": "overview",
+        "label": {
+          "en": "Overview",
+          "fr": "Aperçu",
+          "de": "Übersicht",
+          "zh": "概览"
+        },
+        "paragraphs": {
+          "en": [
+            "A'Zambezi River Lodge sits on the banks of the Zambezi River on the edge of Zambezi National Park, near Victoria Falls. The location offers river frontage, a jetty, and views of African wildlife, prized for its tranquility and seclusion."
+          ],
+          "fr": [
+            "A'Zambezi River Lodge est situé sur les rives du fleuve Zambèze, en bordure du parc national du Zambèze, à proximité de Victoria Falls. Le site offre un accès direct au fleuve, une jetée et des vues sur la faune africaine, apprécié pour sa tranquillité et son isolement."
+          ],
+          "de": [
+            "Die A'Zambezi River Lodge liegt am Ufer des Sambesi, am Rand des Zambezi-Nationalparks, in der Nähe der Victoriafälle. Der Standort bietet Flussfront, einen Steg und Ausblicke auf die afrikanische Tierwelt und ist für seine Ruhe und Abgeschiedenheit bekannt."
+          ],
+          "zh": [
+            "A'Zambezi River Lodge坐落于赞比西河畔，毗邻赞比西国家公园，靠近维多利亚瀑布。得天独厚的河景、专属码头及非洲野生动物景观，使其以宁静私密著称。"
+          ]
+        },
+        "rows": []
+      },
+      {
+        "id": "rooms",
+        "label": {
+          "en": "Rooms",
+          "fr": "Chambres",
+          "de": "Zimmer",
+          "zh": "客房"
+        },
+        "paragraphs": {
+          "en": [
+            "Guest rooms feature standard double, queen or king size beds, free high-speed Wi-Fi, individually controlled air conditioning, a bathroom with bathtub and shower, a 32\" LCD TV with satellite news, a direct-dial phone, hair dryer, in-room safe, and mosquito net and repellents. Rooms are either river-facing or garden-facing."
+          ],
+          "fr": [
+            "Les chambres disposent de lits doubles, queen ou king size, d'une connexion Wi-Fi gratuite à haut débit, d'une climatisation individuelle, d'une salle de bain avec baignoire et douche, d'une télévision LCD 32 pouces avec chaînes d'actualités par satellite, d'un téléphone à ligne directe, d'un sèche-cheveux, d'un coffre-fort et d'une moustiquaire avec répulsifs. Les chambres donnent soit sur le fleuve, soit sur le jardin."
+          ],
+          "de": [
+            "Die Gästezimmer verfügen über Doppel-, Queen- oder Kingsize-Betten, kostenloses Highspeed-WLAN, individuell regulierbare Klimaanlage, ein Bad mit Badewanne und Dusche, einen 32-Zoll-LCD-Fernseher mit Satelliten-Nachrichten, ein Direktwahltelefon, einen Föhn, einen Zimmersafe sowie Moskitonetz und Repellents. Die Zimmer sind entweder zum Fluss oder zum Garten ausgerichtet."
+          ],
+          "zh": [
+            "客房配备标准双人床、大床或特大床，免费高速WiFi，独立控温空调，配有浴缸及淋浴的卫浴间，32英寸卫星新闻液晶电视，直拨电话，吹风机，房内保险箱，以及蚊帐和驱蚊用品。客房分为河景房和花园景观房。"
+          ]
+        },
+        "rows": [
+          {
+            "label": {
+              "en": "Luxury King Suites",
+              "fr": "Suites King de Luxe",
+              "de": "Luxus-King-Suiten",
+              "zh": "豪华大床套房"
+            },
+            "value": "2"
+          },
+          {
+            "label": {
+              "en": "Queen Suites",
+              "fr": "Suites Queen",
+              "de": "Queen-Suiten",
+              "zh": "大床套房"
+            },
+            "value": "2"
+          },
+          {
+            "label": {
+              "en": "Standard Double",
+              "fr": "Chambre Double Standard",
+              "de": "Standard-Doppelzimmer",
+              "zh": "标准双人房"
+            },
+            "value": "44"
+          },
+          {
+            "label": {
+              "en": "Standard Twin (some interleading)",
+              "fr": "Chambre Twin Standard (certaines communicantes)",
+              "de": "Standard-Zweibettzimmer (teils verbunden)",
+              "zh": "标准双床房（部分可连通）"
+            },
+            "value": "37"
+          },
+          {
+            "label": {
+              "en": "Paraplegic Rooms",
+              "fr": "Chambres pour personnes à mobilité réduite",
+              "de": "Zimmer für Rollstuhlfahrer",
+              "zh": "无障碍客房"
+            },
+            "value": "2 (1 twin, 1 double)"
+          }
+        ]
+      },
+      {
+        "id": "dining",
+        "label": {
+          "en": "Dining & Bars",
+          "fr": "Restauration & Bars",
+          "de": "Restaurants & Bars",
+          "zh": "餐饮与酒吧"
+        },
+        "paragraphs": {
+          "en": [
+            "Amulonga Bar is the main hotel bar, with a deck overlooking the Zambezi River.",
+            "Zambezi Bar is a Zimbabwean-style rondavel bar, ideal for pre-dinner drinks.",
+            "Amulonga Restaurant is an award-winning open-air restaurant seating 120 guests, blending modern and African cuisine with traditional entertainment during dinner."
+          ],
+          "fr": [
+            "Le bar Amulonga est le bar principal de l'hôtel, avec une terrasse donnant sur le fleuve Zambèze.",
+            "Le Zambezi Bar est un bar de style rondavel zimbabwéen, idéal pour un apéritif avant le dîner.",
+            "Le restaurant Amulonga est un restaurant en plein air primé, pouvant accueillir 120 convives, qui associe cuisine moderne et africaine à des animations traditionnelles pendant le dîner."
+          ],
+          "de": [
+            "Die Amulonga Bar ist die Hauptbar des Hotels mit einer Terrasse mit Blick auf den Sambesi.",
+            "Die Zambezi Bar ist eine Bar im simbabwischen Rondavel-Stil, ideal für einen Aperitif vor dem Abendessen.",
+            "Das Amulonga Restaurant ist ein preisgekröntes Open-Air-Restaurant mit Platz für 120 Gäste, das moderne und afrikanische Küche mit traditioneller Unterhaltung beim Abendessen verbindet."
+          ],
+          "zh": [
+            "Amulonga酒吧是酒店的主酒吧，设有可俯瞰赞比西河的露台。",
+            "Zambezi酒吧是一间津巴布韦传统圆屋风格酒吧，非常适合餐前小酌。",
+            "Amulonga餐厅是一家屡获殊荣的露天餐厅，可容纳120位宾客，将现代与非洲美食相结合，晚餐时段还设有传统表演。"
+          ]
+        },
+        "rows": [
+          {
+            "label": {
+              "en": "Breakfast",
+              "fr": "Petit-déjeuner",
+              "de": "Frühstück",
+              "zh": "早餐"
+            },
+            "value": "6:30 – 10:00"
+          },
+          {
+            "label": {
+              "en": "Lunch",
+              "fr": "Déjeuner",
+              "de": "Mittagessen",
+              "zh": "午餐"
+            },
+            "value": "12:30 – 14:00"
+          },
+          {
+            "label": {
+              "en": "Dinner",
+              "fr": "Dîner",
+              "de": "Abendessen",
+              "zh": "晚餐"
+            },
+            "value": "19:00 – 21:30"
+          }
+        ]
+      },
+      {
+        "id": "conferencing",
+        "label": {
+          "en": "Conferencing",
+          "fr": "Conférences",
+          "de": "Konferenzen",
+          "zh": "会议设施"
+        },
+        "paragraphs": {
+          "en": [
+            "Three conference rooms are available, the largest seating up to 100 delegates cinema-style, plus garden banquets for up to 300 guests by the river.",
+            "Equipment provided: LCD projector, screen, PA system, flipchart and stands."
+          ],
+          "fr": [
+            "Trois salles de conférence sont disponibles, la plus grande pouvant accueillir jusqu'à 100 délégués en style cinéma, ainsi que des banquets de jardin pour jusqu'à 300 invités au bord du fleuve.",
+            "Équipement fourni : projecteur LCD, écran, système de sonorisation, tableau à feuilles mobiles et supports."
+          ],
+          "de": [
+            "Es stehen drei Konferenzräume zur Verfügung, der größte bietet Platz für bis zu 100 Teilnehmer im Kinostil, zusätzlich Gartenbankette für bis zu 300 Gäste am Fluss.",
+            "Bereitgestellte Ausstattung: LCD-Projektor, Leinwand, PA-Anlage, Flipchart und Ständer."
+          ],
+          "zh": [
+            "酒店设有三间会议室，最大可容纳100人（剧院式排列），并可在河畔花园举办最多300人的宴会。",
+            "提供设备：液晶投影仪、屏幕、扩音系统、活动挂图及支架。"
+          ]
+        },
+        "rows": [
+          {
+            "label": {
+              "en": "Inyathi Room – Cinema / Theatre",
+              "fr": "Salle Inyathi – Cinéma / Théâtre",
+              "de": "Inyathi-Raum – Kino/Theater",
+              "zh": "Inyathi会议厅 – 剧院式"
+            },
+            "value": "100"
+          },
+          {
+            "label": {
+              "en": "Inyathi Room – Conference / School Room",
+              "fr": "Salle Inyathi – Conférence / Salle de classe",
+              "de": "Inyathi-Raum – Konferenz/Schulraum",
+              "zh": "Inyathi会议厅 – 课桌式"
+            },
+            "value": "80"
+          },
+          {
+            "label": {
+              "en": "Inyathi Room – U-Shape",
+              "fr": "Salle Inyathi – Forme en U",
+              "de": "Inyathi-Raum – U-Form",
+              "zh": "Inyathi会议厅 – U型"
+            },
+            "value": "50"
+          },
+          {
+            "label": {
+              "en": "Inyathi Room – Hollow Square",
+              "fr": "Salle Inyathi – Carré creux",
+              "de": "Inyathi-Raum – Hohlquadrat",
+              "zh": "Inyathi会议厅 – 回字型"
+            },
+            "value": "60"
+          },
+          {
+            "label": {
+              "en": "Inyathi Room – Board Room",
+              "fr": "Salle Inyathi – Salle de conseil",
+              "de": "Inyathi-Raum – Boardroom",
+              "zh": "Inyathi会议厅 – 董事会式"
+            },
+            "value": "60"
+          },
+          {
+            "label": {
+              "en": "Inyathi Room – Cocktail",
+              "fr": "Salle Inyathi – Cocktail",
+              "de": "Inyathi-Raum – Empfang",
+              "zh": "Inyathi会议厅 – 鸡尾酒会"
+            },
+            "value": "120"
+          },
+          {
+            "label": {
+              "en": "Inyathi Room – Dinner Banquet",
+              "fr": "Salle Inyathi – Banquet dînatoire",
+              "de": "Inyathi-Raum – Bankett",
+              "zh": "Inyathi会议厅 – 晚宴"
+            },
+            "value": "80"
+          },
+          {
+            "label": {
+              "en": "Sebastian Boardroom – Cinema-style",
+              "fr": "Salle Sebastian – Style cinéma",
+              "de": "Sebastian-Boardroom – Kinostil",
+              "zh": "Sebastian董事会室 – 剧院式"
+            },
+            "value": "40"
+          },
+          {
+            "label": {
+              "en": "Sebastian Boardroom – Board Room",
+              "fr": "Salle Sebastian – Salle de conseil",
+              "de": "Sebastian-Boardroom – Boardroom",
+              "zh": "Sebastian董事会室 – 董事会式"
+            },
+            "value": "15"
+          }
+        ]
+      },
+      {
+        "id": "facilities",
+        "label": {
+          "en": "Facilities & Services",
+          "fr": "Installations & Services",
+          "de": "Einrichtungen & Services",
+          "zh": "设施与服务"
+        },
+        "paragraphs": {
+          "en": [],
+          "fr": [],
+          "de": [],
+          "zh": []
+        },
+        "rows": [
+          {
+            "label": {
+              "en": "High-speed Wi-Fi",
+              "fr": "Wi-Fi haut débit",
+              "de": "Highspeed-WLAN",
+              "zh": "高速WiFi"
+            },
+            "value": ""
+          },
+          {
+            "label": {
+              "en": "Outdoor pool & children's pool",
+              "fr": "Piscine extérieure et piscine pour enfants",
+              "de": "Außenpool & Kinderpool",
+              "zh": "室外泳池及儿童泳池"
+            },
+            "value": ""
+          },
+          {
+            "label": {
+              "en": "16-hour room service",
+              "fr": "Service en chambre 16h/24",
+              "de": "16-Stunden-Zimmerservice",
+              "zh": "16小时客房送餐服务"
+            },
+            "value": ""
+          },
+          {
+            "label": {
+              "en": "Reading corner",
+              "fr": "Coin lecture",
+              "de": "Leseecke",
+              "zh": "阅读角"
+            },
+            "value": ""
+          },
+          {
+            "label": {
+              "en": "Same-day laundry & valet",
+              "fr": "Blanchisserie et service de voiturier le jour même",
+              "de": "Wäscheservice & Concierge am selben Tag",
+              "zh": "当日洗衣及行李管家服务"
+            },
+            "value": ""
+          },
+          {
+            "label": {
+              "en": "Beauty spa",
+              "fr": "Spa de beauté",
+              "de": "Beauty-Spa",
+              "zh": "美容水疗中心"
+            },
+            "value": ""
+          },
+          {
+            "label": {
+              "en": "Airport transfers",
+              "fr": "Transferts aéroport",
+              "de": "Flughafentransfers",
+              "zh": "机场接送服务"
+            },
+            "value": ""
+          },
+          {
+            "label": {
+              "en": "Babysitting on request",
+              "fr": "Garde d'enfants sur demande",
+              "de": "Babysitting auf Anfrage",
+              "zh": "可预约保姆服务"
+            },
+            "value": ""
+          },
+          {
+            "label": {
+              "en": "Breakfast, lunch & dinner cruises",
+              "fr": "Croisières petit-déjeuner, déjeuner et dîner",
+              "de": "Frühstücks-, Mittags- und Abendkreuzfahrten",
+              "zh": "早餐、午餐及晚餐游船"
+            },
+            "value": ""
+          },
+          {
+            "label": {
+              "en": "Activity desks",
+              "fr": "Bureaux d'activités",
+              "de": "Aktivitäten-Schalter",
+              "zh": "活动预订处"
+            },
+            "value": ""
+          },
+          {
+            "label": {
+              "en": "Outdoor wedding venue on the riverbank",
+              "fr": "Lieu de mariage en plein air au bord du fleuve",
+              "de": "Outdoor-Hochzeitslocation am Flussufer",
+              "zh": "河畔户外婚礼场地"
+            },
+            "value": ""
+          },
+          {
+            "label": {
+              "en": "Iron & ironing board / electrical adapters on request",
+              "fr": "Fer et planche à repasser / adaptateurs électriques sur demande",
+              "de": "Bügeleisen & Bügelbrett / Adapter auf Anfrage",
+              "zh": "熨斗及烫衣板／电源转换插头（可申请）"
+            },
+            "value": ""
+          },
+          {
+            "label": {
+              "en": "Concierge with shoe-polishing",
+              "fr": "Service de conciergerie avec cirage de chaussures",
+              "de": "Concierge mit Schuhputz-Service",
+              "zh": "礼宾服务（含擦鞋服务）"
+            },
+            "value": ""
+          },
+          {
+            "label": {
+              "en": "Car wash",
+              "fr": "Lavage de voiture",
+              "de": "Autowäsche",
+              "zh": "洗车服务"
+            },
+            "value": ""
+          },
+          {
+            "label": {
+              "en": "Curio shop",
+              "fr": "Boutique de curiosités",
+              "de": "Souvenirladen",
+              "zh": "特产礼品店"
+            },
+            "value": ""
+          },
+          {
+            "label": {
+              "en": "Complimentary scheduled shuttles to town & the Rainforest",
+              "fr": "Navettes gratuites programmées vers la ville et la forêt tropicale",
+              "de": "Kostenlose planmäßige Shuttles in die Stadt & zum Regenwald",
+              "zh": "免费定时班车往返市区及雨林"
+            },
+            "value": ""
+          }
+        ]
+      },
+      {
+        "id": "distances",
+        "label": {
+          "en": "Nearby Distances",
+          "fr": "Distances à proximité",
+          "de": "Entfernungen",
+          "zh": "周边距离"
+        },
+        "paragraphs": {
+          "en": [
+            "5 minutes from Victoria Falls town, 20 minutes from Victoria Falls International Airport."
+          ],
+          "fr": [
+            "À 5 minutes de la ville de Victoria Falls, à 20 minutes de l'aéroport international de Victoria Falls."
+          ],
+          "de": [
+            "5 Minuten von der Stadt Victoria Falls entfernt, 20 Minuten vom internationalen Flughafen Victoria Falls."
+          ],
+          "zh": [
+            "距维多利亚瀑布市区5分钟车程，距维多利亚瀑布国际机场20分钟车程。"
+          ]
+        },
+        "rows": [
+          {
+            "label": {
+              "en": "Victoria Falls Rainforest",
+              "fr": "Forêt tropicale de Victoria Falls",
+              "de": "Regenwald von Victoria Falls",
+              "zh": "维多利亚瀑布雨林"
+            },
+            "value": "7 km"
+          },
+          {
+            "label": {
+              "en": "David Livingstone Statue",
+              "fr": "Statue de David Livingstone",
+              "de": "David-Livingstone-Statue",
+              "zh": "戴维·利文斯通雕像"
+            },
+            "value": "7 km"
+          },
+          {
+            "label": {
+              "en": "Victoria Falls Bridge",
+              "fr": "Pont de Victoria Falls",
+              "de": "Victoria-Falls-Brücke",
+              "zh": "维多利亚瀑布大桥"
+            },
+            "value": "7 km"
+          },
+          {
+            "label": {
+              "en": "Crocodile Farm",
+              "fr": "Ferme aux crocodiles",
+              "de": "Krokodilfarm",
+              "zh": "鳄鱼农场"
+            },
+            "value": "0.15 km"
+          },
+          {
+            "label": {
+              "en": "Snake Pit",
+              "fr": "Fosse aux serpents",
+              "de": "Schlangengrube",
+              "zh": "蛇坑"
+            },
+            "value": "5 km"
+          },
+          {
+            "label": {
+              "en": "Big Tree",
+              "fr": "Grand Arbre (Big Tree)",
+              "de": "Großer Baum (Big Tree)",
+              "zh": "大树景点"
+            },
+            "value": "4 km"
+          },
+          {
+            "label": {
+              "en": "Kalundu Island",
+              "fr": "Île de Kalundu",
+              "de": "Kalundu-Insel",
+              "zh": "卡伦杜岛"
+            },
+            "value": "1 km"
+          }
+        ]
+      },
+      {
+        "id": "contact",
+        "label": {
+          "en": "Contact Us",
+          "fr": "Nous contacter",
+          "de": "Kontakt",
+          "zh": "联系我们"
+        },
+        "paragraphs": {
+          "en": [],
+          "fr": [],
+          "de": [],
+          "zh": []
+        },
+        "rows": [
+          {
+            "label": {
+              "en": "Address",
+              "fr": "Adresse",
+              "de": "Adresse",
+              "zh": "地址"
+            },
+            "value": "308 Parkway Drive, Victoria Falls"
+          },
+          {
+            "label": {
+              "en": "Phone",
+              "fr": "Téléphone",
+              "de": "Telefon",
+              "zh": "电话"
+            },
+            "value": "+263 (8328) 44561-4",
+            "href": "tel:+263832844561"
+          },
+          {
+            "label": {
+              "en": "Email",
+              "fr": "E-mail",
+              "de": "E-Mail",
+              "zh": "电子邮箱"
+            },
+            "value": "reservations.azambezi@rtg.co.zw",
+            "href": "mailto:reservations.azambezi@rtg.co.zw"
+          }
+        ]
+      }
     ]
-  }
+  },
+  "policies": [
+    {
+      "title": {
+        "en": "Nature Awareness",
+        "fr": "Sensibilisation à la nature",
+        "de": "Hinweis zur Tierwelt",
+        "zh": "野生动物提示"
+      },
+      "desc": {
+        "en": "As we are located directly on the Zambezi river bank, please keep balcony doors closed to prevent wildlife and monkeys from entering.",
+        "fr": "Étant situés directement sur les rives du Zambèze, veuillez garder les portes du balcon fermées pour empêcher la faune et les singes d'entrer.",
+        "de": "Da wir direkt am Ufer des Sambesi liegen, halten Sie bitte die Balkontüren geschlossen, um Wildtiere und Affen fernzuhalten.",
+        "zh": "由于酒店紧邻赞比西河岸，请保持阳台门关闭，以防止野生动物和猴子进入房间。"
+      }
+    },
+    {
+      "title": {
+        "en": "Pool & Bar",
+        "fr": "Piscine et Bar",
+        "de": "Pool & Bar",
+        "zh": "泳池与酒吧"
+      },
+      "desc": {
+        "en": "Open 08:00 – 22:00. Please use the dedicated towels provided at the pool deck station.",
+        "fr": "Ouvert de 08h00 à 22h00. Veuillez utiliser les serviettes dédiées disponibles à la station de la terrasse de la piscine.",
+        "de": "Geöffnet von 08:00 bis 22:00 Uhr. Bitte benutzen Sie die dafür vorgesehenen Handtücher an der Poolterrasse.",
+        "zh": "开放时间08:00–22:00。请使用泳池区提供的专用毛巾。"
+      }
+    },
+    {
+      "title": {
+        "en": "Sustainability",
+        "fr": "Durabilité",
+        "de": "Nachhaltigkeit",
+        "zh": "可持续发展"
+      },
+      "desc": {
+        "en": "Help us preserve the Victoria Falls ecosystem. We encourage reusing linen to save water.",
+        "fr": "Aidez-nous à préserver l'écosystème de Victoria Falls. Nous encourageons la réutilisation du linge pour économiser l'eau.",
+        "de": "Helfen Sie uns, das Ökosystem der Victoriafälle zu schützen. Wir empfehlen die Wiederverwendung von Wäsche, um Wasser zu sparen.",
+        "zh": "请协助我们保护维多利亚瀑布生态环境。我们鼓励重复使用床品和毛巾以节约用水。"
+      }
+    }
+  ]
 }
