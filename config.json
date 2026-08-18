@@ -1,0 +1,243 @@
+{
+  "hotel": {
+    "name": "A'Zambezi River Lodge",
+    "logoUrl": "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&q=80&w=200",
+    "heroImage": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=1200"
+  },
+  "wifi": {
+    "ssid": "AZambezi_Guest_WiFi",
+    "password": "RiverSideRelax"
+  },
+  "contacts": {
+    "whatsapp": "263772123456",
+    "frontDesk": "+263 13 44561"
+  },
+  "links": {
+    "heritage": "https://heritageexpeditionsafrica.com/"
+  },
+  "sponsored": {
+    "title": "24-Hour Medical Care",
+    "company": "Victoria Falls Medical Centre",
+    "image": "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=400",
+    "link": "https://example.com/medical-centre"
+  },
+  "checkout": "Departure: 11:00 AM",
+
+  "departments": [
+    { "name": "Reception", "ext": "41322 / 41321" },
+    { "name": "General Manager", "ext": "41311" },
+    { "name": "Guest Relations", "ext": "41312" },
+    { "name": "Accountant", "ext": "41314" },
+    { "name": "Front Office Manager", "ext": "399" },
+    { "name": "F&B Manager", "ext": "398" },
+    { "name": "F&B Control", "ext": "394" },
+    { "name": "HR", "ext": "41332" },
+    { "name": "Bar", "ext": "41333" },
+    { "name": "Restaurant", "ext": "41335" },
+    { "name": "Maintenance", "ext": "338" },
+    { "name": "Housekeeping", "ext": "305" },
+    { "name": "Stores", "ext": "342" },
+    { "name": "Accounts – Justin / Fadzai", "ext": "41339" },
+    { "name": "Accounts – Rutendo", "ext": "397" },
+    { "name": "Security Desk", "ext": "354" },
+    { "name": "Security – Gate", "ext": "396" },
+    { "name": "Laundry", "ext": "337" },
+    { "name": "Kitchen", "ext": "340" },
+    { "name": "Heritage Desk", "ext": "41340" },
+    { "name": "Reservations", "ext": "41301" }
+  ],
+
+  "shuttle": {
+    "heading": "Shuttle Bus Timetable",
+    "bannerImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=1200",
+    "route": ["A'Zambezi River Lodge", "Victoria Falls Rainbow Hotel", "Marula Café / Batoka Safaris", "Rainforest"],
+    "schedule": [
+      { "toRainforest": "09:05", "fromRainforest": "09:50" },
+      { "toRainforest": "11:05", "fromRainforest": "11:50" },
+      { "toRainforest": "12:05", "fromRainforest": "12:50" },
+      { "toRainforest": "13:05", "fromRainforest": "13:50" },
+      { "toRainforest": "16:05", "fromRainforest": "16:50" }
+    ],
+    "notes": [
+      "Pick-up and drop-off points: Marula Café / Batoka Safaris, and The Rainforest.",
+      "Clients wishing to board the bus from the hotel should notify the porter and be at Reception by the pick-up times above.",
+      "For the return trip, notify the driver where you need to be picked up and the time."
+    ]
+  },
+
+  "activities": {
+    "provider": "Heritage Expeditions Africa",
+    "tagline": "Dream. Explore. Discover…",
+    "bannerImage": "https://images.unsplash.com/photo-1604537466158-719b1972edd8?auto=format&fit=crop&q=80&w=1200",
+    "sectionImages": {
+      "adrenaline": "",
+      "safari": "",
+      "toursAndTransfers": "",
+      "helicopter": ""
+    },
+    "combos": [
+      { "name": "Zambezi Game Drive + Standard Sunset Cruise", "price": "US$130 per person", "note": "Including park fees", "desc": "A combo that blends wild game viewing with a tranquil sunset cruise on the mighty Zambezi River.", "img": "" },
+      { "name": "Flight of Angels + Game Drive", "price": "US$270 per person", "note": "Including park fees", "desc": "Soar above the Falls on a 12–13 minute helicopter flight, then continue with a 3-hour game drive.", "img": "" },
+      { "name": "Flight of Angels + Standard Sunset Cruise", "price": "US$250 per person", "note": "Including park fees", "desc": "An aerial view of the Falls, followed by a 2-hour sunset cruise on the Zambezi.", "img": "" },
+      { "name": "Flight of Angels + Standard Sunset Cruise + Game Drive", "price": "US$310 per person", "note": "Including park fees", "desc": "The ultimate full-day combo: helicopter flight, game drive and sunset river cruise.", "img": "" }
+    ],
+    "riverAndAir": [
+      { "name": "Zambezi Game Drive", "price": "US$83 per person", "note": "Excluding park fees", "desc": "A thrilling three-hour game drive in Zambezi National Park.", "img": "" },
+      { "name": "Zambezi Standard Sunset Cruise", "price": "US$52 per person", "note": "Excluding park fees", "desc": "Glide along the Zambezi at sunset, spotting hippo, crocodile and birdlife.", "img": "" },
+      { "name": "Flight of Angels", "price": "US$210 per person", "note": "Including park fees, drinks and snacks", "desc": "A 12–13 minute helicopter flight over the Falls.", "img": "" },
+      { "name": "Zambezi Dinner Cruise", "price": "US$122 per person", "note": "Including transfer and park fees", "desc": "Exceptional dining paired with breathtaking Zambezi scenery.", "img": "" },
+      { "name": "The Boma Dinner and Drum Show", "price": "US$75 per person", "note": "Including transfers", "desc": "Local cuisine, dance and interactive drumming.", "img": "" }
+    ],
+    "adrenaline": [
+      { "name": "White Water Rafting", "price": "US$174", "parkFee": "US$12" },
+      { "name": "Bungee Jumping", "price": "US$194", "parkFee": "US$6" },
+      { "name": "Gorge Swing", "price": "US$134", "parkFee": "US$6" },
+      { "name": "Tandem Gorge Swing", "price": "US$201", "parkFee": "US$6" },
+      { "name": "Zip Line", "price": "US$108", "parkFee": "US$6" },
+      { "name": "Tandem Zip Line", "price": "US$162", "parkFee": "US$6" },
+      { "name": "Flying Fox", "price": "US$69", "parkFee": "US$6" },
+      { "name": "Canopy Tour", "price": "US$81", "parkFee": "US$6" },
+      { "name": "High Wire Pass", "price": "US$208", "parkFee": "US$6" },
+      { "name": "Quad Bike Tour", "price": "US$90", "parkFee": "—" },
+      { "name": "Adventure Jet Boat", "price": "US$141", "parkFee": "US$10" },
+      { "name": "Rafting & Gorge Swing", "price": "US$274", "parkFee": "US$18" }
+    ],
+    "safari": [
+      { "name": "Game Drive Zambezi National Park", "price": "US$83", "parkFee": "Int $16 / SADC $14 / Local $6" },
+      { "name": "Safari Game Walk", "price": "US$132", "parkFee": "US$18" },
+      { "name": "Elephant Encounter", "price": "US$169", "parkFee": "US$24" },
+      { "name": "Chobe Day Trip", "price": "US$178", "parkFee": "US$20" },
+      { "name": "Lion Walk", "price": "US$160", "parkFee": "US$10" },
+      { "name": "Cheetah Walk", "price": "US$160", "parkFee": "US$10" },
+      { "name": "Horse Back Safari", "price": "US$171", "parkFee": "US$30" },
+      { "name": "Game Drive Private Reserve", "price": "US$159", "parkFee": "US$18" },
+      { "name": "Night Game Drive + Bush Dinner", "price": "US$159", "parkFee": "US$18" },
+      { "name": "Dinner Game Drive, Zambezi National Park", "price": "US$216", "parkFee": "US$10" },
+      { "name": "Bush Dinner", "price": "US$216", "parkFee": "US$10" },
+      { "name": "Elephant Ride", "price": "US$160", "parkFee": "US$10" }
+    ],
+    "toursAndTransfers": [
+      { "name": "Traditional Village Tour", "price": "US$70 per person", "note": "Park fees: Int $32, SADC $35" },
+      { "name": "Guided Tour of the Falls", "price": "US$32 per person", "note": "Park fees: SADC $35" },
+      { "name": "Boma Dinner", "price": "US$75 per person", "note": "Transfers included, excluding drinks" },
+      { "name": "Transfer – Livingstone Airport", "price": "US$55 per person one way", "note": "US$27 per person sharing one way" },
+      { "name": "Transfer – Kasane Airport", "price": "US$100 per person one way", "note": "US$50 per person sharing one way" },
+      { "name": "Transfer – Victoria Falls Int'l Airport", "price": "US$15 per person one way", "note": "US$10 per person sharing one way" },
+      { "name": "Victoria Falls Town Shuttle", "price": "US$30 per person one way", "note": "US$10 per person sharing one way" },
+      { "name": "Bamba Tram – Sunrise Run", "price": "US$76 per person" },
+      { "name": "Victoria Falls Bike / Bamba Bike", "price": "US$61 per person" },
+      { "name": "Simunye Theatre", "price": "US$58 per person", "note": "Excluding transfers" }
+    ],
+    "helicopter": [
+      { "name": "Helicopter Flight – 22 minutes", "price": "US$321" },
+      { "name": "Zambezi Spectacular – 25 minutes", "price": "US$379" }
+    ]
+  },
+
+  "restaurant": {
+    "name": "Rainbow Delights",
+    "bannerImage": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200",
+    "allergyNote": "To our guests with food sensitivities or allergies: we cannot ensure that menu items do not contain ingredients that might cause an allergic reaction. Please consider this when ordering.",
+    "categories": [
+      { "id": "omelettes", "label": "Fresh Omelettes", "items": [
+        { "name": "Bacon Temptation Omelette", "price": "US$10", "desc": "Loaded with strips of crispy bacon, a rich cheese sauce, pancake and Cheddar cheese and diced tomatoes.", "img": "" },
+        { "name": "Spinach & Mushroom Omelette", "price": "US$10", "desc": "Fresh spinach and mushrooms folded into a classic omelette.", "img": "" },
+        { "name": "Rainbow Omelette", "price": "US$10", "desc": "Fresh spinach, mushrooms, onions and cheese, topped with rich hollandaise and diced tomatoes.", "img": "" },
+        { "name": "Garden Omelette", "price": "US$10", "desc": "An abundance of fresh green peppers, mushrooms, onions, tomatoes and Cheddar cheese.", "img": "" }
+      ]},
+      { "id": "breakfast-combos", "label": "Breakfast Combinations", "items": [
+        { "name": "The Must-Have Breakfast", "price": "US$7", "desc": "Two eggs, two bacon strips, two pork sausage links, two pieces of ham, hash browns and two buttermilk pancakes.", "img": "" },
+        { "name": "Minute Steaks & Eggs", "price": "US$9", "desc": "Tender Zimbabwean Select steak served with three eggs and three buttermilk pancakes.", "img": "" },
+        { "name": "Steak, Egg & Chips", "price": "US$18", "desc": "Grilled, grass-fed Zimbabwean Select sirloin steak, grilled onions and tomato, served with two eggs.", "img": "" },
+        { "name": "Gazebo Combo", "price": "US$10", "desc": "Two grilled sausage links served with two eggs, hash browns and two buttermilk pancakes.", "img": "" },
+        { "name": "Split Decision Breakfast", "price": "US$6", "desc": "Two eggs, two crispy bacon strips, two sausage links and two triangles of French toast.", "img": "" },
+        { "name": "Eggs Benedict", "price": "US$7", "desc": "Traditional-style bacon on an English muffin topped with two poached eggs and hollandaise. Served with hash browns.", "img": "" }
+      ]},
+      { "id": "toast-waffles-crepes", "label": "French Toast, Waffles & Sweet Crepes", "items": [
+        { "name": "Strawberry Banana French Toast", "price": "US$5", "desc": "Four French toast triangles with cool strawberries, banana and whipped topping.", "img": "" },
+        { "name": "Whole Wheat French Toast Combo", "price": "US$10", "desc": "Whole wheat French toast with banana, scrambled eggs and two strips of bacon.", "img": "" },
+        { "name": "French Toast", "price": "US$5", "desc": "Six fluffy triangle-shaped slices topped with jam or natural honey and powdered sugar.", "img": "" },
+        { "name": "Waffle Combo", "price": "US$10", "desc": "Belgian waffle with two eggs, choice of bacon or sausage links, strawberry topping and cinnamon apple compote.", "img": "" },
+        { "name": "Banana Danish Fruit Pancake", "price": "US$10", "desc": "Two pancakes filled with Danish, cool strawberries and sweet cream cheese, topped with banana.", "img": "" },
+        { "name": "Zimbabwean Pancake", "price": "US$6", "desc": "Four delicate pancakes with Zim butter.", "img": "" },
+        { "name": "Rainbow Pancakes", "price": "US$10", "desc": "Two eggs, two bacon strips and two pork sausage links with your choice of crepe.", "img": "" },
+        { "name": "Fresh Fruit Crepes", "price": "US$8", "desc": "Two crepes topped with fresh fruit, low-fat strawberry yoghurt and granola.", "img": "" }
+      ]},
+      { "id": "pancake-combos", "label": "World Famous Pancake Combos", "items": [
+        { "name": "Three Eggs & Pancakes", "price": "US$12", "desc": "Three eggs with buttermilk pancakes. Choice of bacon, sausage links, corned beef hash or pork sausage.", "img": "" },
+        { "name": "Double Blueberry Pancakes", "price": "US$8", "desc": "Four buttermilk pancakes filled with blueberries, warm compote and whipped topping.", "img": "" },
+        { "name": "Strawberry Banana Pancakes", "price": "US$7", "desc": "Four pancakes filled with banana, crowned with strawberries and whipped topping.", "img": "" }
+      ]},
+      { "id": "savory-crepes", "label": "Savory Crepes, Soups & Double Take", "items": [
+        { "name": "Vegetarian Stuffed Crepes", "price": "US$5", "desc": "Zim cheese, scrambled eggs, spinach, mushrooms and onions, topped with hollandaise.", "img": "" },
+        { "name": "Chicken & Spinach Crepes", "price": "US$8", "desc": "Chicken, spinach, mushrooms and onions in two crepes with Swiss cheese and hollandaise.", "img": "" },
+        { "name": "Bacon & Cheddar Stuffed Crepes", "price": "Ask your server", "desc": "Scrambled eggs, Cheddar and bacon, topped with cheddar and sour cream.", "img": "" },
+        { "name": "Soup of the Day", "price": "US$5", "desc": "Freshly made daily.", "img": "" },
+        { "name": "Double Take", "price": "US$12", "desc": "Pick a starter (salad, fruit or loaded potato & bacon soup) and a half sandwich or soup of the day.", "img": "" }
+      ]},
+      { "id": "sandwiches-burgers", "label": "Sandwiches & Burgers", "note": "Served with your choice of seasoned fries & onion rings", "items": [
+        { "name": "Cheese Steak Stacker", "price": "US$12", "desc": "Grilled rib-eye steak and onions topped with melted Cheddar on a grilled roll.", "img": "" },
+        { "name": "Chicken & Bacon Club Sandwich", "price": "US$10", "desc": "Roast chicken, crispy bacon, Cheddar, tomato, lettuce and mayonnaise.", "img": "" },
+        { "name": "The Double Decker", "price": "US$12", "desc": "Six strips of crispy bacon, lettuce, tomato and mayonnaise on white toast.", "img": "" },
+        { "name": "Tuscan Chicken Griller", "price": "US$12", "desc": "Grilled chicken breast with melting cheese, oven-roasted tomatoes and lettuce.", "img": "" },
+        { "name": "Bacon & Beef Burgers", "price": "US$12", "desc": "Hickory-smoked bacon blended into the patty. All-beef available on request.", "img": "" },
+        { "name": "Rainbow Burger", "price": "US$12", "desc": "Thick, juicy beef burger with melting cheese, lettuce, tomato and caramelised onions.", "img": "" },
+        { "name": "Monster Bacon & Beef Cheeseburger", "price": "US$15", "desc": "Two patties, American and Provolone cheese, Romano-Parmesan bun.", "img": "" }
+      ]},
+      { "id": "nibbles", "label": "Nibbles", "items": [
+        { "name": "Chicken Fajita Quesadilla", "price": "US$6", "desc": "Grilled chicken, onions, peppers and tomatoes with Cheddar and Jack cheese, sour cream and salsa.", "img": "" },
+        { "name": "Macaroni & Cheese", "price": "US$10", "desc": "", "img": "" },
+        { "name": "Crispy Chicken Tenders & Fries", "price": "US$10", "desc": "Breaded, crispy-fried chicken strips with honey mustard.", "img": "" },
+        { "name": "Onion Rings", "price": "US$10", "desc": "", "img": "" }
+      ]},
+      { "id": "salads", "label": "Fresh Salads", "items": [
+        { "name": "Grilled Chicken Caesar Salad", "price": "US$9", "desc": "Iceberg lettuce, croutons and tomato in Caesar dressing, topped with grilled chicken and parmesan.", "img": "" },
+        { "name": "Crispy Chicken Salad", "price": "US$10", "desc": "Garden greens, crispy chicken, tomatoes, bacon, cheese and a hardboiled egg.", "img": "" },
+        { "name": "Vumba Goat Cheese Salad", "price": "US$15", "desc": "Cereal-crusted goat cheese, baby leaves, berries and cherry tomatoes in balsamic vinaigrette.", "img": "" }
+      ]},
+      { "id": "dinner", "label": "Fresh Dinner", "items": [
+        { "name": "Zim Prime Steak of the Day", "price": "US$18", "desc": "Cooked just the way you like it, seasoned potatoes and steamed broccoli.", "img": "" },
+        { "name": "Sirloin Steak Tips Dinner", "price": "US$18", "desc": "Sirloin tips grilled with onions, mashed potatoes and steamed broccoli.", "img": "" },
+        { "name": "Freshly Grilled Tilapia", "price": "US$15", "desc": "Pan-seared tilapia, sautéed mushrooms, onions, tomatoes and balsamic glaze.", "img": "" },
+        { "name": "Tempura Fried Prawns", "price": "US$18", "desc": "Golden butter-fried shrimp with vegetables, potatoes and sweet chilli & ginger sauce.", "img": "" },
+        { "name": "Lemon & Herb Chicken", "price": "US$15", "desc": "Seared quarter chicken marinated with rosemary, garlic and lemon.", "img": "" },
+        { "name": "Grilled Balsamic-Glazed Chicken", "price": "US$15", "desc": "Boneless chicken breast, sautéed mushrooms, onions, tomatoes and balsamic glaze.", "img": "" },
+        { "name": "Onion Pot Roast", "price": "US$18", "desc": "Slow-cooked beef stew or braised local chicken, choice of starch.", "img": "" },
+        { "name": "Pan Fried Mushrooms", "price": "US$10", "desc": "Lightly cooked seasonal mushrooms with vegetables and a choice of starch.", "img": "" }
+      ]},
+      { "id": "top5", "label": "Top 5 Dishes", "items": [
+        { "name": "Honey Glazed \"Pork Ribs\" Hawaii", "price": "US$16", "desc": "", "img": "" },
+        { "name": "Amulonga Pasta with Mushrooms", "price": "US$12", "desc": "", "img": "" },
+        { "name": "Grilled Tozho Steaks", "price": "US$16", "desc": "", "img": "" },
+        { "name": "House Pizza", "price": "US$12", "desc": "", "img": "" },
+        { "name": "Evolution Wrap", "price": "US$15", "desc": "", "img": "" }
+      ]},
+      { "id": "desserts", "label": "Delicious Desserts", "items": [
+        { "name": "Fruit Bowl", "price": "US$5", "desc": "Refreshing seasonal fresh fruit salad.", "img": "" },
+        { "name": "Ice Cream Sundae", "price": "US$5", "desc": "Vanilla ice cream, hot fudge or strawberry topping, whipped topping and a cherry.", "img": "" },
+        { "name": "Fruit Crepe", "price": "US$5", "desc": "Vanilla ice cream and whipped topping with strawberry, blueberry or cinnamon apple compote.", "img": "" },
+        { "name": "Chef's Cake of the Day", "price": "US$6", "desc": "Ask your waiter.", "img": "" }
+      ]},
+      { "id": "kinder", "label": "Kinder Café (12 & Under)", "items": [
+        { "name": "Funny Pancake", "price": "US$7", "desc": "Buttermilk pancake with strawberry eyes, whipped-topping nose and banana smile.", "img": "" },
+        { "name": "The Rascal", "price": "US$8", "desc": "Fruit crepe with vanilla ice cream and whipped topping.", "img": "" },
+        { "name": "Silver Five", "price": "US$7", "desc": "Five silver-dollar buttermilk pancakes with scrambled egg and crispy onion.", "img": "" },
+        { "name": "Fresh Toast", "price": "US$6", "desc": "Two triangles of French toast with two crispy bacon strips.", "img": "" },
+        { "name": "Scrambled Egg & Pancake", "price": "US$7", "desc": "Scrambled egg with one buttermilk pancake.", "img": "" },
+        { "name": "Crispy Chicken Strips", "price": "US$7", "desc": "Served with fresh fruit.", "img": "" },
+        { "name": "Kids Cheeseburger", "price": "US$5", "desc": "Served with fresh chips.", "img": "" },
+        { "name": "Grilled Cheese Sandwich", "price": "US$10", "desc": "Served with fresh chips.", "img": "" },
+        { "name": "Fish Goujons", "price": "US$10", "desc": "Crispy fried fish, chips and coleslaw.", "img": "" },
+        { "name": "Jonny's Fresh Fruit Dish", "price": "US$10", "desc": "A refreshing dish of seasonal fruit.", "img": "" },
+        { "name": "Kids Drinks", "price": "US$2", "desc": "Soft drinks, chocolate milk, milkshake or hot chocolate.", "img": "" },
+        { "name": "Kids Ice Cream Sundae", "price": "US$3", "desc": "", "img": "" }
+      ]},
+      { "id": "asian-corner", "label": "Asian Corner", "items": [
+        { "name": "Traditional Asian Soup", "price": "US$5", "desc": "Clear consommé with beef cubes, chicken strips, noodles and garlic.", "img": "" },
+        { "name": "Pork & Prawn Stir Fry", "price": "US$15", "desc": "Classic Asian infusion presented with basmati rice.", "img": "" },
+        { "name": "Chicken Kong Pao", "price": "US$8", "desc": "Stir-fried chicken breast cubes, chillies and assorted peppers.", "img": "" },
+        { "name": "Prawn & Chicken Noodle", "price": "US$18", "desc": "Chicken and prawns with pasta in a creamy coconut chilli sauce.", "img": "" }
+      ]}
+    ]
+  }
+}
