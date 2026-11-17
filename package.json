@@ -1,0 +1,16 @@
+{
+  "name": "azambezi-concierge",
+  "version": "2.0.0",
+  "description": "A'Zambezi River Lodge guest concierge app with admin backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}
