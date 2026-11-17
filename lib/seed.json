@@ -1,0 +1,1628 @@
+{
+  "meta": {
+    "version": 1,
+    "updatedAt": null
+  },
+  "hotel": {
+    "name": "A'Zambezi River Lodge",
+    "logoUrl": "https://i.ibb.co/Fqjz6r4V/azam-logo.jpg",
+    "heroImage": "https://i.ibb.co/fV635h07/AZambezi-River-Lodge-poolside1.jpg",
+    "address": "308 Parkway Drive, Victoria Falls",
+    "tagline": {
+      "en": "On the banks of the Zambezi River.",
+      "fr": "Sur les rives du fleuve Zambèze.",
+      "de": "Am Ufer des Sambesi.",
+      "zh": "坐落于赞比西河畔。"
+    }
+  },
+  "wifi": {
+    "ssid": "Azambezi: Rainbow Guest",
+    "password": "T6WQ4-MUYXZ",
+    "security": "WPA"
+  },
+  "contacts": {
+    "whatsapp": "263772123456",
+    "frontDesk": "+263 (8328) 44561-4",
+    "frontDeskDial": "+263832844561",
+    "email": "reservations.azambezi@rtg.co.zw"
+  },
+  "departure": {
+    "time": "10:00",
+    "lateCheckout": true
+  },
+  "hours": [
+    {
+      "id": "breakfast",
+      "label": {
+        "en": "Breakfast",
+        "fr": "Petit-déjeuner",
+        "de": "Frühstück",
+        "zh": "早餐"
+      },
+      "open": "06:30",
+      "close": "10:00",
+      "show": true
+    },
+    {
+      "id": "lunch",
+      "label": {
+        "en": "Lunch",
+        "fr": "Déjeuner",
+        "de": "Mittagessen",
+        "zh": "午餐"
+      },
+      "open": "12:30",
+      "close": "14:00",
+      "show": true
+    },
+    {
+      "id": "dinner",
+      "label": {
+        "en": "Dinner",
+        "fr": "Dîner",
+        "de": "Abendessen",
+        "zh": "晚餐"
+      },
+      "open": "19:00",
+      "close": "21:30",
+      "show": true
+    },
+    {
+      "id": "bar",
+      "label": {
+        "en": "Bar",
+        "fr": "Bar",
+        "de": "Bar",
+        "zh": "酒吧"
+      },
+      "open": "10:00",
+      "close": "22:00",
+      "show": true
+    },
+    {
+      "id": "pool",
+      "label": {
+        "en": "Pool",
+        "fr": "Piscine",
+        "de": "Pool",
+        "zh": "泳池"
+      },
+      "open": "08:00",
+      "close": "22:00",
+      "show": true
+    }
+  ],
+  "announcement": {
+    "enabled": false,
+    "text": {
+      "en": "Boma dinner tonight from 19:00. Ask Reception to reserve.",
+      "fr": "Dîner Boma ce soir dès 19h00. Réservez à la réception.",
+      "de": "Heute Abend Boma-Dinner ab 19:00 Uhr. Reservierung an der Rezeption.",
+      "zh": "今晚19:00起举办Boma晚宴，请向前台预订。"
+    }
+  },
+  "sponsor": {
+    "enabled": true,
+    "title": {
+      "en": "24-Hour Medical Care",
+      "fr": "Soins médicaux 24h/24",
+      "de": "24-Stunden-Notarztdienst",
+      "zh": "24小时医疗服务"
+    },
+    "company": "Victoria Falls Medical Centre",
+    "image": "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=400",
+    "link": "https://example.com/medical-centre"
+  },
+  "directory": [
+    {
+      "name": {
+        "en": "Reception",
+        "fr": "Réception",
+        "de": "Rezeption",
+        "zh": "前台"
+      },
+      "ext": "41322 / 41321"
+    },
+    {
+      "name": {
+        "en": "General Manager",
+        "fr": "Directeur Général",
+        "de": "Generaldirektor",
+        "zh": "总经理"
+      },
+      "ext": "41311"
+    },
+    {
+      "name": {
+        "en": "Guest Relations",
+        "fr": "Relations Clients",
+        "de": "Gästebetreuung",
+        "zh": "客户关系部"
+      },
+      "ext": "41312"
+    },
+    {
+      "name": {
+        "en": "Bar",
+        "fr": "Bar",
+        "de": "Bar",
+        "zh": "酒吧"
+      },
+      "ext": "41333"
+    },
+    {
+      "name": {
+        "en": "Restaurant",
+        "fr": "Restaurant",
+        "de": "Restaurant",
+        "zh": "餐厅"
+      },
+      "ext": "41335"
+    },
+    {
+      "name": {
+        "en": "Maintenance",
+        "fr": "Maintenance",
+        "de": "Wartung",
+        "zh": "维修部"
+      },
+      "ext": "338"
+    },
+    {
+      "name": {
+        "en": "Housekeeping",
+        "fr": "Entretien Ménager",
+        "de": "Housekeeping",
+        "zh": "客房部"
+      },
+      "ext": "305"
+    },
+    {
+      "name": {
+        "en": "Security Desk",
+        "fr": "Poste de Sécurité",
+        "de": "Sicherheitsdienst",
+        "zh": "安保处"
+      },
+      "ext": "354"
+    },
+    {
+      "name": {
+        "en": "Laundry",
+        "fr": "Blanchisserie",
+        "de": "Wäscherei",
+        "zh": "洗衣房"
+      },
+      "ext": "337"
+    },
+    {
+      "name": {
+        "en": "Heritage Desk",
+        "fr": "Bureau Heritage",
+        "de": "Heritage-Schalter",
+        "zh": "Heritage服务台"
+      },
+      "ext": "41340"
+    },
+    {
+      "name": {
+        "en": "Reservations",
+        "fr": "Réservations",
+        "de": "Reservierungen",
+        "zh": "预订部"
+      },
+      "ext": "41301"
+    }
+  ],
+  "shuttle": {
+    "heading": {
+      "en": "Town & Rainforest Shuttle",
+      "fr": "Navette Ville & Forêt Tropicale",
+      "de": "Shuttle Stadt & Regenwald",
+      "zh": "市区与雨林班车"
+    },
+    "bannerImage": "https://i.ibb.co/kgR6b9YR/azam-shuttle.jpg",
+    "route": [
+      "A'Zambezi River Lodge",
+      "Victoria Falls Rainbow Hotel",
+      "Marula Café / Batoka Safaris",
+      "Rainforest"
+    ],
+    "schedule": [
+      {
+        "toRainforest": "09:05",
+        "fromRainforest": "09:50"
+      },
+      {
+        "toRainforest": "11:05",
+        "fromRainforest": "11:50"
+      },
+      {
+        "toRainforest": "12:05",
+        "fromRainforest": "12:50"
+      },
+      {
+        "toRainforest": "13:05",
+        "fromRainforest": "13:50"
+      },
+      {
+        "toRainforest": "16:05",
+        "fromRainforest": "16:50"
+      }
+    ],
+    "notes": [
+      {
+        "en": "Pick-up and drop-off points: Marula Café / Batoka Safaris, and The Rainforest.",
+        "fr": "Points de prise en charge et de dépose : Marula Café / Batoka Safaris et la forêt tropicale.",
+        "de": "Ein- und Ausstiegspunkte: Marula Café / Batoka Safaris und der Regenwald.",
+        "zh": "上下车地点：Marula Café / Batoka Safaris 及雨林。"
+      },
+      {
+        "en": "Clients wishing to board the bus from the hotel should notify the porter and be at Reception by the pick-up times above.",
+        "fr": "Les clients souhaitant monter dans la navette à l'hôtel doivent prévenir le portier et se présenter à la réception aux heures indiquées.",
+        "de": "Gäste, die ab dem Hotel mitfahren möchten, informieren bitte den Portier und sind zu den angegebenen Zeiten an der Rezeption.",
+        "zh": "如需从酒店乘车，请提前告知行李员，并于上述时间在前台等候。"
+      },
+      {
+        "en": "For the return trip, notify the driver where you need to be picked up and the time.",
+        "fr": "Pour le retour, indiquez au chauffeur le lieu et l'heure de prise en charge.",
+        "de": "Für die Rückfahrt teilen Sie dem Fahrer bitte Abholort und Uhrzeit mit.",
+        "zh": "返程时，请告知司机您的上车地点和时间。"
+      }
+    ]
+  },
+  "activities": {
+    "provider": "Heritage Expeditions Africa",
+    "tagline": {
+      "en": "Dream. Explore. Discover…",
+      "fr": "Rêvez. Explorez. Découvrez…",
+      "de": "Träumen. Erkunden. Entdecken…",
+      "zh": "梦想·探索·发现…"
+    },
+    "bannerImage": "https://i.ibb.co/S7xJBfbb/azam-activities.webp",
+    "browseUrl": "https://www.heritageexpeditionsafrica.com/destinations/victoria-falls",
+    "deskExt": "41340",
+    "utmSource": "azambezi-concierge",
+    "featured": [
+      {
+        "name": "Standard Sunset Cruise",
+        "icon": "ship",
+        "image": "",
+        "url": "https://www.heritageexpeditionsafrica.com/activity/standard-sunset-cruise",
+        "blurb": {
+          "en": "Two hours on the upper Zambezi at golden hour.",
+          "fr": "Deux heures sur le haut Zambèze au coucher du soleil.",
+          "de": "Zwei Stunden auf dem oberen Sambesi zur goldenen Stunde.",
+          "zh": "黄昏时分畅游赞比西河上游两小时。"
+        }
+      },
+      {
+        "name": "Flight of the Angels",
+        "icon": "plane",
+        "image": "",
+        "url": "https://www.heritageexpeditionsafrica.com/activity/helicopter-short-flight-flight-of-the-angels",
+        "blurb": {
+          "en": "A short helicopter flight over the Falls.",
+          "fr": "Un court vol en hélicoptère au-dessus des chutes.",
+          "de": "Ein kurzer Helikopterflug über die Fälle.",
+          "zh": "乘直升机短途俯瞰瀑布。"
+        }
+      },
+      {
+        "name": "Guided Tour of the Falls",
+        "icon": "droplets",
+        "image": "",
+        "url": "https://www.heritageexpeditionsafrica.com/tour/guided-tour-of-the-falls",
+        "blurb": {
+          "en": "Walk the Rainforest with a local guide.",
+          "fr": "Parcourez la forêt tropicale avec un guide local.",
+          "de": "Den Regenwald mit einem lokalen Guide erkunden.",
+          "zh": "由当地导游带领漫步雨林。"
+        }
+      },
+      {
+        "name": "Game Drive, Zambezi National Park",
+        "icon": "binoculars",
+        "image": "",
+        "url": "https://www.heritageexpeditionsafrica.com/activity/game-drive-zambezi-national-park",
+        "blurb": {
+          "en": "A two-hour drive in the park next door.",
+          "fr": "Deux heures de safari dans le parc voisin.",
+          "de": "Eine zweistündige Pirschfahrt im angrenzenden Park.",
+          "zh": "在毗邻的国家公园进行两小时游猎。"
+        }
+      },
+      {
+        "name": "White-Water Rafting",
+        "icon": "waves",
+        "image": "",
+        "url": "https://www.heritageexpeditionsafrica.com/activity/white-water-rafting",
+        "blurb": {
+          "en": "A full day on the rapids below the Falls.",
+          "fr": "Une journée sur les rapides en aval des chutes.",
+          "de": "Ein ganzer Tag auf den Stromschnellen unterhalb der Fälle.",
+          "zh": "在瀑布下游激流中漂流一整天。"
+        }
+      },
+      {
+        "name": "Boma Dinner",
+        "icon": "flame",
+        "image": "",
+        "url": "https://www.heritageexpeditionsafrica.com/activity/boma-dinner",
+        "blurb": {
+          "en": "An evening of food, drumming and dance.",
+          "fr": "Une soirée de cuisine, percussions et danse.",
+          "de": "Ein Abend mit Essen, Trommeln und Tanz.",
+          "zh": "美食、鼓乐与舞蹈之夜。"
+        }
+      }
+    ]
+  },
+  "menu": {
+    "name": "Rainbow Delights",
+    "bannerImage": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200",
+    "allergyNote": {
+      "en": "To our guests with food sensitivities or allergies: we cannot ensure that menu items do not contain ingredients that might cause an allergic reaction. Please consider this when ordering.",
+      "fr": "Pour nos clients ayant des sensibilités ou des allergies alimentaires : nous ne pouvons garantir que les plats de la carte ne contiennent pas d'ingrédients susceptibles de provoquer une réaction allergique. Merci d'en tenir compte lors de votre commande.",
+      "de": "Für Gäste mit Lebensmittelunverträglichkeiten oder Allergien: Wir können nicht garantieren, dass die Gerichte auf der Speisekarte keine Zutaten enthalten, die eine allergische Reaktion auslösen könnten. Bitte berücksichtigen Sie dies bei Ihrer Bestellung.",
+      "zh": "对于有食物敏感或过敏的宾客：我们无法保证菜单中的菜品不含可能引起过敏反应的成分，点餐时请留意。"
+    },
+    "categories": [
+      {
+        "id": "omelettes",
+        "label": {
+          "en": "Fresh Omelettes",
+          "fr": "Omelettes Fraîches",
+          "de": "Frische Omeletts",
+          "zh": "新鲜蛋卷"
+        },
+        "note": {
+          "en": "",
+          "fr": "",
+          "de": "",
+          "zh": ""
+        },
+        "served": "breakfast",
+        "items": [
+          {
+            "name": "Bacon Temptation Omelette",
+            "desc": "Loaded with strips of crispy bacon, a rich cheese sauce, pancake and Cheddar cheese and diced tomatoes.",
+            "price": "US$10",
+            "soldOut": false
+          },
+          {
+            "name": "Spinach & Mushroom Omelette",
+            "desc": "Fresh spinach and mushrooms folded into a classic omelette.",
+            "price": "US$10",
+            "soldOut": false
+          },
+          {
+            "name": "Rainbow Omelette",
+            "desc": "Fresh spinach, mushrooms, onions and cheese, topped with rich hollandaise and diced tomatoes.",
+            "price": "US$10",
+            "soldOut": false
+          },
+          {
+            "name": "Garden Omelette",
+            "desc": "An abundance of fresh green peppers, mushrooms, onions, tomatoes and Cheddar cheese.",
+            "price": "US$10",
+            "soldOut": false
+          }
+        ]
+      },
+      {
+        "id": "breakfast-combos",
+        "label": {
+          "en": "Breakfast Combinations",
+          "fr": "Formules Petit-déjeuner",
+          "de": "Frühstückskombinationen",
+          "zh": "早餐套餐"
+        },
+        "note": {
+          "en": "",
+          "fr": "",
+          "de": "",
+          "zh": ""
+        },
+        "served": "breakfast",
+        "items": [
+          {
+            "name": "The Must-Have Breakfast",
+            "desc": "Two eggs, two bacon strips, two pork sausage links, two pieces of ham, hash browns and two buttermilk pancakes.",
+            "price": "US$7",
+            "soldOut": false
+          },
+          {
+            "name": "Minute Steaks & Eggs",
+            "desc": "Tender Zimbabwean Select steak served with three eggs and three buttermilk pancakes.",
+            "price": "US$9",
+            "soldOut": false
+          },
+          {
+            "name": "Steak, Egg & Chips",
+            "desc": "Grilled, grass-fed Zimbabwean Select sirloin steak, grilled onions and tomato, served with two eggs.",
+            "price": "US$18",
+            "soldOut": false
+          },
+          {
+            "name": "Gazebo Combo",
+            "desc": "Two grilled sausage links served with two eggs, hash browns and two buttermilk pancakes.",
+            "price": "US$10",
+            "soldOut": false
+          },
+          {
+            "name": "Split Decision Breakfast",
+            "desc": "Two eggs, two crispy bacon strips, two sausage links and two triangles of French toast.",
+            "price": "US$6",
+            "soldOut": false
+          },
+          {
+            "name": "Eggs Benedict",
+            "desc": "Traditional-style bacon on an English muffin topped with two poached eggs and hollandaise. Served with hash browns.",
+            "price": "US$7",
+            "soldOut": false
+          }
+        ]
+      },
+      {
+        "id": "toast-waffles-crepes",
+        "label": {
+          "en": "French Toast, Waffles & Sweet Crepes",
+          "fr": "Pain Perdu, Gaufres & Crêpes Sucrées",
+          "de": "French Toast, Waffeln & Süße Crêpes",
+          "zh": "法式吐司、华夫饼与甜可丽饼"
+        },
+        "note": {
+          "en": "",
+          "fr": "",
+          "de": "",
+          "zh": ""
+        },
+        "served": "breakfast",
+        "items": [
+          {
+            "name": "Strawberry Banana French Toast",
+            "desc": "Four French toast triangles with cool strawberries, banana and whipped topping.",
+            "price": "US$5",
+            "soldOut": false
+          },
+          {
+            "name": "Whole Wheat French Toast Combo",
+            "desc": "Whole wheat French toast with banana, scrambled eggs and two strips of bacon.",
+            "price": "US$10",
+            "soldOut": false
+          },
+          {
+            "name": "French Toast",
+            "desc": "Six fluffy triangle-shaped slices topped with jam or natural honey and powdered sugar.",
+            "price": "US$5",
+            "soldOut": false
+          },
+          {
+            "name": "Waffle Combo",
+            "desc": "Belgian waffle with two eggs, choice of bacon or sausage links, strawberry topping and cinnamon apple compote.",
+            "price": "US$10",
+            "soldOut": false
+          },
+          {
+            "name": "Banana Danish Fruit Pancake",
+            "desc": "Two pancakes filled with Danish, cool strawberries and sweet cream cheese, topped with banana.",
+            "price": "US$10",
+            "soldOut": false
+          },
+          {
+            "name": "Zimbabwean Pancake",
+            "desc": "Four delicate pancakes with Zim butter.",
+            "price": "US$6",
+            "soldOut": false
+          },
+          {
+            "name": "Rainbow Pancakes",
+            "desc": "Two eggs, two bacon strips and two pork sausage links with your choice of crepe.",
+            "price": "US$10",
+            "soldOut": false
+          },
+          {
+            "name": "Fresh Fruit Crepes",
+            "desc": "Two crepes topped with fresh fruit, low-fat strawberry yoghurt and granola.",
+            "price": "US$8",
+            "soldOut": false
+          }
+        ]
+      },
+      {
+        "id": "pancake-combos",
+        "label": {
+          "en": "World Famous Pancake Combos",
+          "fr": "Formules Pancakes Renommées",
+          "de": "Weltberühmte Pancake-Kombis",
+          "zh": "招牌美式煎饼套餐"
+        },
+        "note": {
+          "en": "",
+          "fr": "",
+          "de": "",
+          "zh": ""
+        },
+        "served": "breakfast",
+        "items": [
+          {
+            "name": "Three Eggs & Pancakes",
+            "desc": "Three eggs with buttermilk pancakes. Choice of bacon, sausage links, corned beef hash or pork sausage.",
+            "price": "US$12",
+            "soldOut": false
+          },
+          {
+            "name": "Double Blueberry Pancakes",
+            "desc": "Four buttermilk pancakes filled with blueberries, warm compote and whipped topping.",
+            "price": "US$8",
+            "soldOut": false
+          },
+          {
+            "name": "Strawberry Banana Pancakes",
+            "desc": "Four pancakes filled with banana, crowned with strawberries and whipped topping.",
+            "price": "US$7",
+            "soldOut": false
+          }
+        ]
+      },
+      {
+        "id": "savory-crepes",
+        "label": {
+          "en": "Savory Crepes, Soups & Double Take",
+          "fr": "Crêpes Salées, Soupes & Double Take",
+          "de": "Herzhafte Crêpes, Suppen & Double Take",
+          "zh": "咸味可丽饼、汤品及双拼套餐"
+        },
+        "note": {
+          "en": "",
+          "fr": "",
+          "de": "",
+          "zh": ""
+        },
+        "served": "",
+        "items": [
+          {
+            "name": "Vegetarian Stuffed Crepes",
+            "desc": "Zim cheese, scrambled eggs, spinach, mushrooms and onions, topped with hollandaise.",
+            "price": "US$5",
+            "soldOut": false
+          },
+          {
+            "name": "Chicken & Spinach Crepes",
+            "desc": "Chicken, spinach, mushrooms and onions in two crepes with Swiss cheese and hollandaise.",
+            "price": "US$8",
+            "soldOut": false
+          },
+          {
+            "name": "Bacon & Cheddar Stuffed Crepes",
+            "desc": "Scrambled eggs, Cheddar and bacon, topped with cheddar and sour cream.",
+            "price": "Ask your server",
+            "soldOut": false
+          },
+          {
+            "name": "Soup of the Day",
+            "desc": "Freshly made daily.",
+            "price": "US$5",
+            "soldOut": false
+          },
+          {
+            "name": "Double Take",
+            "desc": "Pick a starter (salad, fruit or loaded potato & bacon soup) and a half sandwich or soup of the day.",
+            "price": "US$12",
+            "soldOut": false
+          }
+        ]
+      },
+      {
+        "id": "sandwiches-burgers",
+        "label": {
+          "en": "Sandwiches & Burgers",
+          "fr": "Sandwichs & Burgers",
+          "de": "Sandwiches & Burger",
+          "zh": "三明治与汉堡"
+        },
+        "note": {
+          "en": "Served with your choice of seasoned fries & onion rings",
+          "fr": "Servi avec votre choix de frites assaisonnées et d'oignons frits",
+          "de": "Serviert mit gewürzten Pommes frites oder Zwiebelringen nach Wahl",
+          "zh": "配以调味薯条或洋葱圈（可选）"
+        },
+        "served": "",
+        "items": [
+          {
+            "name": "Cheese Steak Stacker",
+            "desc": "Grilled rib-eye steak and onions topped with melted Cheddar on a grilled roll.",
+            "price": "US$12",
+            "soldOut": false
+          },
+          {
+            "name": "Chicken & Bacon Club Sandwich",
+            "desc": "Roast chicken, crispy bacon, Cheddar, tomato, lettuce and mayonnaise.",
+            "price": "US$10",
+            "soldOut": false
+          },
+          {
+            "name": "The Double Decker",
+            "desc": "Six strips of crispy bacon, lettuce, tomato and mayonnaise on white toast.",
+            "price": "US$12",
+            "soldOut": false
+          },
+          {
+            "name": "Tuscan Chicken Griller",
+            "desc": "Grilled chicken breast with melting cheese, oven-roasted tomatoes and lettuce.",
+            "price": "US$12",
+            "soldOut": false
+          },
+          {
+            "name": "Bacon & Beef Burgers",
+            "desc": "Hickory-smoked bacon blended into the patty. All-beef available on request.",
+            "price": "US$12",
+            "soldOut": false
+          },
+          {
+            "name": "Rainbow Burger",
+            "desc": "Thick, juicy beef burger with melting cheese, lettuce, tomato and caramelised onions.",
+            "price": "US$12",
+            "soldOut": false
+          },
+          {
+            "name": "Monster Bacon & Beef Cheeseburger",
+            "desc": "Two patties, American and Provolone cheese, Romano-Parmesan bun.",
+            "price": "US$15",
+            "soldOut": false
+          }
+        ]
+      },
+      {
+        "id": "nibbles",
+        "label": {
+          "en": "Nibbles",
+          "fr": "Amuse-bouches",
+          "de": "Snacks",
+          "zh": "小食"
+        },
+        "note": {
+          "en": "",
+          "fr": "",
+          "de": "",
+          "zh": ""
+        },
+        "served": "",
+        "items": [
+          {
+            "name": "Chicken Fajita Quesadilla",
+            "desc": "Grilled chicken, onions, peppers and tomatoes with Cheddar and Jack cheese, sour cream and salsa.",
+            "price": "US$6",
+            "soldOut": false
+          },
+          {
+            "name": "Macaroni & Cheese",
+            "desc": "",
+            "price": "US$10",
+            "soldOut": false
+          },
+          {
+            "name": "Crispy Chicken Tenders & Fries",
+            "desc": "Breaded, crispy-fried chicken strips with honey mustard.",
+            "price": "US$10",
+            "soldOut": false
+          },
+          {
+            "name": "Onion Rings",
+            "desc": "",
+            "price": "US$10",
+            "soldOut": false
+          }
+        ]
+      },
+      {
+        "id": "salads",
+        "label": {
+          "en": "Fresh Salads",
+          "fr": "Salades Fraîches",
+          "de": "Frische Salate",
+          "zh": "新鲜沙拉"
+        },
+        "note": {
+          "en": "",
+          "fr": "",
+          "de": "",
+          "zh": ""
+        },
+        "served": "",
+        "items": [
+          {
+            "name": "Grilled Chicken Caesar Salad",
+            "desc": "Iceberg lettuce, croutons and tomato in Caesar dressing, topped with grilled chicken and parmesan.",
+            "price": "US$9",
+            "soldOut": false
+          },
+          {
+            "name": "Crispy Chicken Salad",
+            "desc": "Garden greens, crispy chicken, tomatoes, bacon, cheese and a hardboiled egg.",
+            "price": "US$10",
+            "soldOut": false
+          },
+          {
+            "name": "Vumba Goat Cheese Salad",
+            "desc": "Cereal-crusted goat cheese, baby leaves, berries and cherry tomatoes in balsamic vinaigrette.",
+            "price": "US$15",
+            "soldOut": false
+          }
+        ]
+      },
+      {
+        "id": "dinner",
+        "label": {
+          "en": "Fresh Dinner",
+          "fr": "Dîner",
+          "de": "Abendessen",
+          "zh": "晚餐主菜"
+        },
+        "note": {
+          "en": "",
+          "fr": "",
+          "de": "",
+          "zh": ""
+        },
+        "served": "dinner",
+        "items": [
+          {
+            "name": "Zim Prime Steak of the Day",
+            "desc": "Cooked just the way you like it, seasoned potatoes and steamed broccoli.",
+            "price": "US$18",
+            "soldOut": false
+          },
+          {
+            "name": "Sirloin Steak Tips Dinner",
+            "desc": "Sirloin tips grilled with onions, mashed potatoes and steamed broccoli.",
+            "price": "US$18",
+            "soldOut": false
+          },
+          {
+            "name": "Freshly Grilled Tilapia",
+            "desc": "Pan-seared tilapia, sautéed mushrooms, onions, tomatoes and balsamic glaze.",
+            "price": "US$15",
+            "soldOut": false
+          },
+          {
+            "name": "Tempura Fried Prawns",
+            "desc": "Golden butter-fried shrimp with vegetables, potatoes and sweet chilli & ginger sauce.",
+            "price": "US$18",
+            "soldOut": false
+          },
+          {
+            "name": "Lemon & Herb Chicken",
+            "desc": "Seared quarter chicken marinated with rosemary, garlic and lemon.",
+            "price": "US$15",
+            "soldOut": false
+          },
+          {
+            "name": "Grilled Balsamic-Glazed Chicken",
+            "desc": "Boneless chicken breast, sautéed mushrooms, onions, tomatoes and balsamic glaze.",
+            "price": "US$15",
+            "soldOut": false
+          },
+          {
+            "name": "Onion Pot Roast",
+            "desc": "Slow-cooked beef stew or braised local chicken, choice of starch.",
+            "price": "US$18",
+            "soldOut": false
+          },
+          {
+            "name": "Pan Fried Mushrooms",
+            "desc": "Lightly cooked seasonal mushrooms with vegetables and a choice of starch.",
+            "price": "US$10",
+            "soldOut": false
+          }
+        ]
+      },
+      {
+        "id": "top5",
+        "label": {
+          "en": "Top 5 Dishes",
+          "fr": "Top 5 des Plats",
+          "de": "Top 5 Gerichte",
+          "zh": "五大热门菜品"
+        },
+        "note": {
+          "en": "",
+          "fr": "",
+          "de": "",
+          "zh": ""
+        },
+        "served": "",
+        "items": [
+          {
+            "name": "Honey Glazed \"Pork Ribs\" Hawaii",
+            "desc": "",
+            "price": "US$16",
+            "soldOut": false
+          },
+          {
+            "name": "Amulonga Pasta with Mushrooms",
+            "desc": "",
+            "price": "US$12",
+            "soldOut": false
+          },
+          {
+            "name": "Grilled Tozho Steaks",
+            "desc": "",
+            "price": "US$16",
+            "soldOut": false
+          },
+          {
+            "name": "House Pizza",
+            "desc": "",
+            "price": "US$12",
+            "soldOut": false
+          },
+          {
+            "name": "Evolution Wrap",
+            "desc": "",
+            "price": "US$15",
+            "soldOut": false
+          }
+        ]
+      },
+      {
+        "id": "desserts",
+        "label": {
+          "en": "Delicious Desserts",
+          "fr": "Délicieux Desserts",
+          "de": "Köstliche Desserts",
+          "zh": "美味甜点"
+        },
+        "note": {
+          "en": "",
+          "fr": "",
+          "de": "",
+          "zh": ""
+        },
+        "served": "",
+        "items": [
+          {
+            "name": "Fruit Bowl",
+            "desc": "Refreshing seasonal fresh fruit salad.",
+            "price": "US$5",
+            "soldOut": false
+          },
+          {
+            "name": "Ice Cream Sundae",
+            "desc": "Vanilla ice cream, hot fudge or strawberry topping, whipped topping and a cherry.",
+            "price": "US$5",
+            "soldOut": false
+          },
+          {
+            "name": "Fruit Crepe",
+            "desc": "Vanilla ice cream and whipped topping with strawberry, blueberry or cinnamon apple compote.",
+            "price": "US$5",
+            "soldOut": false
+          },
+          {
+            "name": "Chef's Cake of the Day",
+            "desc": "Ask your waiter.",
+            "price": "US$6",
+            "soldOut": false
+          }
+        ]
+      },
+      {
+        "id": "kinder",
+        "label": {
+          "en": "Kinder Café (12 & Under)",
+          "fr": "Kinder Café (12 ans et moins)",
+          "de": "Kinder Café (bis 12 Jahre)",
+          "zh": "儿童餐厅（12岁以下）"
+        },
+        "note": {
+          "en": "",
+          "fr": "",
+          "de": "",
+          "zh": ""
+        },
+        "served": "",
+        "items": [
+          {
+            "name": "Funny Pancake",
+            "desc": "Buttermilk pancake with strawberry eyes, whipped-topping nose and banana smile.",
+            "price": "US$7",
+            "soldOut": false
+          },
+          {
+            "name": "The Rascal",
+            "desc": "Fruit crepe with vanilla ice cream and whipped topping.",
+            "price": "US$8",
+            "soldOut": false
+          },
+          {
+            "name": "Silver Five",
+            "desc": "Five silver-dollar buttermilk pancakes with scrambled egg and crispy onion.",
+            "price": "US$7",
+            "soldOut": false
+          },
+          {
+            "name": "Fresh Toast",
+            "desc": "Two triangles of French toast with two crispy bacon strips.",
+            "price": "US$6",
+            "soldOut": false
+          },
+          {
+            "name": "Scrambled Egg & Pancake",
+            "desc": "Scrambled egg with one buttermilk pancake.",
+            "price": "US$7",
+            "soldOut": false
+          },
+          {
+            "name": "Crispy Chicken Strips",
+            "desc": "Served with fresh fruit.",
+            "price": "US$7",
+            "soldOut": false
+          },
+          {
+            "name": "Kids Cheeseburger",
+            "desc": "Served with fresh chips.",
+            "price": "US$5",
+            "soldOut": false
+          },
+          {
+            "name": "Grilled Cheese Sandwich",
+            "desc": "Served with fresh chips.",
+            "price": "US$10",
+            "soldOut": false
+          },
+          {
+            "name": "Fish Goujons",
+            "desc": "Crispy fried fish, chips and coleslaw.",
+            "price": "US$10",
+            "soldOut": false
+          },
+          {
+            "name": "Jonny's Fresh Fruit Dish",
+            "desc": "A refreshing dish of seasonal fruit.",
+            "price": "US$10",
+            "soldOut": false
+          },
+          {
+            "name": "Kids Drinks",
+            "desc": "Soft drinks, chocolate milk, milkshake or hot chocolate.",
+            "price": "US$2",
+            "soldOut": false
+          },
+          {
+            "name": "Kids Ice Cream Sundae",
+            "desc": "",
+            "price": "US$3",
+            "soldOut": false
+          }
+        ]
+      },
+      {
+        "id": "asian-corner",
+        "label": {
+          "en": "Asian Corner",
+          "fr": "Coin Asiatique",
+          "de": "Asien-Ecke",
+          "zh": "亚洲美食角"
+        },
+        "note": {
+          "en": "",
+          "fr": "",
+          "de": "",
+          "zh": ""
+        },
+        "served": "",
+        "items": [
+          {
+            "name": "Traditional Asian Soup",
+            "desc": "Clear consommé with beef cubes, chicken strips, noodles and garlic.",
+            "price": "US$5",
+            "soldOut": false
+          },
+          {
+            "name": "Pork & Prawn Stir Fry",
+            "desc": "Classic Asian infusion presented with basmati rice.",
+            "price": "US$15",
+            "soldOut": false
+          },
+          {
+            "name": "Chicken Kong Pao",
+            "desc": "Stir-fried chicken breast cubes, chillies and assorted peppers.",
+            "price": "US$8",
+            "soldOut": false
+          },
+          {
+            "name": "Prawn & Chicken Noodle",
+            "desc": "Chicken and prawns with pasta in a creamy coconut chilli sauce.",
+            "price": "US$18",
+            "soldOut": false
+          }
+        ]
+      }
+    ]
+  },
+  "about": {
+    "categories": [
+      {
+        "id": "overview",
+        "label": {
+          "en": "Overview",
+          "fr": "Aperçu",
+          "de": "Übersicht",
+          "zh": "概览"
+        },
+        "paragraphs": [
+          {
+            "en": "A'Zambezi River Lodge sits on the banks of the Zambezi River on the edge of Zambezi National Park, near Victoria Falls. The location offers river frontage, a jetty, and views of African wildlife, prized for its tranquility and seclusion.",
+            "fr": "A'Zambezi River Lodge est situé sur les rives du fleuve Zambèze, en bordure du parc national du Zambèze, à proximité de Victoria Falls. Le site offre un accès direct au fleuve, une jetée et des vues sur la faune africaine, apprécié pour sa tranquillité et son isolement.",
+            "de": "Die A'Zambezi River Lodge liegt am Ufer des Sambesi, am Rand des Zambezi-Nationalparks, in der Nähe der Victoriafälle. Der Standort bietet Flussfront, einen Steg und Ausblicke auf die afrikanische Tierwelt und ist für seine Ruhe und Abgeschiedenheit bekannt.",
+            "zh": "A'Zambezi River Lodge坐落于赞比西河畔，毗邻赞比西国家公园，靠近维多利亚瀑布。得天独厚的河景、专属码头及非洲野生动物景观，使其以宁静私密著称。"
+          }
+        ],
+        "rows": []
+      },
+      {
+        "id": "rooms",
+        "label": {
+          "en": "Rooms",
+          "fr": "Chambres",
+          "de": "Zimmer",
+          "zh": "客房"
+        },
+        "paragraphs": [
+          {
+            "en": "Guest rooms feature standard double, queen or king size beds, free high-speed Wi-Fi, individually controlled air conditioning, a bathroom with bathtub and shower, a 32\" LCD TV with satellite news, a direct-dial phone, hair dryer, in-room safe, and mosquito net and repellents. Rooms are either river-facing or garden-facing.",
+            "fr": "Les chambres disposent de lits doubles, queen ou king size, d'une connexion Wi-Fi gratuite à haut débit, d'une climatisation individuelle, d'une salle de bain avec baignoire et douche, d'une télévision LCD 32 pouces avec chaînes d'actualités par satellite, d'un téléphone à ligne directe, d'un sèche-cheveux, d'un coffre-fort et d'une moustiquaire avec répulsifs. Les chambres donnent soit sur le fleuve, soit sur le jardin.",
+            "de": "Die Gästezimmer verfügen über Doppel-, Queen- oder Kingsize-Betten, kostenloses Highspeed-WLAN, individuell regulierbare Klimaanlage, ein Bad mit Badewanne und Dusche, einen 32-Zoll-LCD-Fernseher mit Satelliten-Nachrichten, ein Direktwahltelefon, einen Föhn, einen Zimmersafe sowie Moskitonetz und Repellents. Die Zimmer sind entweder zum Fluss oder zum Garten ausgerichtet.",
+            "zh": "客房配备标准双人床、大床或特大床，免费高速WiFi，独立控温空调，配有浴缸及淋浴的卫浴间，32英寸卫星新闻液晶电视，直拨电话，吹风机，房内保险箱，以及蚊帐和驱蚊用品。客房分为河景房和花园景观房。"
+          }
+        ],
+        "rows": [
+          {
+            "label": {
+              "en": "Luxury King Suites",
+              "fr": "Suites King de Luxe",
+              "de": "Luxus-King-Suiten",
+              "zh": "豪华大床套房"
+            },
+            "value": "2",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Queen Suites",
+              "fr": "Suites Queen",
+              "de": "Queen-Suiten",
+              "zh": "大床套房"
+            },
+            "value": "2",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Standard Double",
+              "fr": "Chambre Double Standard",
+              "de": "Standard-Doppelzimmer",
+              "zh": "标准双人房"
+            },
+            "value": "44",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Standard Twin (some interleading)",
+              "fr": "Chambre Twin Standard (certaines communicantes)",
+              "de": "Standard-Zweibettzimmer (teils verbunden)",
+              "zh": "标准双床房（部分可连通）"
+            },
+            "value": "37",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Accessible Rooms",
+              "fr": "Chambres accessibles",
+              "de": "Barrierefreie Zimmer",
+              "zh": "无障碍客房"
+            },
+            "value": "2 (1 twin, 1 double)",
+            "href": ""
+          }
+        ]
+      },
+      {
+        "id": "dining",
+        "label": {
+          "en": "Dining & Bars",
+          "fr": "Restauration & Bars",
+          "de": "Restaurants & Bars",
+          "zh": "餐饮与酒吧"
+        },
+        "paragraphs": [
+          {
+            "en": "Amulonga Bar is the main hotel bar, with a deck overlooking the Zambezi River.",
+            "fr": "Le bar Amulonga est le bar principal de l'hôtel, avec une terrasse donnant sur le fleuve Zambèze.",
+            "de": "Die Amulonga Bar ist die Hauptbar des Hotels mit einer Terrasse mit Blick auf den Sambesi.",
+            "zh": "Amulonga酒吧是酒店的主酒吧，设有可俯瞰赞比西河的露台。"
+          },
+          {
+            "en": "Zambezi Bar is a Zimbabwean-style rondavel bar, ideal for pre-dinner drinks.",
+            "fr": "Le Zambezi Bar est un bar de style rondavel zimbabwéen, idéal pour un apéritif avant le dîner.",
+            "de": "Die Zambezi Bar ist eine Bar im simbabwischen Rondavel-Stil, ideal für einen Aperitif vor dem Abendessen.",
+            "zh": "Zambezi酒吧是一间津巴布韦传统圆屋风格酒吧，非常适合餐前小酌。"
+          },
+          {
+            "en": "Amulonga Restaurant is an award-winning open-air restaurant seating 120 guests, blending modern and African cuisine with traditional entertainment during dinner.",
+            "fr": "Le restaurant Amulonga est un restaurant en plein air primé, pouvant accueillir 120 convives, qui associe cuisine moderne et africaine à des animations traditionnelles pendant le dîner.",
+            "de": "Das Amulonga Restaurant ist ein preisgekröntes Open-Air-Restaurant mit Platz für 120 Gäste, das moderne und afrikanische Küche mit traditioneller Unterhaltung beim Abendessen verbindet.",
+            "zh": "Amulonga餐厅是一家屡获殊荣的露天餐厅，可容纳120位宾客，将现代与非洲美食相结合，晚餐时段还设有传统表演。"
+          }
+        ],
+        "rows": []
+      },
+      {
+        "id": "conferencing",
+        "label": {
+          "en": "Conferencing",
+          "fr": "Conférences",
+          "de": "Konferenzen",
+          "zh": "会议设施"
+        },
+        "paragraphs": [
+          {
+            "en": "Three conference rooms are available, the largest seating up to 100 delegates cinema-style, plus garden banquets for up to 300 guests by the river.",
+            "fr": "Trois salles de conférence sont disponibles, la plus grande pouvant accueillir jusqu'à 100 délégués en style cinéma, ainsi que des banquets de jardin pour jusqu'à 300 invités au bord du fleuve.",
+            "de": "Es stehen drei Konferenzräume zur Verfügung, der größte bietet Platz für bis zu 100 Teilnehmer im Kinostil, zusätzlich Gartenbankette für bis zu 300 Gäste am Fluss.",
+            "zh": "酒店设有三间会议室，最大可容纳100人（剧院式排列），并可在河畔花园举办最多300人的宴会。"
+          },
+          {
+            "en": "Equipment provided: LCD projector, screen, PA system, flipchart and stands.",
+            "fr": "Équipement fourni : projecteur LCD, écran, système de sonorisation, tableau à feuilles mobiles et supports.",
+            "de": "Bereitgestellte Ausstattung: LCD-Projektor, Leinwand, PA-Anlage, Flipchart und Ständer.",
+            "zh": "提供设备：液晶投影仪、屏幕、扩音系统、活动挂图及支架。"
+          }
+        ],
+        "rows": [
+          {
+            "label": {
+              "en": "Inyathi Room: Cinema / Theatre",
+              "fr": "Salle Inyathi: Cinéma / Théâtre",
+              "de": "Inyathi-Raum: Kino/Theater",
+              "zh": "Inyathi会议厅: 剧院式"
+            },
+            "value": "100",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Inyathi Room: Conference / School Room",
+              "fr": "Salle Inyathi: Conférence / Salle de classe",
+              "de": "Inyathi-Raum: Konferenz/Schulraum",
+              "zh": "Inyathi会议厅: 课桌式"
+            },
+            "value": "80",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Inyathi Room: U-Shape",
+              "fr": "Salle Inyathi: Forme en U",
+              "de": "Inyathi-Raum: U-Form",
+              "zh": "Inyathi会议厅: U型"
+            },
+            "value": "50",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Inyathi Room: Hollow Square",
+              "fr": "Salle Inyathi: Carré creux",
+              "de": "Inyathi-Raum: Hohlquadrat",
+              "zh": "Inyathi会议厅: 回字型"
+            },
+            "value": "60",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Inyathi Room: Board Room",
+              "fr": "Salle Inyathi: Salle de conseil",
+              "de": "Inyathi-Raum: Boardroom",
+              "zh": "Inyathi会议厅: 董事会式"
+            },
+            "value": "60",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Inyathi Room: Cocktail",
+              "fr": "Salle Inyathi: Cocktail",
+              "de": "Inyathi-Raum: Empfang",
+              "zh": "Inyathi会议厅: 鸡尾酒会"
+            },
+            "value": "120",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Inyathi Room: Dinner Banquet",
+              "fr": "Salle Inyathi: Banquet dînatoire",
+              "de": "Inyathi-Raum: Bankett",
+              "zh": "Inyathi会议厅: 晚宴"
+            },
+            "value": "80",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Sebastian Boardroom: Cinema-style",
+              "fr": "Salle Sebastian: Style cinéma",
+              "de": "Sebastian-Boardroom: Kinostil",
+              "zh": "Sebastian董事会室: 剧院式"
+            },
+            "value": "40",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Sebastian Boardroom: Board Room",
+              "fr": "Salle Sebastian: Salle de conseil",
+              "de": "Sebastian-Boardroom: Boardroom",
+              "zh": "Sebastian董事会室: 董事会式"
+            },
+            "value": "15",
+            "href": ""
+          }
+        ]
+      },
+      {
+        "id": "facilities",
+        "label": {
+          "en": "Facilities & Services",
+          "fr": "Installations & Services",
+          "de": "Einrichtungen & Services",
+          "zh": "设施与服务"
+        },
+        "paragraphs": [],
+        "rows": [
+          {
+            "label": {
+              "en": "High-speed Wi-Fi",
+              "fr": "Wi-Fi haut débit",
+              "de": "Highspeed-WLAN",
+              "zh": "高速WiFi"
+            },
+            "value": "",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Outdoor pool & children's pool",
+              "fr": "Piscine extérieure et piscine pour enfants",
+              "de": "Außenpool & Kinderpool",
+              "zh": "室外泳池及儿童泳池"
+            },
+            "value": "",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "16-hour room service",
+              "fr": "Service en chambre 16h/24",
+              "de": "16-Stunden-Zimmerservice",
+              "zh": "16小时客房送餐服务"
+            },
+            "value": "",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Reading corner",
+              "fr": "Coin lecture",
+              "de": "Leseecke",
+              "zh": "阅读角"
+            },
+            "value": "",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Same-day laundry & valet",
+              "fr": "Blanchisserie et service de voiturier le jour même",
+              "de": "Wäscheservice & Concierge am selben Tag",
+              "zh": "当日洗衣及行李管家服务"
+            },
+            "value": "",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Beauty spa",
+              "fr": "Spa de beauté",
+              "de": "Beauty-Spa",
+              "zh": "美容水疗中心"
+            },
+            "value": "",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Airport transfers",
+              "fr": "Transferts aéroport",
+              "de": "Flughafentransfers",
+              "zh": "机场接送服务"
+            },
+            "value": "",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Babysitting on request",
+              "fr": "Garde d'enfants sur demande",
+              "de": "Babysitting auf Anfrage",
+              "zh": "可预约保姆服务"
+            },
+            "value": "",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Breakfast, lunch & dinner cruises",
+              "fr": "Croisières petit-déjeuner, déjeuner et dîner",
+              "de": "Frühstücks-, Mittags- und Abendkreuzfahrten",
+              "zh": "早餐、午餐及晚餐游船"
+            },
+            "value": "",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Activity desks",
+              "fr": "Bureaux d'activités",
+              "de": "Aktivitäten-Schalter",
+              "zh": "活动预订处"
+            },
+            "value": "",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Outdoor wedding venue on the riverbank",
+              "fr": "Lieu de mariage en plein air au bord du fleuve",
+              "de": "Outdoor-Hochzeitslocation am Flussufer",
+              "zh": "河畔户外婚礼场地"
+            },
+            "value": "",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Iron & ironing board / electrical adapters on request",
+              "fr": "Fer et planche à repasser / adaptateurs électriques sur demande",
+              "de": "Bügeleisen & Bügelbrett / Adapter auf Anfrage",
+              "zh": "熨斗及烫衣板／电源转换插头（可申请）"
+            },
+            "value": "",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Concierge with shoe-polishing",
+              "fr": "Service de conciergerie avec cirage de chaussures",
+              "de": "Concierge mit Schuhputz-Service",
+              "zh": "礼宾服务（含擦鞋服务）"
+            },
+            "value": "",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Car wash",
+              "fr": "Lavage de voiture",
+              "de": "Autowäsche",
+              "zh": "洗车服务"
+            },
+            "value": "",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Curio shop",
+              "fr": "Boutique de curiosités",
+              "de": "Souvenirladen",
+              "zh": "特产礼品店"
+            },
+            "value": "",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Complimentary scheduled shuttles to town & the Rainforest",
+              "fr": "Navettes gratuites programmées vers la ville et la forêt tropicale",
+              "de": "Kostenlose planmäßige Shuttles in die Stadt & zum Regenwald",
+              "zh": "免费定时班车往返市区及雨林"
+            },
+            "value": "",
+            "href": ""
+          }
+        ]
+      },
+      {
+        "id": "distances",
+        "label": {
+          "en": "Nearby Distances",
+          "fr": "Distances à proximité",
+          "de": "Entfernungen",
+          "zh": "周边距离"
+        },
+        "paragraphs": [
+          {
+            "en": "5 minutes from Victoria Falls town, 20 minutes from Victoria Falls International Airport.",
+            "fr": "À 5 minutes de la ville de Victoria Falls, à 20 minutes de l'aéroport international de Victoria Falls.",
+            "de": "5 Minuten von der Stadt Victoria Falls entfernt, 20 Minuten vom internationalen Flughafen Victoria Falls.",
+            "zh": "距维多利亚瀑布市区5分钟车程，距维多利亚瀑布国际机场20分钟车程。"
+          }
+        ],
+        "rows": [
+          {
+            "label": {
+              "en": "Victoria Falls Rainforest",
+              "fr": "Forêt tropicale de Victoria Falls",
+              "de": "Regenwald von Victoria Falls",
+              "zh": "维多利亚瀑布雨林"
+            },
+            "value": "7 km",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "David Livingstone Statue",
+              "fr": "Statue de David Livingstone",
+              "de": "David-Livingstone-Statue",
+              "zh": "戴维·利文斯通雕像"
+            },
+            "value": "7 km",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Victoria Falls Bridge",
+              "fr": "Pont de Victoria Falls",
+              "de": "Victoria-Falls-Brücke",
+              "zh": "维多利亚瀑布大桥"
+            },
+            "value": "7 km",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Crocodile Farm",
+              "fr": "Ferme aux crocodiles",
+              "de": "Krokodilfarm",
+              "zh": "鳄鱼农场"
+            },
+            "value": "0.15 km",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Snake Pit",
+              "fr": "Fosse aux serpents",
+              "de": "Schlangengrube",
+              "zh": "蛇坑"
+            },
+            "value": "5 km",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Big Tree",
+              "fr": "Grand Arbre (Big Tree)",
+              "de": "Großer Baum (Big Tree)",
+              "zh": "大树景点"
+            },
+            "value": "4 km",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Kalundu Island",
+              "fr": "Île de Kalundu",
+              "de": "Kalundu-Insel",
+              "zh": "卡伦杜岛"
+            },
+            "value": "1 km",
+            "href": ""
+          }
+        ]
+      },
+      {
+        "id": "contact",
+        "label": {
+          "en": "Contact Us",
+          "fr": "Nous contacter",
+          "de": "Kontakt",
+          "zh": "联系我们"
+        },
+        "paragraphs": [],
+        "rows": [
+          {
+            "label": {
+              "en": "Address",
+              "fr": "Adresse",
+              "de": "Adresse",
+              "zh": "地址"
+            },
+            "value": "308 Parkway Drive, Victoria Falls",
+            "href": ""
+          },
+          {
+            "label": {
+              "en": "Phone",
+              "fr": "Téléphone",
+              "de": "Telefon",
+              "zh": "电话"
+            },
+            "value": "+263 (8328) 44561-4",
+            "href": "tel:+263832844561"
+          },
+          {
+            "label": {
+              "en": "Email",
+              "fr": "E-mail",
+              "de": "E-Mail",
+              "zh": "电子邮箱"
+            },
+            "value": "reservations.azambezi@rtg.co.zw",
+            "href": "mailto:reservations.azambezi@rtg.co.zw"
+          }
+        ]
+      }
+    ]
+  },
+  "policies": [
+    {
+      "title": {
+        "en": "Nature Awareness",
+        "fr": "Sensibilisation à la nature",
+        "de": "Hinweis zur Tierwelt",
+        "zh": "野生动物提示"
+      },
+      "desc": {
+        "en": "As we are located directly on the Zambezi river bank, please keep balcony doors closed to prevent wildlife and monkeys from entering.",
+        "fr": "Étant situés directement sur les rives du Zambèze, veuillez garder les portes du balcon fermées pour empêcher la faune et les singes d'entrer.",
+        "de": "Da wir direkt am Ufer des Sambesi liegen, halten Sie bitte die Balkontüren geschlossen, um Wildtiere und Affen fernzuhalten.",
+        "zh": "由于酒店紧邻赞比西河岸，请保持阳台门关闭，以防止野生动物和猴子进入房间。"
+      }
+    },
+    {
+      "title": {
+        "en": "Pool",
+        "fr": "Piscine",
+        "de": "Pool",
+        "zh": "泳池"
+      },
+      "desc": {
+        "en": "Please use the dedicated towels provided at the pool deck station. See today's opening times on the home screen.",
+        "fr": "Veuillez utiliser les serviettes dédiées disponibles à la station de la terrasse de la piscine. Consultez les horaires du jour sur l'écran d'accueil.",
+        "de": "Bitte benutzen Sie die dafür vorgesehenen Handtücher an der Poolterrasse. Die heutigen Öffnungszeiten finden Sie auf dem Startbildschirm.",
+        "zh": "请使用泳池区提供的专用毛巾。当日开放时间请见首页。"
+      }
+    },
+    {
+      "title": {
+        "en": "Sustainability",
+        "fr": "Durabilité",
+        "de": "Nachhaltigkeit",
+        "zh": "可持续发展"
+      },
+      "desc": {
+        "en": "Help us preserve the Victoria Falls ecosystem. We encourage reusing linen to save water.",
+        "fr": "Aidez-nous à préserver l'écosystème de Victoria Falls. Nous encourageons la réutilisation du linge pour économiser l'eau.",
+        "de": "Helfen Sie uns, das Ökosystem der Victoriafälle zu schützen. Wir empfehlen die Wiederverwendung von Wäsche, um Wasser zu sparen.",
+        "zh": "请协助我们保护维多利亚瀑布生态环境。我们鼓励重复使用床品和毛巾以节约用水。"
+      }
+    }
+  ]
+}
